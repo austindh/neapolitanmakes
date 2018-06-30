@@ -1,2 +1,2 @@
 # neapolitanmakes
-[neapolitanmakes.com](www.neapolitanmakes.com)
+[neapolitanmakes.com](https://neapolitanmakes.com)
