@@ -1,0 +1,36 @@
+{
+  "name": "neapolitanmakes",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "babel app -d build; npm run css; node generate.js;",
+    "css": "node-sass --include-path sass app/scss/main.scss docs/css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/austindh/neapolitanmakes.git"
+  },
+  "author": "Austin Hughes",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/austindh/neapolitanmakes/issues"
+  },
+  "homepage": "https://github.com/austindh/neapolitanmakes#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
+    "babel-plugin-transform-react-jsx": "^6.24.1",
+    "fs-extra": "^7.0.0",
+    "glob": "^7.1.2",
+    "markdown": "^0.5.0",
+    "node-sass": "^4.9.2",
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2",
+    "react-html-parser": "^2.0.2"
+  }
+}

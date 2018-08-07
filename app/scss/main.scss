@@ -1,0 +1,11 @@
+@import 'colors';
+
+@import 'normalize';
+
+@import 'components/header';
+@import 'components/post';
+
+body {
+	background: $white;
+	font-family: 'Slabo 27px', serif;
+}

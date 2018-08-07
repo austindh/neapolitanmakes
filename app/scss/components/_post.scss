@@ -1,0 +1,18 @@
+@import '../colors';
+
+.post {
+    background: $white;
+    color: $black;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 30px;
+
+    img {
+        max-width: 500px;
+        height: auto;
+    }
+
+    hr {
+        width: 100%;
+    }
+}
