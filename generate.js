@@ -82,7 +82,7 @@ async function main() {
 
 	// Create html files
 	for (let post of posts) {
-		const { filePath, shortUrl, path, dateString, title, next, prev } = post;
+		const { filePath, shortUrl, path, dateString, title, next, prev, date } = post;
 
 		const markdownText = (await fse.readFile(path)).toString();
 		
@@ -105,7 +105,7 @@ async function main() {
 		const tree = markdown.parse(markdownText);
 		updateImages(tree);
 		const html = markdown.renderJsonML(markdown.toHTMLTree(tree));
-		const postHtml = getPostHtml(html, { title, next, prev });
+		const postHtml = getPostHtml(html, { title, next, prev, date });
 		const pageHtml = getPageHtml(postHtml);
 
 		await fse.writeFile(`${filePath}${shortUrl}.html`, pageHtml);

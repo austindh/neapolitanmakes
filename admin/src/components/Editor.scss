@@ -1,0 +1,28 @@
+#editor {
+	height: 100%;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+.header {
+	height: 50px;
+}
+
+.main {
+	flex-grow: 1;
+	display: flex;
+	
+	textarea {
+		width: 50%;
+		resize: horizontal;
+	}
+
+	.post {
+		border: solid 1px gray;
+		padding: 0 15px;
+		overflow: auto;
+		flex-grow: 1;
+	}
+}

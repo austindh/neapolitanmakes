@@ -1,0 +1,22 @@
+#admin {
+	height: 100%;
+    padding: 20px;
+	box-sizing: border-box;
+	display: flex;
+    flex-direction: column;
+}
+
+button {
+	width: 100px;
+}
+
+.posts {
+	margin-top: 20px;
+    border: solid 1px gray;
+	flex-grow: 1;
+	padding: 10px;
+
+	td {
+		text-align: center;
+	}
+}

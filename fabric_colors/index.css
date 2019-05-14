@@ -1,0 +1,29 @@
+body {
+	display: flex;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+	display: flex;
+	margin-bottom: 20px;
+}
+
+.container canvas {
+	border: solid 1px;
+	height: 400px;
+}
+
+#swatches {
+    display: flex;
+    justify-content: center;
+}
+
+.swatch {
+    height: 100px;
+    width: 100px;
+    display: inline-block;
+	margin: 0 10px;
+	border: solid 1px black;
+}
