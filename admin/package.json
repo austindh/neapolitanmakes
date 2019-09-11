@@ -11,7 +11,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "babel": "babel generate-blog/components -d generate-blog/build --presets=@babel/preset-react,@babel/preset-env",
+    "css": "node-sass src/Blog.scss generate-blog/build/index.css"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -28,5 +30,12 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.4",
+    "@babel/preset-env": "^7.4.4",
+    "@babel/preset-react": "^7.0.0",
+    "node-sass": "^4.12.0"
   }
 }

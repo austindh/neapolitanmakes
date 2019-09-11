@@ -4,11 +4,24 @@ const path = require('path');
 const fse = require('fs-extra');
 const { markdown } = require('markdown');
 
-const { getPageHtml } = require('../../build/js/Page');
-const { getPostHtml } = require('../../build/js/Post');
+const { getPageHtml } = require('./build/Page');
+const { getPostHtml } = require('./build/Post');
 
 const DOCS_DIR = path.resolve(__dirname, '../../docs');
-const ADMIN_DIR = path.resolve(__dirname, '../../admin');
+const ADMIN_DIR = path.resolve(__dirname, '../../admin_old');
+
+// Empty out docs folder
+const clearDocsFolder = () => {
+	return new Promise((resolve, reject) => {
+		fse.emptyDir(DOCS_DIR, err => {
+			if (err) {
+				reject(err);
+			} else {
+				resolve();
+			}
+		})
+	});
+}
 
 
 module.exports = {
@@ -117,3 +130,6 @@ module.exports = {
 	}
 
 };
+
+clearDocsFolder();
+module.exports.build();

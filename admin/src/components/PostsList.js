@@ -40,15 +40,15 @@ export default class Editor extends React.Component {
 
 	render() {
 
-		const postList = this.state.posts.map(p => {
+		const postList = this.state.posts.map((p, i) => {
 			return (
-				<tr>
+				<tr key={i}>
 					<td>
 						<Link to={{
 							pathname: '/editor',
 							state: { post: p }
 						}}>
-							<a>{p.title}</a>
+							{p.title}
 						</Link>
 					</td>
 					<td>{p.date}</td>
@@ -74,7 +74,7 @@ export default class Editor extends React.Component {
 				<button>
 					<a href="/site">Preview Site</a>
 				</button>
-				<table class="posts">
+				<table className="posts">
 					<thead>
 						<tr>
 							<th>Title</th>

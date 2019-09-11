@@ -1,0 +1,43 @@
+@import '../../colors';
+
+#header {
+	background: $black;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    padding: 0 28px;
+    font-size: 2.4em;
+    color: $white;
+
+    #nea {
+        color: #ffabb9;
+    }
+
+    #makes {
+        color: #dcbe95;
+    }
+}
+
+#tabs {
+    display: flex;
+    padding: 0px 30px;
+    background: $black;
+    color: $white;
+    font-size: 1.2em;
+
+    .tab {
+        padding: 10px;
+        cursor: pointer;
+        margin-right: 2px;
+
+        &.active {
+            background: $white;
+            color: $black;
+        }
+
+        &:not(.active):hover {
+            background: #ffabb9;
+            color: $black;
+        }
+    }
+}

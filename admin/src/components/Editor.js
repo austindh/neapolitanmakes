@@ -162,8 +162,8 @@ export default class Editor extends React.Component {
 					<button className="" onClick={this.delete}>Delete</button>
 				</div>
 				<div className="info">
-					<input type="text" value={title} onChange={this.onTitleChange}></input>
-					<input type="text" value={textDate} onChange={this.onDateChange}></input>
+					<input type="text" value={title || ''} onChange={this.onTitleChange}></input>
+					<input type="text" value={textDate || ''} onChange={this.onDateChange}></input>
 					<span>{date}</span>
 				</div>
 				<div className="main">

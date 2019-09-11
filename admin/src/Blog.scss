@@ -1,0 +1,11 @@
+@import 'colors';
+
+@import 'normalize';
+
+@import 'components/blog/header';
+@import 'components/blog/post';
+
+body {
+	background: $white;
+	font-family: 'Montserrat 27px', serif;
+}
