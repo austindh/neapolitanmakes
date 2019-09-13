@@ -113,8 +113,10 @@ export default class Editor extends React.Component {
 		const reader = new FileReader();
 		reader.onloadend = () => {
 			const data = reader.result.split(",", 2)[1];
+			console.log('file', file);
 			axios.post('/images', { imageData: data, filename: file.name }).then(res => {
-				this.addImage(`/temp/${file.name}`)
+				console.log('res', res);
+				this.addImage(`/img/${res.data.path}`)
 			});
 		};
 		reader.readAsDataURL(file);
