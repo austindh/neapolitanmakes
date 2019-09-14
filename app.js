@@ -12,8 +12,8 @@ app.listen(PORT, () => {
 const bodyParser = require( 'body-parser' );
 app.use( bodyParser.json({ limit: '50mb' }) );
 
-app.use('/admin', express.static('admin'));
 app.use('/', express.static('docs'));
+app.use('/admin', express.static('admin/public'));
 // app.use('/img', express.static('doc')); // temporary images
 
 app.use('/posts', require('./admin/routes/posts'));

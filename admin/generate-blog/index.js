@@ -8,26 +8,23 @@ const { getPageHtml } = require('./build/Page');
 const { getPostHtml } = require('./build/Post');
 
 const DOCS_DIR = path.resolve(__dirname, '../../docs');
+const cssFile = path.resolve(__dirname, 'build/index.css');
 const ADMIN_DIR = path.resolve(__dirname, '../../admin_old');
 
-// Empty out docs folder
-const clearDocsFolder = () => {
-	return new Promise((resolve, reject) => {
-		fse.emptyDir(DOCS_DIR, err => {
-			if (err) {
-				reject(err);
-			} else {
-				resolve();
-			}
-		})
-	});
+// Empty out docs folder (except for images)
+const clearDocsFolder = async () => {
+
+	const files = await fse.readdir(DOCS_DIR);
+	const pathsToDelete = files.filter(f => f !== 'img');
+	for (let p of pathsToDelete) {
+		await fse.remove(path.join(DOCS_DIR, p));
+	}
 }
 
 
 module.exports = {
 
 	async build() {
-
 		let posts = await db.getPosts();
 		
 		// newest first
@@ -58,59 +55,53 @@ module.exports = {
 		// console.log( 'posts:', posts );
 
 		// Create proper folders for img folder and posts
-		await fse.ensureDir(path.join(DOCS_DIR, 'imgaa'));
+		// await fse.ensureDir(path.join(DOCS_DIR, 'imgaa'));
 		const createFolders = posts.map(p => fse.ensureDir(path.join(DOCS_DIR, p.htmlPath)));
 		await Promise.all(createFolders);
+
+		// Copy over css
+		const cssDir = path.join(DOCS_DIR, 'css');
+		await fse.ensureDir(cssDir);
+		await fse.copyFile(cssFile, path.join(cssDir, 'style.css'));
 		
 		// TODO delete previous contents of docs
 
-		// Copy over images from temp folder to images folder
-		// TODO future extra processing here
-		const adminImages = path.join(ADMIN_DIR, 'temp');
-		const siteImages = path.join(DOCS_DIR, 'img');
-		await fse.copy(adminImages, siteImages);
+		// // Copy over images from temp folder to images folder
+		// // TODO future extra processing here
+		// const adminImages = path.join(ADMIN_DIR, 'temp');
+		// const siteImages = path.join(DOCS_DIR, 'img');
+		// await fse.copy(adminImages, siteImages);
 
 		// Create html files
 		let first = true;
 		posts = [posts[0], ...posts]; // duplicate first post for index
 		for (let post of posts) {
 			let { title, next, prev, date } = post;
-			// TODO temp figure this out
-			if (next) {
-				next = `../..${next}`;
-			}
-			if (prev) {
-				if (first) {
-					prev = `../site${prev}`;
-				} else {
-					prev = `../..${prev}`;
-				}
-			}
 
 			date = new Date(date);
 			const markdownText = post.body || '';
 			
-			// Update image urls to replace 'temp' with 'img'
-			// TODO change admin 'temp' dir to be named 'img' to make this unnecessary
-			const updateImages = entry => {
-				if (entry[0] === 'img') {
-					const data = entry[1];
-					// console.log( 'data.href:', data );
-					if (data.href && data.href.replace) {
-						data.href = data.href.replace('temp', 'site/img');
-						// console.log( 'data.href:', data.href );
-					}
-				}
+			// // Update image urls to replace 'temp' with 'img'
+			// // TODO change admin 'temp' dir to be named 'img' to make this unnecessary
+			// const updateImages = entry => {
+			// 	if (entry[0] === 'img') {
+			// 		const data = entry[1];
+			// 		console.log( 'data.href:', data );
+			// 		if (data.href && data.href.replace) {
+			// 			data.href = data.href.replace('temp', 'site/img');
+			// 			console.log( 'data.href:', data.href );
+			// 		}
+			// 	}
 
-				entry.forEach(e => {
-					if (Array.isArray(e)) {
-						updateImages(e);
-					}
-				});
-			};
+			// 	entry.forEach(e => {
+			// 		if (Array.isArray(e)) {
+			// 			updateImages(e);
+			// 		}
+			// 	});
+			// };
 			
 			const tree = markdown.parse(markdownText);
-			updateImages(tree);
+			// updateImages(tree);
 			const html = markdown.renderJsonML(markdown.toHTMLTree(tree));
 			const postHtml = getPostHtml(html, { title, next, prev, date });
 			const pageHtml = getPageHtml(postHtml, first);
@@ -120,7 +111,8 @@ module.exports = {
 			// newest post is new index.html
 			if (first) {
 				first = false;
-				await fse.writeFile(path.join(DOCS_DIR, 'index.html'), pageHtml);
+				const indexPath = path.join(DOCS_DIR, 'index.html');
+				await fse.writeFile(indexPath, pageHtml);
 			}
 
 		}
@@ -131,5 +123,10 @@ module.exports = {
 
 };
 
-clearDocsFolder();
-module.exports.build();
+const main = async () => {
+	await clearDocsFolder();
+	console.log('cleared');
+	module.exports.build();
+	console.log('built');
+}
+main();

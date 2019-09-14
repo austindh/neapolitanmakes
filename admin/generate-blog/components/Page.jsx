@@ -7,8 +7,9 @@ import Header from './Header';
 
 export const getPageHtml = (postHtml, isFirst = false) => {
 	
-	const cssPrefix = isFirst ? '' : '../../';
-	const cssUrl = cssPrefix + 'css/style.css'; 
+	// const cssPrefix = isFirst ? '' : '../../';
+	// const cssUrl = cssPrefix + 'css/style.css'; 
+	const cssUrl = '/css/style.css'; 
 	
 	return renderToStaticMarkup(
 		<html>

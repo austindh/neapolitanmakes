@@ -67,12 +67,13 @@ export default class Editor extends React.Component {
 			) 
 		}
 
+		// ATODO make preview site build site before opening up preview
 		return (
 			<div id="admin">
 				<h1>Admin</h1>
 				<button onClick={this.newPost}>New Post</button>
 				<button>
-					<a href="/site">Preview Site</a>
+					<a href="http://localhost:8082">Preview Site</a>
 				</button>
 				<table className="posts">
 					<thead>
