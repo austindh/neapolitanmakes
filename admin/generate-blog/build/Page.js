@@ -18,8 +18,9 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 // Main page
 var getPageHtml = function getPageHtml(postHtml) {
   var isFirst = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
-  var cssPrefix = isFirst ? '' : '../../';
-  var cssUrl = cssPrefix + 'css/style.css';
+  // const cssPrefix = isFirst ? '' : '../../';
+  // const cssUrl = cssPrefix + 'css/style.css'; 
+  var cssUrl = '/css/style.css';
   return (0, _server.renderToStaticMarkup)(_react.default.createElement("html", null, _react.default.createElement("head", null, _react.default.createElement("meta", {
     name: "viewport",
     content: "width=device-width, initial-scale=1.0"

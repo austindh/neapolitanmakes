@@ -125,8 +125,7 @@ module.exports = {
 
 const main = async () => {
 	await clearDocsFolder();
-	console.log('cleared');
 	module.exports.build();
-	console.log('built');
+	console.log('site built');
 }
 main();
