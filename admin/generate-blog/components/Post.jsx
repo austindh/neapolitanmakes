@@ -5,7 +5,6 @@ import { renderToStaticMarkup } from 'react-dom/server';
 export const getPostHtml = (html, props) => {
 
 	const { title, prev, next, date } = props;
-	// console.log( 'props:', props );
 
 	const nextLink = next ? <a href={next}>Newer</a> : '';
 	const prevLink = prev ? <a href={prev}>Older</a> : '';

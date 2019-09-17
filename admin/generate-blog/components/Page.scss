@@ -1,0 +1,24 @@
+#body {
+	display: flex;
+}
+
+#sidebar {
+	width: 200px;
+    padding: 20px 0px;
+    margin: 20px 0;
+    margin-right: 30px;
+
+	.pic {
+		display: flex;
+		justify-content: center;
+	}
+
+	img {
+		width: 150px;
+		height: 150px;
+		object-fit: cover;
+		border-radius: 150px;
+		object-position: -8px 0px;
+		background: #b6c0a8;
+	}
+}

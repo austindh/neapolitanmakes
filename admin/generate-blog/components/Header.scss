@@ -1,0 +1,131 @@
+@import '../scss/colors';
+
+$socialIconSize: 35px;
+
+#header {
+	background: $white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 28px;
+    color: $black;
+    margin: 20px 0;
+    margin-bottom: 10px;
+    
+    > div {
+        width: 100%;
+    }
+    
+    .logo {
+        .main {
+            font-size: 45px;
+        }
+
+        .sub-title {
+            font-size: 18px;
+            font-family: 'Homemade Apple';
+            font-weight: 100;
+            margin-left: 4px;
+            color: #969696;
+        }
+    }
+
+    #nea {
+        color: $pink;
+    }
+
+    #politan {
+        color: black;
+    }
+
+    #makes {
+        color: $brown;
+    }
+
+    .social {
+        display: flex;
+        justify-content: flex-end;
+        position: absolute;
+        right: 30px;
+        top: 30px;
+
+        $marLeft: 6px;
+
+        .wrapper {
+            background: $pink;
+            height: $socialIconSize;
+            width: $socialIconSize;
+            border-radius: $socialIconSize;
+            margin-left: $marLeft;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wrapper2 {
+            background: $brown;
+        }
+
+        #instagram {
+            height: $socialIconSize - 13px;
+        }
+
+        > img {
+            height: $socialIconSize;
+            margin-left: $marLeft;
+        }
+
+        .wrapper, > img {
+            cursor: pointer;
+        }
+    }
+}
+
+#tabs {
+    position: sticky;
+    top: 0px;
+    background: $white;
+    color: $black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px 0;
+
+    .container {
+        display: flex;
+        padding: 0px 30px;
+        font-size: 1.1em;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .tab {
+        padding: 6px 10px;
+        cursor: pointer;
+        flex-grow: 1;
+        text-align: center;
+        margin: 0 5px;
+        transition: background 200ms linear;
+
+        &.active {
+            background: $white;
+            color: $black;
+        }
+
+        &:not(.active):hover {
+            background: $pink;
+            color: $white;
+        }
+    }
+
+    .divider {
+        width: 2px;
+        height: 35px;
+        background: $black;
+
+        &:first-child, &:last-child {
+            opacity: 0;
+            width: 50px;
+        }
+    }
+}

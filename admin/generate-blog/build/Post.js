@@ -17,8 +17,7 @@ var getPostHtml = function getPostHtml(html, props) {
   var title = props.title,
       prev = props.prev,
       next = props.next,
-      date = props.date; // console.log( 'props:', props );
-
+      date = props.date;
   var nextLink = next ? _react.default.createElement("a", {
     href: next
   }, "Newer") : '';

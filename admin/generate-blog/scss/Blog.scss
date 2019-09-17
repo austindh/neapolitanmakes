@@ -1,0 +1,13 @@
+@import 'colors';
+
+@import 'normalize';
+
+body {
+	background: $white;
+	font-family: Montserrat, sans-serif;
+}
+
+@import '../components/Header.scss';
+@import '../components/Post.scss';
+@import '../components/Page.scss';
+

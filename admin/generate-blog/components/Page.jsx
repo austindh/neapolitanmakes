@@ -7,20 +7,27 @@ import Header from './Header';
 
 export const getPageHtml = (postHtml, isFirst = false) => {
 	
-	// const cssPrefix = isFirst ? '' : '../../';
-	// const cssUrl = cssPrefix + 'css/style.css'; 
 	const cssUrl = '/css/style.css'; 
 	
 	return renderToStaticMarkup(
 		<html>
 			<head>
 				<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-				<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" />
+				<link href="https://fonts.googleapis.com/css?family=Montserrat|Homemade+Apple" rel="stylesheet" />
 				<link href={cssUrl} rel="stylesheet" />
+				<link rel="shortcut icon" href="icons/favicon.ico" />
+				<title>NeapolitanMakes</title>
 			</head>
 			<body>
 				<Header />
-				{ ReactHtmlParser(postHtml) }
+				<div id="body">
+					{ ReactHtmlParser(postHtml) }
+					<div id="sidebar">
+						<div className="pic">
+							<img alt="Nea Hughes" src="/img/nea.jpg"></img>
+						</div>
+					</div>
+				</div>		
 			</body>
 		</html>
 	);

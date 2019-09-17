@@ -16,7 +16,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "build:babel": "babel generate-blog/components -d generate-blog/build --presets=@babel/preset-react,@babel/preset-env",
-    "build:css": "node-sass src/Blog.scss generate-blog/build/index.css",
+    "build:css": "node-sass generate-blog/scss/Blog.scss generate-blog/build/index.css",
     "build:js": "node generate-blog/index.js",
     "build:blog": "npm run build:babel && npm run build:css && npm run build:js"
   },

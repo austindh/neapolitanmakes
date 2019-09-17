@@ -1,0 +1,20 @@
+@import '../scss/colors';
+
+.post {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 30px;
+    flex-grow: 1;
+    background: white;
+    margin: 20px 30px;
+    box-shadow: 2px 2px 4px 1px #84848452;
+
+    img {
+        max-width: 500px;
+        height: auto;
+    }
+
+    hr {
+        width: 100%;
+    }
+}

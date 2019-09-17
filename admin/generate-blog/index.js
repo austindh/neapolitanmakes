@@ -8,8 +8,8 @@ const { getPageHtml } = require('./build/Page');
 const { getPostHtml } = require('./build/Post');
 
 const DOCS_DIR = path.resolve(__dirname, '../../docs');
+const ICONS_DIR = path.resolve(__dirname, 'icons');
 const cssFile = path.resolve(__dirname, 'build/index.css');
-const ADMIN_DIR = path.resolve(__dirname, '../../admin_old');
 
 // Empty out docs folder (except for images)
 const clearDocsFolder = async () => {
@@ -52,26 +52,19 @@ module.exports = {
 			}
 		});
 		
-		// console.log( 'posts:', posts );
-
-		// Create proper folders for img folder and posts
-		// await fse.ensureDir(path.join(DOCS_DIR, 'imgaa'));
+		// Create proper folders for posts
 		const createFolders = posts.map(p => fse.ensureDir(path.join(DOCS_DIR, p.htmlPath)));
 		await Promise.all(createFolders);
+
+		// ATODO probably just put icons in DOCS folder to start with, since we don't need them duplicated
+		// Copy over icons
+		await fse.copy(ICONS_DIR, path.join(DOCS_DIR, 'icons'));
 
 		// Copy over css
 		const cssDir = path.join(DOCS_DIR, 'css');
 		await fse.ensureDir(cssDir);
 		await fse.copyFile(cssFile, path.join(cssDir, 'style.css'));
-		
-		// TODO delete previous contents of docs
-
-		// // Copy over images from temp folder to images folder
-		// // TODO future extra processing here
-		// const adminImages = path.join(ADMIN_DIR, 'temp');
-		// const siteImages = path.join(DOCS_DIR, 'img');
-		// await fse.copy(adminImages, siteImages);
-
+	
 		// Create html files
 		let first = true;
 		posts = [posts[0], ...posts]; // duplicate first post for index
@@ -80,25 +73,6 @@ module.exports = {
 
 			date = new Date(date);
 			const markdownText = post.body || '';
-			
-			// // Update image urls to replace 'temp' with 'img'
-			// // TODO change admin 'temp' dir to be named 'img' to make this unnecessary
-			// const updateImages = entry => {
-			// 	if (entry[0] === 'img') {
-			// 		const data = entry[1];
-			// 		console.log( 'data.href:', data );
-			// 		if (data.href && data.href.replace) {
-			// 			data.href = data.href.replace('temp', 'site/img');
-			// 			console.log( 'data.href:', data.href );
-			// 		}
-			// 	}
-
-			// 	entry.forEach(e => {
-			// 		if (Array.isArray(e)) {
-			// 			updateImages(e);
-			// 		}
-			// 	});
-			// };
 			
 			const tree = markdown.parse(markdownText);
 			// updateImages(tree);
