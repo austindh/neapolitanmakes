@@ -14,8 +14,9 @@ const cssFile = path.resolve(__dirname, 'build/index.css');
 // Empty out docs folder (except for images)
 const clearDocsFolder = async () => {
 
+	const foldersToKeep = new Set(['img', 'icons']);
 	const files = await fse.readdir(DOCS_DIR);
-	const pathsToDelete = files.filter(f => f !== 'img');
+	const pathsToDelete = files.filter(f => !foldersToKeep.has(f));
 	for (let p of pathsToDelete) {
 		await fse.remove(path.join(DOCS_DIR, p));
 	}
@@ -55,10 +56,6 @@ module.exports = {
 		// Create proper folders for posts
 		const createFolders = posts.map(p => fse.ensureDir(path.join(DOCS_DIR, p.htmlPath)));
 		await Promise.all(createFolders);
-
-		// ATODO probably just put icons in DOCS folder to start with, since we don't need them duplicated
-		// Copy over icons
-		await fse.copy(ICONS_DIR, path.join(DOCS_DIR, 'icons'));
 
 		// Copy over css
 		const cssDir = path.join(DOCS_DIR, 'css');
