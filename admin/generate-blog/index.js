@@ -14,7 +14,7 @@ const cssFile = path.resolve(__dirname, 'build/index.css');
 // Empty out docs folder (except for images)
 const clearDocsFolder = async () => {
 
-	const foldersToKeep = new Set(['img', 'icons']);
+	const foldersToKeep = new Set(['img', 'icons', 'js']);
 	const files = await fse.readdir(DOCS_DIR);
 	const pathsToDelete = files.filter(f => !foldersToKeep.has(f));
 	for (let p of pathsToDelete) {

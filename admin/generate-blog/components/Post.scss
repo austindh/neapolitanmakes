@@ -1,20 +1,40 @@
 @import '../scss/colors';
 
 .post {
+    max-width: 800px;
     display: flex;
     flex-direction: column;
     padding: 10px 30px;
     flex-grow: 1;
-    background: white;
     margin: 20px 30px;
-    box-shadow: 2px 2px 4px 1px #84848452;
+    line-height: 1.8em;
+    margin-bottom: 50px;
 
     img {
-        max-width: 500px;
-        height: auto;
+        max-width: 100%;
+        max-height: 500px;
+        margin-left: 50%;
+        transform: translateX(-50%);
     }
 
     hr {
         width: 100%;
+    }
+
+    .links {
+        display: flex;
+        justify-content: space-between;
+
+        a {
+            color: $gray;
+            text-decoration: none;
+            transition: all 0.2s;
+            margin: 20px 0;
+
+            &:hover {
+                color: $black;
+                text-decoration: underline;
+            }
+        }
     }
 }

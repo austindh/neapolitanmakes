@@ -2,23 +2,22 @@
 	display: flex;
 }
 
-#sidebar {
-	width: 200px;
-    padding: 20px 0px;
-    margin: 20px 0;
-    margin-right: 30px;
+#backdrop {
+	position: absolute;
+	opacity: 0;
+	transition: opacity 0.5s;
+	background: #6e6e6e80;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
 
-	.pic {
-		display: flex;
-		justify-content: center;
+	&.closed {
+		z-index: -1;
 	}
-
-	img {
-		width: 150px;
-		height: 150px;
-		object-fit: cover;
-		border-radius: 150px;
-		object-position: -8px 0px;
-		background: #b6c0a8;
+	
+	&.open {
+		z-index: 2;
+		opacity: 1;
 	}
 }

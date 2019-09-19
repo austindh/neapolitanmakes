@@ -6,16 +6,18 @@ export const getPostHtml = (html, props) => {
 
 	const { title, prev, next, date } = props;
 
-	const nextLink = next ? <a href={next}>Newer</a> : '';
-	const prevLink = prev ? <a href={prev}>Older</a> : '';
+	const nextLink = next ? <a href={next}>{'< Newer Post'}</a> : <span></span>;
+	const prevLink = prev ? <a href={prev}>{'Older Post >'}</a> : <span></span>;
 
 	return renderToStaticMarkup(
-		<div className="post">
+		<div className="post card">
 			<h1>{ title }</h1>
 			<div className="date">{date.toLocaleDateString('en')}</div>
 			{ ReactHtmlParser(html) }
-			{ nextLink }
-			{ prevLink }
+			<div className="links">
+				{ nextLink }
+				{ prevLink }
+			</div>
 		</div>
 	);
 };

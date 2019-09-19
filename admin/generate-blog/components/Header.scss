@@ -1,4 +1,5 @@
 @import '../scss/colors';
+@import '../scss/mixins';
 
 $socialIconSize: 35px;
 
@@ -19,6 +20,10 @@ $socialIconSize: 35px;
     .logo {
         .main {
             font-size: 45px;
+
+            @include narrow {
+                font-size: 36px;
+            }
         }
 
         .sub-title {
@@ -26,7 +31,11 @@ $socialIconSize: 35px;
             font-family: 'Homemade Apple';
             font-weight: 100;
             margin-left: 4px;
-            color: #969696;
+            color: $gray;
+
+            @include narrow {
+                font-size: 14px;
+            }
         }
     }
 
@@ -42,42 +51,49 @@ $socialIconSize: 35px;
         color: $brown;
     }
 
-    .social {
-        display: flex;
-        justify-content: flex-end;
+    .nea-social {
         position: absolute;
         right: 30px;
         top: 28px;
+    }
+}
 
-        $marLeft: 6px;
+.nea-social {
+    display: flex;
+    justify-content: flex-end;
 
-        .wrapper {
-            background: $pink;
-            height: $socialIconSize;
-            width: $socialIconSize;
-            border-radius: $socialIconSize;
-            margin-left: $marLeft;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
+    @include mediumWide {
+        display: none;
+    }
 
-        .wrapper2 {
-            background: $brown;
-        }
+    $marLeft: 6px;
 
-        #instagram {
-            height: $socialIconSize - 13px;
-        }
+    .wrapper {
+        background: $pink;
+        height: $socialIconSize;
+        width: $socialIconSize;
+        border-radius: $socialIconSize;
+        margin-left: $marLeft;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
-        > img {
-            height: $socialIconSize;
-            margin-left: $marLeft;
-        }
+    .wrapper2 {
+        background: $brown;
+    }
 
-        .wrapper, > img {
-            cursor: pointer;
-        }
+    #instagram {
+        height: $socialIconSize - 13px;
+    }
+
+    > img {
+        height: $socialIconSize;
+        margin-left: $marLeft;
+    }
+
+    .wrapper, > img {
+        cursor: pointer;
     }
 }
 
@@ -89,7 +105,13 @@ $socialIconSize: 35px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 20px 0;
+    margin: 20px 0;
+    padding: 10px 0;
+    z-index: 2;
+
+    @include narrow {
+        display: none;
+    }
 
     .container {
         display: flex;
@@ -99,33 +121,86 @@ $socialIconSize: 35px;
         align-items: center;
     }
 
-    .tab {
-        padding: 6px 10px;
-        cursor: pointer;
-        flex-grow: 1;
-        text-align: center;
-        margin: 0 5px;
-        transition: background 200ms linear;
-
-        &.active {
-            background: $white;
-            color: $black;
-        }
-
-        &:not(.active):hover {
-            background: $pink;
-            color: $white;
-        }
-    }
-
+    
     .divider {
         width: 2px;
         height: 35px;
         background: $black;
-
+        
         &:first-child, &:last-child {
             opacity: 0;
-            width: 50px;
+            // width: 50px;
+            flex-grow: 1;
+        }
+    }
+}
+
+.tab {
+    padding: 6px 10px;
+    cursor: pointer;
+    flex-grow: 1;
+    text-align: center;
+    margin: 0 5px;
+    transition: background 200ms linear;
+
+    &.active {
+        background: $white;
+        color: $black;
+    }
+
+    &:not(.active):hover {
+        background: $pink;
+        color: $white;
+    }
+}
+
+#hamburger {
+    display: none;
+    z-index: 4;
+    
+    @include narrow {
+        position: absolute;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        justify-content: center;
+        align-items: center;
+        box-sizing: border-box;
+        background: #fdfdfd;
+        width: 40px;
+        height: 40px;
+        border-radius: 30px;
+        box-shadow: 1px 1px 3px 1px #00000059;
+        background: $pink;
+        top: 26px;
+        right: 30px;
+    }
+
+    div {
+        background: white;
+        height: 2px;
+        width: 100%;
+        transition: all 0.5s cubic-bezier(0.65, 0.03, 0.4, 1.03);
+
+        &:not(:last-child) {
+            margin-bottom: 4px;
+        }
+    }
+
+    &.open {
+        .top {
+            transform: translate(-4px, 12px) rotate(45deg);
+            width: 15px;
+        }
+
+        .middle {
+            transform: rotate(180deg);
+        }
+
+        .bottom {
+            transform: translate(-4px, -12px) rotate(-225deg);
+            width: 15px;
         }
     }
 }

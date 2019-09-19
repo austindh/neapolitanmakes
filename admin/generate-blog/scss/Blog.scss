@@ -1,13 +1,23 @@
-@import 'colors';
-
 @import 'normalize';
+@import 'colors';
 
 body {
 	background: $white;
 	font-family: Montserrat, sans-serif;
 }
 
+.card {
+	background: white;
+    box-shadow: 2px 2px 4px 1px #84848452;
+}
+
+.spacer {
+	flex-grow: 1;
+}
+
 @import '../components/Header.scss';
 @import '../components/Post.scss';
 @import '../components/Page.scss';
+@import '../components/Sidebar.scss';
+@import '../components/Sidenav.scss';
 

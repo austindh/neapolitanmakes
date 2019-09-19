@@ -1,7 +1,7 @@
 // Main page
 import React from 'react';
 
-const tabNames = [
+export const tabNames = [
 	'Sewing',
 	'Food',
 	'Crafts',
@@ -16,6 +16,19 @@ tabNames.forEach((tabName, i) => {
 	tabs.push(<div className="divider"></div>)
 });
 
+export const socialIcons = (
+<div className="nea-social">
+	<img alt="pinterest" src="/icons/pinterest original.svg"></img>
+	<img alt="facebook" src="/icons/facebook original.svg"></img>
+	<div className="wrapper">
+		<img id="instagram" alt="instagram" src="/icons/instagram.svg"></img>
+	</div>
+	<div className="wrapper wrapper2">
+		<img id="instagram" alt="instagram" src="/icons/instagram.svg"></img>
+	</div>
+</div>
+);
+
 const Header = props => {
 	return(
 		[
@@ -28,21 +41,17 @@ const Header = props => {
 					</div>
 					<div className="sub-title">Flavors of Creativity</div>
 				</div>
-				<div className="social">
-					<img alt="pinterest" src="/icons/pinterest original.svg"></img>
-					<img alt="facebook" src="/icons/facebook original.svg"></img>
-					<div className="wrapper">
-						<img id="instagram" alt="instagram" src="/icons/instagram.svg"></img>
-					</div>
-					<div className="wrapper wrapper2">
-						<img id="instagram" alt="instagram" src="/icons/instagram.svg"></img>
-					</div>
-				</div>
+				{ socialIcons }
 			</div>,
 			<div id="tabs">
 				<div className="container">
 					{tabs}
 				</div>
+			</div>,
+			<div id="hamburger">
+				<div className="top"></div>
+				<div className="middle"></div>
+				<div className="bottom"></div>
 			</div>
 		]
 	);
