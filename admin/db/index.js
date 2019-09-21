@@ -94,6 +94,29 @@ module.exports = {
 
 	async deletePost(postId) {
 		return await run('delete from posts where id = ?', postId);
+	},
+
+	async getPages() {
+		const pages = await selectAll('select * from pages');
+		return pages;
+	},
+
+	async createPage() {
+		const title = 'Page';
+		const url = 'page';
+		
+		const newPageId = await run("insert into pages(title, url) values(?, ?)", title, url);
+		return await selectOne('select * from pages where id = ?', newPageId);
+	},
+
+	async updatePage(page) {
+		let { id, title, url, body } = page;
+		return await run('update pages set title = ?, url = ?, body = ? where id = ?',
+			title, url, body, id);
+	},
+
+	async deletePage(pageId) {
+		return await run('delete from pages where id = ?', pageId);
 	}
 
 };

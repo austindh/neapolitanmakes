@@ -17,16 +17,16 @@ tabNames.forEach((tabName, i) => {
 });
 
 export const socialIcons = (
-<div className="nea-social">
-	<img alt="pinterest" src="/icons/pinterest original.svg"></img>
-	<img alt="facebook" src="/icons/facebook original.svg"></img>
-	<div className="wrapper">
-		<img id="instagram" alt="instagram" src="/icons/instagram.svg"></img>
+	<div className="nea-social">
+		<img alt="pinterest" src="/icons/pinterest original.svg"></img>
+		<img alt="facebook" src="/icons/facebook original.svg"></img>
+		<div className="wrapper">
+			<img id="instagram" alt="instagram" src="/icons/instagram.svg"></img>
+		</div>
+		<div className="wrapper wrapper2">
+			<img id="instagram" alt="instagram" src="/icons/instagram.svg"></img>
+		</div>
 	</div>
-	<div className="wrapper wrapper2">
-		<img id="instagram" alt="instagram" src="/icons/instagram.svg"></img>
-	</div>
-</div>
 );
 
 const Header = props => {
@@ -34,11 +34,11 @@ const Header = props => {
 		[
 			<div id="header">
 				<div className="logo">
-					<div className="main">
+					<a className="main" href="/">
 						<span id="nea">NEA</span>
 						<span id="politan">POLITAN</span>
 						<span id="makes">MAKES</span>
-					</div>
+					</a>
 					<div className="sub-title">Flavors of Creativity</div>
 				</div>
 				{ socialIcons }

@@ -319,20 +319,25 @@ body {
   margin-bottom: 10px; }
   #header > div {
     width: 100%; }
-  #header .logo .main {
-    font-size: 45px; }
-    @media (max-width: 650px) {
-      #header .logo .main {
-        font-size: 36px; } }
-  #header .logo .sub-title {
-    font-size: 18px;
-    font-family: 'Homemade Apple';
-    font-weight: 100;
-    margin-left: 4px;
-    color: #969696; }
-    @media (max-width: 650px) {
-      #header .logo .sub-title {
-        font-size: 14px; } }
+  #header .logo {
+    z-index: 2; }
+    #header .logo .main {
+      display: inline-block;
+      font-size: 45px;
+      cursor: pointer;
+      text-decoration: none; }
+      @media (max-width: 650px) {
+        #header .logo .main {
+          font-size: 36px; } }
+    #header .logo .sub-title {
+      font-size: 18px;
+      font-family: 'Homemade Apple';
+      font-weight: 100;
+      margin-left: 4px;
+      color: #969696; }
+      @media (max-width: 650px) {
+        #header .logo .sub-title {
+          font-size: 14px; } }
   #header #nea {
     color: #ff7289; }
   #header #politan {
@@ -449,6 +454,7 @@ body {
     width: 15px; }
 
 .post {
+  min-width: 500px;
   max-width: 800px;
   display: flex;
   flex-direction: column;
@@ -457,6 +463,9 @@ body {
   margin: 20px 30px;
   line-height: 1.8em;
   margin-bottom: 50px; }
+  @media (max-width: 900px) {
+    .post {
+      min-width: unset; } }
   .post img {
     max-width: 100%;
     max-height: 500px;

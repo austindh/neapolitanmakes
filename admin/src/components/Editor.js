@@ -76,7 +76,6 @@ export default class Editor extends React.Component {
 		axios.post('/posts', { post }).then(res => {
 			Object.assign(savedPost, post);
 			this.setState({ savedPost });
-			console.log( 'res:', res );
 		});
 	}
 
@@ -90,7 +89,6 @@ export default class Editor extends React.Component {
 
 		axios.delete('/posts/' + post.id).then(res => {
 			this.setState({ postDeleted: true });
-			console.log( 'res:', res );
 		});
 	}
 
@@ -113,9 +111,7 @@ export default class Editor extends React.Component {
 		const reader = new FileReader();
 		reader.onloadend = () => {
 			const data = reader.result.split(",", 2)[1];
-			console.log('file', file);
 			axios.post('/images', { imageData: data, filename: file.name }).then(res => {
-				console.log('res', res);
 				this.addImage(`/img/${res.data.path}`)
 			});
 		};

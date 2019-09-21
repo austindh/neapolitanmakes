@@ -4,20 +4,29 @@ import { renderToStaticMarkup } from 'react-dom/server';
 
 export const getPostHtml = (html, props) => {
 
-	const { title, prev, next, date } = props;
+	const { title, prev, next, date, url } = props;
 
 	const nextLink = next ? <a href={next}>{'< Newer Post'}</a> : <span></span>;
 	const prevLink = prev ? <a href={prev}>{'Older Post >'}</a> : <span></span>;
 
-	return renderToStaticMarkup(
-		<div className="post card">
-			<h1>{ title }</h1>
-			<div className="date">{date.toLocaleDateString('en')}</div>
-			{ ReactHtmlParser(html) }
+	let postContents;
+	if (url) { // standalone page
+		postContents = ReactHtmlParser(html);
+	} else {
+		postContents = ([
+			<div className="date">{date.toLocaleDateString('en')}</div>,
+			ReactHtmlParser(html),
 			<div className="links">
 				{ nextLink }
 				{ prevLink }
 			</div>
+		]);
+	}
+
+	return renderToStaticMarkup(
+		<div className="post card">
+			<h1>{ title }</h1>
+			{ postContents }
 		</div>
 	);
 };

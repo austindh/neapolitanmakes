@@ -72,10 +72,9 @@ module.exports = {
 			const markdownText = post.body || '';
 			
 			const tree = markdown.parse(markdownText);
-			// updateImages(tree);
 			const html = markdown.renderJsonML(markdown.toHTMLTree(tree));
 			const postHtml = getPostHtml(html, { title, next, prev, date });
-			const pageHtml = getPageHtml(postHtml, first);
+			const pageHtml = getPageHtml(postHtml);
 
 			await fse.writeFile(path.join(DOCS_DIR, post.fullUrl,), pageHtml);
 			
@@ -88,8 +87,20 @@ module.exports = {
 
 		}
 
+		// Create other non-blog post pages
+		const pages = await db.getPages();
+		for (let page of pages) {
+			let { title, url, body } = page;
 
+			const markdownText = body || '';
+			const tree = markdown.parse(markdownText);
+			const html = markdown.renderJsonML(markdown.toHTMLTree(tree));
+			const postHtml = getPostHtml(html, { title, url });
+			const pageHtml = getPageHtml(postHtml);
 
+			const pageLocation = path.join(DOCS_DIR, `${url}.html`);
+			await fse.writeFile(pageLocation, pageHtml);
+		}
 	}
 
 };

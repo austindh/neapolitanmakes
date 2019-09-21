@@ -1,16 +1,80 @@
-// @import 'colors';
+@import '../generate-blog/scss/colors';
 @import 'normalize';
 // @import 'main';
 
+body {
+	background: $white;
+	font-family: Montserrat, sans-serif;
+}
 
 #admin {
-	height: 100%;
-    padding: 20px;
+	height: 100vh;
+    padding: 30px;
 	box-sizing: border-box;
 	display: flex;
-    flex-direction: column;
+	flex-direction: column;
+	
+	a {
+		text-decoration: none;
+		
+		&:hover {
+			text-decoration: underline;
+		}
+
+		&:visited {
+			color: unset;
+		}
+	}
+
+	.preview {
+		position: absolute;
+		display: flex;
+		justify-content: flex-end;
+		left: 30px;
+		right: 30px;
+
+		button {
+			background: #aceeff;
+			color: black;
+			font-weight: normal;
+		}
+	}
+}
+
+.card {
+	background: white;
+	box-shadow: 2px 2px 4px 1px #84848452;
+	margin: 20px 0px;
+	padding: 25px;
+	position: relative;
+	
+	.title {
+		font-size: 25px;
+		font-weight: bold;
+	}
+
+	.top-right {
+		position: absolute;
+		top: 20px;
+		right: 20px;
+	}
 }
 
 button {
-	width: 100px;
+	cursor: pointer;
+    min-width: 100px;
+    padding: 10px 20px;
+    background: #e2e2e2;
+    border-radius: 2px;
+    border: none;
+    font-weight: bold;
+	
+	&.primary {
+		background: $pink;
+		color: white;
+	}
+
+	&:hover {
+		box-shadow: 2px 2px 4px 1px #84848452;
+	}
 }

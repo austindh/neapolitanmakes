@@ -1,33 +1,32 @@
 const express = require( 'express' );
 const router = express.Router();
-// const builder = require('../generate-blog/index');
+
+console.log('loading');
 
 const db = require('../db');
 
 router.get( '/', async ( req, res ) => {
-	const posts = await db.getPosts();
+
+	const pages = await db.getPages();
 	
 	res.writeHead( 200, { 'Content-Type': 'application/json' });
-	res.end( JSON.stringify(posts) );
+	res.end( JSON.stringify(pages) );
 
 });
 
-// add new post
+// add new page
 router.put('/', async (req, res) => {
-	const newPost = await db.createPost();
-
-	// builder.build();
+	const newPage = await db.createPage();
+	console.log('newPage', newPage);
 
 	res.writeHead( 200, { 'Content-Type': 'application/json' });
-	res.end( JSON.stringify(newPost) );
+	res.end( JSON.stringify(newPage) );
 });
 
 // update
 router.post('/', async (req, res) => {
-	const { post } = req.body;
-	await db.updatePost(post);
-
-	// builder.build();
+	const { page } = req.body;
+	await db.updatePage(page);
 
 	res.writeHead( 200, { 'Content-Type': 'text/plain' });
 	res.end('OK');
@@ -36,9 +35,7 @@ router.post('/', async (req, res) => {
 // delete
 router.delete('/:id', async (req, res) => {
 	const { id } = req.params;
-	await db.deletePost(id);
-
-	// builder.build();
+	await db.deletePage(id);
 
 	res.writeHead( 200, { 'Content-Type': 'text/plain' });
 	res.end('OK');

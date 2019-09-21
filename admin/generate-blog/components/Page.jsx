@@ -7,7 +7,7 @@ import Header from './Header';
 import Sidebar from './Sidebar';
 import Sidenav from './Sidenav';
 
-export const getPageHtml = (postHtml, isFirst = false) => {
+export const getPageHtml = (postHtml) => {
 	
 	const cssUrl = '/css/style.css'; 
 	

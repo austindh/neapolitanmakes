@@ -14,9 +14,9 @@ app.use( bodyParser.json({ limit: '50mb' }) );
 
 app.use('/', express.static('docs'));
 app.use('/admin', express.static('admin/public'));
-// app.use('/img', express.static('doc')); // temporary images
 
 app.use('/posts', require('./admin/routes/posts'));
+app.use('/pages', require('./admin/routes/pages'));
 app.use('/images', require('./admin/routes/images'));
 
 // to use React routing
@@ -25,11 +25,6 @@ app.use( '*', function( req, res ) {
 });
 
 
-// fs.watch('admin/js', { recursive: true }, (eventType, filename) => {
-// 	buildWebpack();
-// });
-
-// fs.watch('app/scss', { recursive: true }, buildWebpack);
 
 let running = false;
 let waiting = false;

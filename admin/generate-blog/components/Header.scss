@@ -18,8 +18,13 @@ $socialIconSize: 35px;
     }
     
     .logo {
+        z-index: 2;
+
         .main {
+            display: inline-block;
             font-size: 45px;
+            cursor: pointer;
+            text-decoration: none;
 
             @include narrow {
                 font-size: 36px;

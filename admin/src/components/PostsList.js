@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-target-blank */
 import React from 'react';
 import axios from 'axios';
 import {
@@ -13,28 +14,39 @@ export default class Editor extends React.Component {
 		super(props);
 		this.state = {
 			newPost: null,
-			posts: []
+			posts: [],
+			pages: []
 		};
-
-		this.newPost = this.newPost.bind(this);
 	}
 
 	componentDidMount() {
-		this.reloadPosts();
+		this.reloadPostsAndPages();
 	}
 
-	reloadPosts() {
+	reloadPostsAndPages() {
 		axios.get('/posts').then(res => {
 			const { data: posts } = res;
 			posts.sort((a, b) => new Date(a.date) > new Date(b.date) ? -1 : 1); // newest at top
 			this.setState({ posts });
 		});
+
+		axios.get('/pages').then(res => {
+			const pages = res.data;
+			this.setState({ pages });
+		});
 	}
 
-	newPost() {
+	newPost = () => {
 		axios.put('/posts').then(res => {
 			const post = res.data;
 			this.setState({ newPost: post });
+		});
+	}
+
+	newPage = () => {
+		axios.put('/pages').then(res => {
+			const page = res.data;
+			this.setState({ newPost: page });
 		});
 	}
 
@@ -51,7 +63,23 @@ export default class Editor extends React.Component {
 							{p.title}
 						</Link>
 					</td>
-					<td>{p.date}</td>
+					<td className="date">{p.date}</td>
+				</tr>
+			);
+		});
+
+		const pageList = this.state.pages.map((p, i) => {
+			return (
+				<tr key={i}>
+					<td>
+						<Link to={{
+							pathname: '/editor',
+							state: { post: p }
+						}}>
+							{p.title}
+						</Link>
+					</td>
+					<td className="date">/{p.url}</td>
 				</tr>
 			);
 		});
@@ -70,22 +98,46 @@ export default class Editor extends React.Component {
 		// ATODO make preview site build site before opening up preview
 		return (
 			<div id="admin">
-				<h1>Admin</h1>
-				<button onClick={this.newPost}>New Post</button>
-				<button>
-					<a href="http://localhost:8082">Preview Site</a>
-				</button>
-				<table className="posts">
-					<thead>
-						<tr>
-							<th>Title</th>
-							<th>Date</th>
-						</tr>
-					</thead>
-					<tbody>
-						{postList}
-					</tbody>
-				</table>
+				<h1>NeapolitanMakes Admin</h1>
+				<div className="preview">
+					<button className="primary">
+						<a href="http://localhost:8082" target="_blank">Preview Site</a>
+					</button>
+				</div>
+				<div className="card">
+					<div className="title">Blog Posts</div>
+					<div class="top-right">
+						<button className="primary" onClick={this.newPost}>New Post</button>
+					</div>
+					<table className="posts">
+						<thead>
+							<tr>
+								<th className="table-title">Title</th>
+								<th>Date</th>
+							</tr>
+						</thead>
+						<tbody>
+							{postList}
+						</tbody>
+					</table>
+				</div>
+				<div className="card">
+					<div className="title">Pages</div>
+					<div class="top-right">
+						<button className="primary" onClick={this.newPage}>New Page</button>
+					</div>
+					<table className="posts">
+						<thead>
+							<tr>
+								<th className="table-title">Title</th>
+								<th>url</th>
+							</tr>
+						</thead>
+						<tbody>
+							{pageList}
+						</tbody>
+					</table>
+				</div>
 			</div>
 		);
 
