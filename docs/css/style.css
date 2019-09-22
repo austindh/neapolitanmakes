@@ -484,6 +484,21 @@ body {
       .post .links a:hover {
         color: #272727;
         text-decoration: underline; }
+  .post .tags {
+    display: flex;
+    flex-wrap: wrap; }
+    .post .tags .tag {
+      cursor: pointer;
+      background: #eaeaea;
+      padding: 4px 15px;
+      border-radius: 30px;
+      margin-right: 8px;
+      margin-bottom: 8px;
+      color: #676767;
+      transition: background 0.2s; }
+      .post .tags .tag:hover {
+        color: white;
+        background: #ff7289; }
 
 #body {
   display: flex; }

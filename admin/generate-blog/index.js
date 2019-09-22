@@ -28,19 +28,27 @@ module.exports = {
 	async build() {
 		let posts = await db.getPosts();
 		
+		const postsLookup = {};
+
 		// newest first
 		posts.sort((a, b) => new Date(a.date) > new Date(b.date) ? -1 : 1);
 		
-		// Get HTML path for post
+		// Get HTML path for post and create lookup table for json file
 		posts.forEach(p => {
 			const postDate = new Date(p.date);
 			const year = postDate.getFullYear();
-			const month = postDate.getMonth() + 1;
+			const month = (postDate.getMonth() + 1).toString().padStart(2, '0');
 			
 			p.htmlPath = `/${year}/${month}/`;
 			p.fullUrl = p.htmlPath + p.cleanTitle + '.html';
+
+			postsLookup[p.id] = {
+				title: p.title,
+				thumbnail: p.thumbnail,
+				url: p.fullUrl
+			};
 		});
-		
+
 		// link previous and next posts
 		posts.forEach((p, i) => {
 			if (i !== 0) {
@@ -68,12 +76,14 @@ module.exports = {
 		for (let post of posts) {
 			let { title, next, prev, date } = post;
 
+			const tags = await db.getTagsForPost(post.id);
+
 			date = new Date(date);
 			const markdownText = post.body || '';
 			
 			const tree = markdown.parse(markdownText);
 			const html = markdown.renderJsonML(markdown.toHTMLTree(tree));
-			const postHtml = getPostHtml(html, { title, next, prev, date });
+			const postHtml = getPostHtml(html, { title, next, prev, date }, tags);
 			const pageHtml = getPageHtml(postHtml);
 
 			await fse.writeFile(path.join(DOCS_DIR, post.fullUrl,), pageHtml);
@@ -101,6 +111,17 @@ module.exports = {
 			const pageLocation = path.join(DOCS_DIR, `${url}.html`);
 			await fse.writeFile(pageLocation, pageHtml);
 		}
+
+		// Create .json files to be loaded for lookup purposes
+		const jsonDir = path.join(DOCS_DIR, 'json');
+		await fse.ensureDir(jsonDir);
+		await fse.writeFile(path.join(jsonDir, 'posts.json'), JSON.stringify(postsLookup));
+		
+		const tagToPostLookup = await db.getTagToPostsLookup();
+		await fse.writeFile(path.join(jsonDir, 'tags.json'), JSON.stringify(tagToPostLookup));
+
+		// Create tags page (page to see all posts with given tag)
+
 	}
 
 };

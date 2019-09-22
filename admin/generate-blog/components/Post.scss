@@ -43,4 +43,25 @@
             }
         }
     }
+
+    .tags {
+        display: flex;
+        flex-wrap: wrap;
+
+        .tag {
+            cursor: pointer;
+            background: #eaeaea;
+            padding: 4px 15px;
+            border-radius: 30px;
+            margin-right: 8px;
+            margin-bottom: 8px;
+            color: #676767;
+            transition: background 0.2s;
+
+            &:hover {
+                color: white;
+                background: $pink;
+            }
+        }
+    }
 }
