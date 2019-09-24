@@ -1,0 +1,30 @@
+@import '../scss/colors';
+
+.match-summary {
+	display: flex;
+	align-items: baseline;
+	margin: 0 10px;
+
+	span {
+		margin-right: 16px;
+	}
+}
+
+.matches {
+	display: flex;
+	flex-direction: column;
+
+	.post-summary {
+		padding: 20px;
+		display: flex;
+		margin: 10px;
+		align-items: center;
+
+		img {
+			margin-left: unset;
+			transform: unset;
+			margin-right: 20px;
+			width: 72px;
+		}
+	}
+}

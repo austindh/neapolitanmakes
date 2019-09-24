@@ -487,18 +487,21 @@ body {
   .post .tags {
     display: flex;
     flex-wrap: wrap; }
-    .post .tags .tag {
-      cursor: pointer;
-      background: #eaeaea;
-      padding: 4px 15px;
-      border-radius: 30px;
-      margin-right: 8px;
-      margin-bottom: 8px;
-      color: #676767;
-      transition: background 0.2s; }
-      .post .tags .tag:hover {
-        color: white;
-        background: #ff7289; }
+    .post .tags a {
+      text-decoration: none; }
+
+.tag {
+  cursor: pointer;
+  background: #eaeaea;
+  padding: 4px 15px;
+  border-radius: 30px;
+  margin-right: 8px;
+  margin-bottom: 8px;
+  color: #676767;
+  transition: background 0.2s; }
+  .tag:hover, .tag.active {
+    color: white;
+    background: #ff7289; }
 
 #body {
   display: flex; }
@@ -581,3 +584,24 @@ body {
     box-shadow: 0px 0px 5px 1px #00000073; }
   #sidenav .tab {
     margin-bottom: 25px; }
+
+.match-summary {
+  display: flex;
+  align-items: baseline;
+  margin: 0 10px; }
+  .match-summary span {
+    margin-right: 16px; }
+
+.matches {
+  display: flex;
+  flex-direction: column; }
+  .matches .post-summary {
+    padding: 20px;
+    display: flex;
+    margin: 10px;
+    align-items: center; }
+    .matches .post-summary img {
+      margin-left: unset;
+      transform: unset;
+      margin-right: 20px;
+      width: 72px; }

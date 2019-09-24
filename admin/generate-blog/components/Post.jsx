@@ -11,7 +11,13 @@ export const getPostHtml = (html, props, tags) => {
 
 	let tagsContent;
 	if (tags && tags.length) {
-		tags = tags.map((t, i) => <div key={i} className="tag">{t}</div>);
+		tags = tags.map((t, i) => (
+				<a href={`/tags?tag=${encodeURIComponent(t)}`}>
+			<div key={i} className="tag">
+					{t}
+			</div>
+				</a>
+		));
 		tagsContent = <div className="tags">{tags}</div>;
 	}
 

@@ -12,7 +12,7 @@ app.listen(PORT, () => {
 const bodyParser = require( 'body-parser' );
 app.use( bodyParser.json({ limit: '50mb' }) );
 
-app.use('/', express.static('docs'));
+app.use('/', express.static('docs', { extensions: ['html'] }));
 app.use('/admin', express.static('admin/public'));
 
 app.use('/posts', require('./admin/routes/posts'));

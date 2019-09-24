@@ -4,7 +4,9 @@ const INPUT_FILES_PATH = path.resolve(__dirname, './js');
 
 module.exports = {
 	entry: {
-		sidenav: path.join(INPUT_FILES_PATH, 'sidenav.ts')
+		main: path.join(INPUT_FILES_PATH, 'main.ts'),
+		sidenav: path.join(INPUT_FILES_PATH, 'sidenav.ts'),
+		tagSearch: path.join(INPUT_FILES_PATH, 'tagSearch.ts')
 	},
 	output: {
 		filename: '[name].js',

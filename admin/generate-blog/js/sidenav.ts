@@ -10,7 +10,6 @@ function toggleSidenav() {
 	const menu = document.getElementById('hamburger');
 	const isOpen = menu.classList.contains(openClass);
 
-
 	if (!isOpen) {
 		affectedElements.forEach(e => e.classList.add(openClass));
 		backdrop.classList.remove('closed');

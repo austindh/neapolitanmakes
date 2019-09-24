@@ -121,6 +121,8 @@ module.exports = {
 		await fse.writeFile(path.join(jsonDir, 'tags.json'), JSON.stringify(tagToPostLookup));
 
 		// Create tags page (page to see all posts with given tag)
+		const pageHtml = getPageHtml('<div class="post"></div>', 'tagSearch.js');
+		await fse.writeFile(path.join(DOCS_DIR, 'tags.html'), pageHtml);
 
 	}
 

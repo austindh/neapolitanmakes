@@ -7,9 +7,10 @@ import Header from './Header';
 import Sidebar from './Sidebar';
 import Sidenav from './Sidenav';
 
-export const getPageHtml = (postHtml) => {
+export const getPageHtml = (postHtml, additionalJsFilename) => {
 	
-	const cssUrl = '/css/style.css'; 
+	const cssUrl = '/css/style.css';
+	let additionalJs = additionalJsFilename ? <script src={`/js/${additionalJsFilename}`}></script> : '';
 	
 	return renderToStaticMarkup(
 		<html>
@@ -19,6 +20,7 @@ export const getPageHtml = (postHtml) => {
 				<link href={cssUrl} rel="stylesheet" />
 				<link rel="shortcut icon" href="/icons/favicon.ico" />
 				<title>NeapolitanMakes</title>
+				<script src="/js/main.js"></script>
 			</head>
 			<body>
 				<Header />
@@ -33,6 +35,7 @@ export const getPageHtml = (postHtml) => {
 				<div id="backdrop" className="closed"></div>
 				<Sidenav />
 				<script src="/js/sidenav.js"></script>
+				{ additionalJs }
 			</body>
 		</html>
 	);
