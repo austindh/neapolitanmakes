@@ -1,20 +1,27 @@
 // Main page
 import React from 'react';
 
-export const tabNames = [
-	'Sewing',
-	'Food',
-	'Crafts',
-	'Home',
-	'Shop',
-	'Etsy',
-	'About'
-];
-const tabs = [<div className="divider"></div>];
-tabNames.forEach((tabName, i) => {
-	tabs.push(<div className="tab">{tabName}</div>);
-	tabs.push(<div className="divider"></div>)
+
+const tabs = [];
+const addTab = (name, url) => {
+	const t = { name, url };
+	tabs.push(t)
+}
+addTab('Sewing', null);
+addTab('Food', null);
+addTab('Crafts', null);
+addTab('Home', null);
+addTab('Shop', null);
+addTab('Etsy', '/etsy');
+addTab('About', '/about');
+
+const headerTabs = [<div className="divider"></div>];
+tabs.forEach((t, i) => {
+	headerTabs.push(<a href={t.url} className="tab"><div>{t.name}</div></a>);
+	headerTabs.push(<div className="divider"></div>)
 });
+
+export const blogTabs = tabs;
 
 export const socialIcons = (
 	<div className="nea-social">
@@ -45,7 +52,7 @@ const Header = props => {
 			</div>,
 			<div id="tabs">
 				<div className="container">
-					{tabs}
+					{headerTabs}
 				</div>
 			</div>,
 			<div id="hamburger">

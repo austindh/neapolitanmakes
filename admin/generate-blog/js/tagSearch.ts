@@ -5,11 +5,9 @@ const main = async () => {
 	
 	const { search } = window.location;
 	const tagName = decodeURIComponent(search.split('?tag=')[1]);
-	if (!tagName || !tagLookup[tagName]) {
-		return;
-	}
 
-	const posts = tagLookup[tagName].map(postId => {
+	const postIds = tagLookup[tagName] || [];
+	const posts = postIds.map(postId => {
 		const post = postLookup[postId];
 		if (!post) {
 			return null;

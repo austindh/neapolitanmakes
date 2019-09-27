@@ -82,6 +82,8 @@ const main = async () => {
 		let markdown = turndown.turndown(post.html);
 		markdown = markdown.replace(/\n\n/g, '  \n'); // get rid of extra new lines
 		markdown = markdown.replace(/http:\/\/(www\.)?hungryhungryhighness(\.blogspot)?\.com\//g, '/'); // make old links relative links to new blog
+		markdown = markdown.replace(/\/search\/label\/([a-z]+)?/, (match, p1) => `/tags?tag=${p1}`); // fix search links
+		markdown = markdown.replace(/\n-+/g, '\n');
 
 		// markdown = markdown.replace(/---+/g, '');
 
@@ -106,7 +108,6 @@ const main = async () => {
 
 	const tagCategories = await db.getCategories();
 	const foodCategoryId = tagCategories.find(x => x.name === 'Food').id;
-	console.log('foodCategoryId', foodCategoryId);
 
 	for (let post of blogPosts) {
 		const newPost = await db.createPost();

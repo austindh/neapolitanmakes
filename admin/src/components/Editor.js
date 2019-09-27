@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 import axios from 'axios';
 import _ from 'underscore';
 import {
@@ -11,6 +12,8 @@ import {
 import { markdown } from 'markdown';
 import ReactHtmlParser from 'react-html-parser';
 
+import Modal from './Modal';
+
 import './Editor.scss';
 
 export default class Editor extends React.Component {
@@ -21,7 +24,9 @@ export default class Editor extends React.Component {
 			savedPost: {},
 			post: {},
 			bodyCursorPos: 0,
-			postDeleted: false
+			postDeleted: false,
+			nonPost: false, // used for other pages, like About Me, etc.
+			tagModalOpen: false
 		}
 
 		this.bodyText = React.createRef();
@@ -42,7 +47,8 @@ export default class Editor extends React.Component {
 		const { state } = this.props.location || {};
 		const { post } = state || {};
 		const savedPost = Object.assign({}, post);
-		this.setState({ post, savedPost });
+		const nonPost = !!post.url;
+		this.setState({ post, savedPost, nonPost });
 	}
 
 	addImage(url) {
@@ -72,22 +78,24 @@ export default class Editor extends React.Component {
 	}
 
 	save() {
-		const { post, savedPost } = this.state;
-		axios.post('/posts', { post }).then(res => {
+		const { post, savedPost, nonPost } = this.state;
+		const endPoint = nonPost ? '/pages' : '/posts';
+		axios.post(endPoint, { post }).then(res => {
 			Object.assign(savedPost, post);
 			this.setState({ savedPost });
 		});
 	}
 
 	delete() {
-		const { post } = this.state;
+		const { post, nonPost } = this.state;
 		const { title } = post;
 		const shouldDelete = window.confirm(`Are you sure you want to delete "${title}"?`);
 		if (!shouldDelete) {
 			return;
 		}
 
-		axios.delete('/posts/' + post.id).then(res => {
+		const endPoint = nonPost ? '/pages/' : '/posts/';
+		axios.delete(endPoint + post.id).then(res => {
 			this.setState({ postDeleted: true });
 		});
 	}
@@ -101,6 +109,12 @@ export default class Editor extends React.Component {
 	onDateChange(e) {
 		const { post } = this.state;
 		post.date = e.target.value;
+		this.setState({ post });
+	}
+
+	onUrlChange = e => {
+		const { post } = this.state;
+		post.url = e.target.value;
 		this.setState({ post });
 	}
 
@@ -129,9 +143,17 @@ export default class Editor extends React.Component {
 		const bodyCursorPos = e.target.selectionStart;
 		this.setState({ bodyCursorPos });
 	}
+
+	openTagModal = () => {
+		this.setState({ tagModalOpen: true });
+	}
+
+	closeTagModal = () => {
+		this.setState({ tagModalOpen: false });
+	}
 	
 	render() {
-		const { savedPost, post, postDeleted } = this.state;
+		const { savedPost, post, postDeleted, nonPost, tagModalOpen } = this.state;
 
 		const hasChanges = !_.isEqual(savedPost, post);
 
@@ -139,30 +161,58 @@ export default class Editor extends React.Component {
 			return <Redirect to="/"/>
 		}
 
-		let { date: textDate, title, body } = post || {};
+		let { date: textDate, title, body, url } = post || {};
 		body = body || '';
 		let date = new Date(textDate).toDateString();
 
 		const bodyHtml = markdown.toHTML(body);
 
+		const secondaryInputWithDisplay = nonPost ? 
+			[
+				<label key="1">
+					Page Url:
+					<input type="text" value={url || ''} onChange={this.onUrlChange}></input>
+					<span key="2">/{url}</span>
+				</label>,
+			] :
+			[
+				<label key="1" className={date === 'Invalid Date' ? 'err' : ''}>
+					Post Date:
+					<input type="text" value={textDate || ''} onChange={this.onDateChange}></input>
+					<span key="2">{date}</span>
+				</label>,
+			];
+
+		const tagsModal = ReactDOM.createPortal(
+			<Modal open={tagModalOpen} onClose={this.closeTagModal}>
+				TAGS
+			</Modal>,
+			document.getElementById('modal')
+		);
+
 		return (
 			<div id="editor">
 				<div className="header">
-					<Link to={{
-						pathname: '/',
-						state: { reloadPosts: true }
-					}}>
-						<button>Back</button>
-					</Link>
-					<button onClick={() => this.fileInput.current.click() }>Add Image</button>
-					<input ref={this.fileInput} hidden={true} type="file" onChange={this.onFileChange}></input>
-					<button className="" disabled={!hasChanges} onClick={this.save}>Save</button>
-					<button className="" onClick={this.delete}>Delete</button>
-				</div>
-				<div className="info">
-					<input type="text" value={title || ''} onChange={this.onTitleChange}></input>
-					<input type="text" value={textDate || ''} onChange={this.onDateChange}></input>
-					<span>{date}</span>
+					<div className="info">
+						<label>
+							Title:
+							<input type="text" value={title || ''} onChange={this.onTitleChange}></input>
+						</label>
+						{secondaryInputWithDisplay}
+					</div>
+					<div className="buttons">
+						<Link to={{
+							pathname: '/',
+							state: { reloadPosts: true }
+						}}>
+							<button>Back</button>
+						</Link>
+						<button onClick={() => this.fileInput.current.click() }>Add Image</button>
+						<input ref={this.fileInput} hidden={true} type="file" onChange={this.onFileChange}></input>
+						<button className="" disabled={!hasChanges} onClick={this.save}>Save</button>
+						<button className="" onClick={this.delete}>Delete</button>
+						<button onClick={this.openTagModal}>Tags</button>
+					</div>
 				</div>
 				<div className="main">
 					<textarea ref={this.bodyText} value={body} onChange={this.onBodyChange} 
@@ -173,6 +223,7 @@ export default class Editor extends React.Component {
 						{ ReactHtmlParser(bodyHtml) }
 					</div>
 				</div>
+				{ tagsModal }
 			</div>
 		);
 	}

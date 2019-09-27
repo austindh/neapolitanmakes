@@ -147,6 +147,8 @@ $socialIconSize: 35px;
     text-align: center;
     margin: 0 5px;
     transition: background 200ms linear;
+    color: $black;
+    text-decoration: none;
 
     &.active {
         background: $white;

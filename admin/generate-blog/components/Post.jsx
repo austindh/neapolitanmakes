@@ -4,7 +4,7 @@ import { renderToStaticMarkup } from 'react-dom/server';
 
 export const getPostHtml = (html, props, tags) => {
 
-	const { title, prev, next, date, url } = props;
+	const { title, prev, next, date, url, selfUrl } = props;
 
 	const nextLink = next ? <a href={next}>{'< Newer Post'}</a> : <span></span>;
 	const prevLink = prev ? <a href={prev}>{'Older Post >'}</a> : <span></span>;
@@ -36,10 +36,19 @@ export const getPostHtml = (html, props, tags) => {
 		]);
 	}
 
+	// For index page to link to post page
+	let titleEl = <h1>{title}</h1>;
+	if (selfUrl) {
+		titleEl = (
+			<h1>
+				<a href={selfUrl}>{title}</a>
+			</h1>
+		);
+	}
 
 	return renderToStaticMarkup(
 		<div className="post card">
-			<h1>{ title }</h1>
+			{ titleEl }
 			{ postContents }
 		</div>
 	);

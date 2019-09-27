@@ -53,6 +53,15 @@
         }
 
     }
+
+    h1 a {
+        text-decoration: none;
+        color: $black;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
 }
 
 .tag {

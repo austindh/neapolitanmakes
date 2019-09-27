@@ -76,6 +76,26 @@ module.exports = {
 		const posts = await selectAll('select * from posts');
 		return posts;
 	},
+
+	async getPostsWithTags() {
+		const getPosts = selectAll(`
+			select p.id, p.date, p.title, p.cleanTitle, p.body, p.thumbnail, group_concat(pt.tag_id) as tags
+			from posts p
+			left join post_tag pt on p.id = pt.post_id
+			group by p.id;
+		`);
+		const getTagLookup = this.getTagLookup();
+		const [posts, tagLookup] = await Promise.all([getPosts, getTagLookup]);
+		return posts.map(p => {
+			const tags = (p.tags || '')
+				.split(',')
+				.map(x => parseInt(x))
+				.map(x => tagLookup[x])
+				.filter(x => !!x);
+			p.tags = tags;
+			return p;
+		});
+	},
 	
 	async createPost() {
 		const now = new Date();
@@ -193,6 +213,23 @@ module.exports = {
 			where post_id = ?
 		`, postId);
 		return tags.map(x => x.name);
+	},
+
+	async getAllTags() {
+		return await selectAll('select * from tags');
+	},
+
+	async getTagLookup() {
+		const tags = await this.getAllTags();
+		const lookup = {};
+		tags.forEach(t => {
+			lookup[t.id] = {
+				id: t.id,
+				name: t.name,
+				category: t.category_id
+			}
+		});
+		return lookup;
 	},
 
 	// Get lookup of tags to post

@@ -24,6 +24,7 @@ export default class Editor extends React.Component {
 	}
 
 	reloadPostsAndPages() {
+
 		axios.get('/posts').then(res => {
 			const { data: posts } = res;
 			posts.sort((a, b) => new Date(a.date) > new Date(b.date) ? -1 : 1); // newest at top
@@ -53,15 +54,22 @@ export default class Editor extends React.Component {
 	render() {
 
 		const postList = this.state.posts.map((p, i) => {
+			const postTags = p.tags.map((t, i) => {
+				return(
+					<div key={i} className="tag">{t.name}</div>
+				);
+			});
+
 			return (
 				<tr key={i}>
-					<td>
+					<td className="post-title">
 						<Link to={{
 							pathname: '/editor',
 							state: { post: p }
 						}}>
 							{p.title}
 						</Link>
+						<div className="tags">{ postTags }</div>
 					</td>
 					<td className="date">{p.date}</td>
 				</tr>
@@ -106,27 +114,29 @@ export default class Editor extends React.Component {
 				</div>
 				<div className="card">
 					<div className="title">Blog Posts</div>
-					<div class="top-right">
+					<div className="top-right">
 						<button className="primary" onClick={this.newPost}>New Post</button>
 					</div>
-					<table className="posts">
-						<thead>
-							<tr>
-								<th className="table-title">Title</th>
-								<th>Date</th>
-							</tr>
-						</thead>
-						<tbody>
-							{postList}
-						</tbody>
-					</table>
+					<div className="posts">
+						<table>
+							<thead>
+								<tr>
+									<th className="table-title">Title</th>
+									<th>Date</th>
+								</tr>
+							</thead>
+							<tbody>
+								{postList}
+							</tbody>
+						</table>
+					</div>
 				</div>
 				<div className="card">
 					<div className="title">Pages</div>
-					<div class="top-right">
+					<div className="top-right">
 						<button className="primary" onClick={this.newPage}>New Page</button>
 					</div>
-					<table className="posts">
+					<table className="pages">
 						<thead>
 							<tr>
 								<th className="table-title">Title</th>

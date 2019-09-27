@@ -25,7 +25,7 @@ router.put('/', async (req, res) => {
 
 // update
 router.post('/', async (req, res) => {
-	const { page } = req.body;
+	const { post: page } = req.body;
 	await db.updatePage(page);
 
 	res.writeHead( 200, { 'Content-Type': 'text/plain' });

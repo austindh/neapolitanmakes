@@ -40,7 +40,7 @@ module.exports = {
 			const month = (postDate.getMonth() + 1).toString().padStart(2, '0');
 			
 			p.htmlPath = `/${year}/${month}/`;
-			p.fullUrl = p.htmlPath + p.cleanTitle + '.html';
+			p.fullUrl = p.htmlPath + p.cleanTitle;
 
 			postsLookup[p.id] = {
 				title: p.title,
@@ -74,7 +74,11 @@ module.exports = {
 		let first = true;
 		posts = [posts[0], ...posts]; // duplicate first post for index
 		for (let post of posts) {
-			let { title, next, prev, date } = post;
+			let { title, next, prev, date, fullUrl } = post;
+			let selfUrl;
+			if (first) {
+				selfUrl = fullUrl; // index page needs post title to link to post page
+			}
 
 			const tags = await db.getTagsForPost(post.id);
 
@@ -83,10 +87,10 @@ module.exports = {
 			
 			const tree = markdown.parse(markdownText);
 			const html = markdown.renderJsonML(markdown.toHTMLTree(tree));
-			const postHtml = getPostHtml(html, { title, next, prev, date }, tags);
+			const postHtml = getPostHtml(html, { title, next, prev, date, selfUrl }, tags);
 			const pageHtml = getPageHtml(postHtml);
 
-			await fse.writeFile(path.join(DOCS_DIR, post.fullUrl,), pageHtml);
+			await fse.writeFile(path.join(DOCS_DIR, post.fullUrl + '.html'), pageHtml);
 			
 			// newest post is new index.html
 			if (first) {

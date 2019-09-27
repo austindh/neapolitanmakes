@@ -1,25 +1,76 @@
 #editor {
-	height: 100%;
+	height: 100vh;
     padding: 30px;
     display: flex;
     flex-direction: column;
-    box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 .header {
-	height: 50px;
+	display: flex;
+	margin-bottom: 20px;
+
+	> div {
+		width: 50%;
+	}
+
+	.buttons {
+		display: flex;
+		justify-content: flex-end;
+	}
+
+	button {
+		margin-left: 10px;
+	}
+
+	.info {
+		display: flex;
+		flex-direction: column;
+
+		label {
+			width: 500px;
+			font-weight: bold;
+			display: flex;
+			align-items: center;
+			margin-bottom: 8px;
+
+			span {
+				margin-left: 16px;
+			}
+
+			&.err {
+				input {
+					border: solid 1px red;
+				}
+
+				span {
+					color: red;
+				}
+			}
+		}
+
+		input {
+			margin-left: 10px;
+			padding: 5px 10px;
+			flex-grow: 1;
+		}
+
+	}
 }
 
 .main {
 	flex-grow: 1;
 	display: flex;
+	overflow: auto;
 	
 	textarea {
+		padding: 30px;
 		width: 50%;
-		resize: horizontal;
+		resize: none;
 	}
 
 	.post {
+		width: 50%;
 		border: solid 1px gray;
 		padding: 0 15px;
 		overflow: auto;
@@ -28,6 +79,8 @@
 
 		img {
 			max-width: 100%;
+			margin-left: 50%;
+			transform: translateX(-50%);
 		}
 	}
 }

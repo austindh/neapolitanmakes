@@ -1,8 +1,10 @@
 import React from 'react';
-import { tabNames } from './Header';
+import { blogTabs } from './Header';
 
-const tabs = tabNames.map(name => (
-	<div className="tab">{name}</div>
+const tabs = blogTabs.map(t => (
+	<a href={t.url} className="tab">
+		<div>{t.name}</div>
+	</a>
 ));
 
 const Sidenav = props => {

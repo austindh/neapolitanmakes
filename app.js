@@ -17,6 +17,7 @@ app.use('/admin', express.static('admin/public'));
 
 app.use('/posts', require('./admin/routes/posts'));
 app.use('/pages', require('./admin/routes/pages'));
+app.use('/tags', require('./admin/routes/tags'));
 app.use('/images', require('./admin/routes/images'));
 
 // to use React routing
