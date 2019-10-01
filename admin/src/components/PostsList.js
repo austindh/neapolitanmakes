@@ -109,7 +109,7 @@ export default class Editor extends React.Component {
 				<h1>NeapolitanMakes Admin</h1>
 				<div className="preview">
 					<a href="http://localhost:8082" target="_blank">
-						<button className="primary">Preview Site</button>
+						<button className="secondary">Preview Site</button>
 					</a>
 				</div>
 				<div className="card">

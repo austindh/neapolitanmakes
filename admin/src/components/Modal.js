@@ -17,7 +17,7 @@ class Modal extends Component {
 		const classes = open ? 'open' : '';
 		return (
 			<div id="modal-overlay" className={classes} onClick={this.clickOutside}>
-				<div id="modal-body" onClick={this.bodyClick}>
+				<div id="modal" onClick={this.bodyClick}>
 					{this.props.children}
 				</div>
 			</div>

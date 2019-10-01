@@ -1,0 +1,24 @@
+@import '../../generate-blog/scss/colors';
+
+#post-tags-modal {
+	width: 700px;
+	flex-grow: 1;
+	display: flex;
+	flex-direction: column;
+
+	.tag {
+		margin-top: 10px;
+		cursor: pointer;
+
+		&.current, &:hover {
+			color: white;
+			background: $pink;
+		}
+	}
+
+	.divider {
+		margin: 15px 0px;
+		width: 100%;
+		border-bottom: solid 1px #d4d4d4;
+	}
+}

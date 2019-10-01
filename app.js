@@ -12,13 +12,14 @@ app.listen(PORT, () => {
 const bodyParser = require( 'body-parser' );
 app.use( bodyParser.json({ limit: '50mb' }) );
 
+app.use('/posts', require('./admin/routes/posts'));
+app.use('/pages', require('./admin/routes/pages'));
+app.use('/posttags', require('./admin/routes/tags'));
+app.use('/images', require('./admin/routes/images'));
+
 app.use('/', express.static('docs', { extensions: ['html'] }));
 app.use('/admin', express.static('admin/public'));
 
-app.use('/posts', require('./admin/routes/posts'));
-app.use('/pages', require('./admin/routes/pages'));
-app.use('/tags', require('./admin/routes/tags'));
-app.use('/images', require('./admin/routes/images'));
 
 // to use React routing
 app.use( '*', function( req, res ) {

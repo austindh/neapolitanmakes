@@ -4,10 +4,10 @@ const router = express.Router();
 const db = require('../db');
 
 router.get( '/', async ( req, res ) => {
-	const posts = await db.getAllTags();
+	const tags = await db.getAllTags();
 	
 	res.writeHead( 200, { 'Content-Type': 'application/json' });
-	res.end( JSON.stringify(posts) );
+	res.end( JSON.stringify(tags) );
 
 });
 

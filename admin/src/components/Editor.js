@@ -13,6 +13,7 @@ import { markdown } from 'markdown';
 import ReactHtmlParser from 'react-html-parser';
 
 import Modal from './Modal';
+import PostTagEditor from './PostTagEditor';
 
 import './Editor.scss';
 
@@ -26,7 +27,7 @@ export default class Editor extends React.Component {
 			bodyCursorPos: 0,
 			postDeleted: false,
 			nonPost: false, // used for other pages, like About Me, etc.
-			tagModalOpen: false
+			tagModalOpen: false,
 		}
 
 		this.bodyText = React.createRef();
@@ -52,8 +53,6 @@ export default class Editor extends React.Component {
 	}
 
 	addImage(url) {
-		// TODO allow name change on image
-		
 		const textarea = this.bodyText.current;
 
 		let { bodyCursorPos } = this.state;
@@ -185,10 +184,12 @@ export default class Editor extends React.Component {
 
 		const tagsModal = ReactDOM.createPortal(
 			<Modal open={tagModalOpen} onClose={this.closeTagModal}>
-				TAGS
+				<PostTagEditor post={post} onCancel={this.closeTagModal}></PostTagEditor>
 			</Modal>,
 			document.getElementById('modal')
 		);
+
+		const postTags = (post.tags || []).map((t, i) => <div key={i} className="tag">{t.name}</div>);
 
 		return (
 			<div id="editor">
@@ -199,6 +200,10 @@ export default class Editor extends React.Component {
 							<input type="text" value={title || ''} onChange={this.onTitleChange}></input>
 						</label>
 						{secondaryInputWithDisplay}
+						<div className="tags">
+							{ postTags }
+							<button className="edit-tags primary" onClick={this.openTagModal}>Edit tags</button>
+						</div>
 					</div>
 					<div className="buttons">
 						<Link to={{
@@ -211,7 +216,6 @@ export default class Editor extends React.Component {
 						<input ref={this.fileInput} hidden={true} type="file" onChange={this.onFileChange}></input>
 						<button className="" disabled={!hasChanges} onClick={this.save}>Save</button>
 						<button className="" onClick={this.delete}>Delete</button>
-						<button onClick={this.openTagModal}>Tags</button>
 					</div>
 				</div>
 				<div className="main">
