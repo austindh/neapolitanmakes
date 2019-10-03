@@ -59,7 +59,7 @@ export default class TagEditor extends React.Component {
 		));
 
 		return ReactDOM.createPortal(
-			<Modal open={this.props.open} onClose={this.props.onClose}>
+			<Modal open={this.props.open} onClose={this.onClose}>
 				<div className="title">Create New Tag</div>
 				<div className="body">
 					<label>
