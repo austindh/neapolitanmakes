@@ -136,4 +136,5 @@ const main = async () => {
 
 	// console.log(xmlData.slice(1000))
 };
-main();
+// main();
+console.log('already imported');

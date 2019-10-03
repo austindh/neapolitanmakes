@@ -1,0 +1,20 @@
+@import '../../generate-blog/scss/colors';
+
+#tag-modal {
+	label {
+		display: block;
+		margin-bottom: 10px;
+
+		span {
+			font-weight: bold;
+			margin-right: 8px;
+		}
+	}
+
+	.tag {
+		display: inline;
+		background: $pink;
+		color: white;
+		min-width: 50px;
+	}
+}

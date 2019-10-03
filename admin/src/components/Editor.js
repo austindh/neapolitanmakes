@@ -150,6 +150,12 @@ export default class Editor extends React.Component {
 	closeTagModal = () => {
 		this.setState({ tagModalOpen: false });
 	}
+
+	tagsUpdated = (tags) => {
+		const { post } = this.state;
+		post.tags = tags;
+		this.setState({ post });
+	}
 	
 	render() {
 		const { savedPost, post, postDeleted, nonPost, tagModalOpen } = this.state;
@@ -184,7 +190,7 @@ export default class Editor extends React.Component {
 
 		const tagsModal = ReactDOM.createPortal(
 			<Modal open={tagModalOpen} onClose={this.closeTagModal}>
-				<PostTagEditor post={post} onCancel={this.closeTagModal}></PostTagEditor>
+				<PostTagEditor post={post} onCancel={this.closeTagModal} onSave={this.tagsUpdated}></PostTagEditor>
 			</Modal>,
 			document.getElementById('modal')
 		);

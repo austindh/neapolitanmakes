@@ -96,6 +96,10 @@ module.exports = {
 			return p;
 		});
 	},
+
+	async getPostByCleanTitle(cleanTitle) {
+		return await selectOne('select * from posts where cleanTitle = ?', cleanTitle);
+	},
 	
 	async createPost() {
 		const now = new Date();
@@ -123,6 +127,13 @@ module.exports = {
 
 	async addTagToPost(postId, tagId) {
 		await run('insert into post_tag(post_id, tag_id) values(?, ?)', postId, tagId);
+	},
+
+	async updatePostTags(postId, tagIds) {
+		await run('delete from post_tag where post_id = ?', postId);
+		for (let tagId of tagIds) {
+			await this.addTagToPost(postId, tagId);
+		}
 	},
 
 	///////////////

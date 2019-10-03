@@ -76,6 +76,15 @@ button {
 	&:hover {
 		box-shadow: 2px 2px 4px 1px #84848452;
 	}
+
+	&:disabled {
+		opacity: 0.7;
+		cursor: default;
+
+		&:hover {
+			box-shadow: none;
+		}
+	}
 }
 
 .tags {

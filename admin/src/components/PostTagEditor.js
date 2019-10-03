@@ -1,6 +1,7 @@
 import React from 'react';
-import { getAllTags } from '../js/tags';
+import { getAllTags, updateTags } from '../js/tags';
 
+import TagEditor from './TagEditor';
 import './PostTagEditor.scss';
 
 export default class PostTagEditor extends React.Component {
@@ -9,7 +10,9 @@ export default class PostTagEditor extends React.Component {
 		this.state = {
 			currentTags: new Set(),
 			allTags: [],
-			searchText: ''
+			searchText: '',
+			postId: null,
+			tagEditorOpen: false
 		}
 
 		getAllTags().then(tags => {
@@ -24,7 +27,7 @@ export default class PostTagEditor extends React.Component {
 		const currentPost = this.props.post || {};
 		const currentTags = currentPost.tags || [];
 		const currentTagIds = currentTags.map(t => t.id);
-		this.setState({ currentTags: new Set(currentTagIds) });
+		this.setState({ currentTags: new Set(currentTagIds), postId: currentPost.id });
 	}
 
 	componentDidUpdate(prevProps) {
@@ -33,20 +36,18 @@ export default class PostTagEditor extends React.Component {
 		const currentTags = currentPost.tags || [];
 		const prevTags = prevPost.tags || [];
 
-		if (currentTags.length !== prevTags.length) {
+		if (currentTags.length !== prevTags.length || currentPost.id !== prevPost.id) {
 			this.resetTags();
 		}
 	}
 
 	addTag = id => {
-		console.log('add');
 		const currentTags = new Set(this.state.currentTags);
 		currentTags.add(id);
 		this.setState({ currentTags });
 	}
 	
 	removeTag = id => {
-		console.log('remove');
 		const currentTags = new Set(this.state.currentTags);
 		currentTags.delete(id);
 		this.setState({ currentTags });
@@ -61,6 +62,24 @@ export default class PostTagEditor extends React.Component {
 	onSearchTextChange = e => {
 		const searchText = e.target.value;
 		this.setState({ searchText });
+	}
+
+	onSave = async () => {
+		const { allTags, currentTags, postId } = this.state;
+		const newTags = allTags.filter(t => currentTags.has(t.id));
+		const tagIds = newTags.map(t => t.id);
+		await updateTags(postId, tagIds);
+
+		this.props.onSave(newTags);
+		this.onCancel();
+	}
+
+	openTagEditor = () => {
+		this.setState({ tagEditorOpen: true });
+	}
+
+	closeTagEditor = () => {
+		this.setState({ tagEditorOpen: false });
 	}
 
 	render() {
@@ -88,13 +107,17 @@ export default class PostTagEditor extends React.Component {
 				<div className="body">
 					<div className="tags">{ currentEls }</div>
 					<div className="divider"></div>
-					<input type="text" placeholder="search..." value={searchText} onChange={this.onSearchTextChange}></input>
+					<div>
+						<input type="text" placeholder="search..." value={searchText} onChange={this.onSearchTextChange}></input>
+						<button className="new-tag secondary" onClick={this.openTagEditor}>+ New Tag</button>
+					</div>
 					<div className="tags">{ otherEls }</div>
 				</div>
 				<div className="buttons">
 					<button onClick={this.onCancel}>Cancel</button>
-					<button className="primary">Save</button>
+					<button className="primary" onClick={this.onSave}>Save</button>
 				</div>
+				<TagEditor open={this.state.tagEditorOpen} onClose={this.closeTagEditor}></TagEditor>
 			</div>
 		);
 	}

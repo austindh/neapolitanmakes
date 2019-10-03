@@ -54,6 +54,7 @@ export default class Editor extends React.Component {
 	render() {
 
 		const postList = this.state.posts.map((p, i) => {
+			p.tags.sort((a, b) => a.name.toLowerCase() < b.name.toLowerCase() ? -1 : 1);
 			const postTags = p.tags.map((t, i) => {
 				return(
 					<div key={i} className="tag">{t.name}</div>

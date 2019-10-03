@@ -15,6 +15,7 @@ app.use( bodyParser.json({ limit: '50mb' }) );
 app.use('/posts', require('./admin/routes/posts'));
 app.use('/pages', require('./admin/routes/pages'));
 app.use('/posttags', require('./admin/routes/tags'));
+app.use('/categories', require('./admin/routes/categories'));
 app.use('/images', require('./admin/routes/images'));
 
 app.use('/', express.static('docs', { extensions: ['html'] }));

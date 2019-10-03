@@ -8,3 +8,7 @@ export const getAllTags = () => {
 	}
 	return tagsCached;
 };
+
+export const updateTags = (postId, tagIds) => {
+	return axios.post('/posttags/post', { postId, tagIds });
+};

@@ -8,7 +8,15 @@ router.get( '/', async ( req, res ) => {
 	
 	res.writeHead( 200, { 'Content-Type': 'application/json' });
 	res.end( JSON.stringify(tags) );
+});
 
+router.post('/post', async (req, res) => {
+	const { postId, tagIds } = req.body;
+
+	await db.updatePostTags(postId, tagIds);
+
+	res.writeHead( 200, { 'Content-Type': 'text/plain' });
+	res.end('OK');
 });
 
 // // add new tag
