@@ -218,10 +218,10 @@ export default class Editor extends React.Component {
 						}}>
 							<button>Back</button>
 						</Link>
-						<button onClick={() => this.fileInput.current.click() }>Add Image</button>
+						<button className="secondary" onClick={() => this.fileInput.current.click() }>Add Image</button>
 						<input ref={this.fileInput} hidden={true} type="file" onChange={this.onFileChange}></input>
-						<button className="" disabled={!hasChanges} onClick={this.save}>Save</button>
-						<button className="" onClick={this.delete}>Delete</button>
+						<button className="primary" disabled={!hasChanges} onClick={this.save}>Save</button>
+						<button className="warn" onClick={this.delete}>Delete</button>
 					</div>
 				</div>
 				<div className="main">

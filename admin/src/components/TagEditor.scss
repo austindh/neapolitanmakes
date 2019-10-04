@@ -11,10 +11,19 @@
 		}
 	}
 
+	.tag-preview {
+		margin-top: 24px;
+	}
+
 	.tag {
 		display: inline;
 		background: $pink;
 		color: white;
 		min-width: 50px;
+		font-size: 1.3em;
+	}
+
+	.buttons {
+		margin-top: 35px!important;
 	}
 }

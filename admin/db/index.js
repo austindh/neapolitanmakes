@@ -207,6 +207,9 @@ module.exports = {
 	///////////////
 	// Insert tag if it doesn't exist
 	async addTagIfNeeded(name, categoryId) {
+		if (!name || !categoryId) {
+			throw new Error('Tag needs name and categoryId')
+		}
 		const selectOneArgs = ['select * from tags where name = ?', name];
 		const tag = await selectOne(...selectOneArgs);
 		if (tag) {
@@ -214,6 +217,18 @@ module.exports = {
 		}
 		await run('insert into tags(name, category_id) values(?, ?)', name, categoryId);
 		return await selectOne(...selectOneArgs);
+	},
+
+	async updateTag(tag) {
+		const { id, name, categoryId } = tag;
+		return await run('update tags set name = ?, category_id = ? where id = ?', name, categoryId, id);
+	},
+
+	async deleteTag(tagId) {
+		if (!tagId) {
+			throw new Error('must specify tagId to delete');
+		}
+		return await run('delete from tags where id = ?', tagId);
 	},
 
 	async getTagsForPost(postId) {
@@ -227,7 +242,16 @@ module.exports = {
 	},
 
 	async getAllTags() {
-		return await selectAll('select * from tags');
+		return await selectAll(`
+			select t.*, ifnull(counts.count, 0) as count
+			from tags t
+			left join (
+				select tag_id, count(*) as count
+				from post_tag pt
+				group by tag_id
+			) counts on t.id = counts.tag_id
+			group by name;
+		`);
 	},
 
 	async getTagLookup() {

@@ -1,8 +1,6 @@
 const express = require( 'express' );
 const router = express.Router();
 
-console.log('loading');
-
 const db = require('../db');
 
 router.get( '/', async ( req, res ) => {
@@ -17,7 +15,6 @@ router.get( '/', async ( req, res ) => {
 // add new page
 router.put('/', async (req, res) => {
 	const newPage = await db.createPage();
-	console.log('newPage', newPage);
 
 	res.writeHead( 200, { 'Content-Type': 'application/json' });
 	res.end( JSON.stringify(newPage) );

@@ -12,6 +12,7 @@ import {
 
 import PostsList from './components/PostsList';
 import Editor from './components/Editor';
+import Tags from './components/Tags';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
 				<Switch>
 					<Route exact path="/" component={PostsList}></Route>
 					<Route path="/editor" component={Editor}></Route>
+					<Route path="/tags" component={Tags}></Route>
 				</Switch>
 			</Router>
   );

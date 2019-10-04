@@ -15,10 +15,11 @@ export default class PostTagEditor extends React.Component {
 			tagEditorOpen: false
 		}
 
+		this.getAllTags();
+	}
+	
+	getAllTags = () => {
 		getAllTags().then(tags => {
-			tags.sort((a, b) => {
-				return a.name.toLowerCase() < b.name.toLowerCase() ? -1 : 1;
-			});
 			this.setState({ allTags: tags });
 		});
 	}
@@ -78,7 +79,10 @@ export default class PostTagEditor extends React.Component {
 		this.setState({ tagEditorOpen: true });
 	}
 
-	closeTagEditor = () => {
+	closeTagEditor = (reloadTags) => {
+		if (reloadTags) {
+			this.getAllTags();
+		}
 		this.setState({ tagEditorOpen: false });
 	}
 

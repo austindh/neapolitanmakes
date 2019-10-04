@@ -1,0 +1,24 @@
+@import '../../generate-blog/scss/colors';
+
+.tags-page {
+	.card {
+		max-width: 800px;
+		margin: 20px auto;
+	}
+
+	input {
+		padding: 8px 16px;
+		margin-bottom: 20px;
+		margin-right: 16px;
+	}
+
+	.tag {
+		cursor: pointer;
+		margin-bottom: 6px;
+
+		&:hover {
+			background: $pink;
+			color: white;
+		}
+	}
+}

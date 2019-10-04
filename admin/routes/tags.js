@@ -3,6 +3,7 @@ const router = express.Router();
 
 const db = require('../db');
 
+// get all tags
 router.get( '/', async ( req, res ) => {
 	const tags = await db.getAllTags();
 	
@@ -10,6 +11,18 @@ router.get( '/', async ( req, res ) => {
 	res.end( JSON.stringify(tags) );
 });
 
+// add new tag
+router.put('/', async(req, res) => {
+	const { name, categoryId } = req.body;
+	console.log('name', name);
+	console.log('categoryId', categoryId);
+	await db.addTagIfNeeded(name, categoryId);
+
+	res.writeHead( 200, { 'Content-Type': 'text/plain' });
+	res.end('OK');
+});
+
+// update tags for post
 router.post('/post', async (req, res) => {
 	const { postId, tagIds } = req.body;
 
@@ -19,30 +32,22 @@ router.post('/post', async (req, res) => {
 	res.end('OK');
 });
 
-// // add new tag
-// router.put('/', async (req, res) => {
-// 	const newPost = await db.createPost();
+// update
+router.post('/', async (req, res) => {
+	const { tag } = req.body;
+	await db.updateTag(tag);
 
-// 	res.writeHead( 200, { 'Content-Type': 'application/json' });
-// 	res.end( JSON.stringify(newPost) );
-// });
+	res.writeHead( 200, { 'Content-Type': 'text/plain' });
+	res.end('OK');
+});
 
-// // update
-// router.post('/', async (req, res) => {
-// 	const { post } = req.body;
-// 	await db.updatePost(post);
+// delete
+router.delete('/:id', async (req, res) => {
+	const { id } = req.params;
+	await db.deleteTag(id);
 
-// 	res.writeHead( 200, { 'Content-Type': 'text/plain' });
-// 	res.end('OK');
-// });
-
-// // delete
-// router.delete('/:id', async (req, res) => {
-// 	const { id } = req.params;
-// 	await db.deletePost(id);
-
-// 	res.writeHead( 200, { 'Content-Type': 'text/plain' });
-// 	res.end('OK');
-// });
+	res.writeHead( 200, { 'Content-Type': 'text/plain' });
+	res.end('OK');
+});
 
 module.exports = router;

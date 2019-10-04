@@ -109,6 +109,9 @@ export default class Editor extends React.Component {
 			<div id="admin">
 				<h1>NeapolitanMakes Admin</h1>
 				<div className="preview">
+					<a href="/tags">
+						<button className="secondary">Manage Tags</button>
+					</a>
 					<a href="http://localhost:8082" target="_blank">
 						<button className="secondary">Preview Site</button>
 					</a>
