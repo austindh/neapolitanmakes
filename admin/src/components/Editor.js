@@ -26,6 +26,7 @@ export default class Editor extends React.Component {
 			post: {},
 			bodyCursorPos: 0,
 			postDeleted: false,
+			goBack: false,
 			nonPost: false, // used for other pages, like About Me, etc.
 			tagModalOpen: false,
 		}
@@ -156,13 +157,29 @@ export default class Editor extends React.Component {
 		post.tags = tags;
 		this.setState({ post });
 	}
+
+	goBack = () => {
+		const { savedPost, post } = this.state;
+		const hasChanges = !_.isEqual(savedPost, post);
+		let shouldGoBack = true;
+		if (hasChanges) {
+			const confirm = window.confirm('You have unsaved changes. Are you sure you want to go back?');
+			if (!confirm) {
+				shouldGoBack = false;
+			}
+		}
+
+		if (shouldGoBack) {
+			this.setState({ goBack: true });
+		}
+	}
 	
 	render() {
-		const { savedPost, post, postDeleted, nonPost, tagModalOpen } = this.state;
+		const { savedPost, post, postDeleted, nonPost, tagModalOpen, goBack } = this.state;
 
 		const hasChanges = !_.isEqual(savedPost, post);
 
-		if (postDeleted) {
+		if (postDeleted || goBack) {
 			return <Redirect to="/"/>
 		}
 
@@ -212,12 +229,7 @@ export default class Editor extends React.Component {
 						</div>
 					</div>
 					<div className="buttons">
-						<Link to={{
-							pathname: '/',
-							state: { reloadPosts: true }
-						}}>
-							<button>Back</button>
-						</Link>
+						<button onClick={this.goBack}>Back</button>
 						<button className="secondary" onClick={() => this.fileInput.current.click() }>Add Image</button>
 						<input ref={this.fileInput} hidden={true} type="file" onChange={this.onFileChange}></input>
 						<button className="primary" disabled={!hasChanges} onClick={this.save}>Save</button>

@@ -119,7 +119,7 @@ export default class PostTagEditor extends React.Component {
 				</div>
 				<div className="buttons">
 					<button onClick={this.onCancel}>Cancel</button>
-					<button className="primary" onClick={this.onSave}>Save</button>
+					<button className="primary" onClick={this.onSave}>Update</button>
 				</div>
 				<TagEditor open={this.state.tagEditorOpen} onClose={this.closeTagEditor}></TagEditor>
 			</div>
