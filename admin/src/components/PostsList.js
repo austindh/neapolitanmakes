@@ -6,6 +6,7 @@ import {
 	Redirect
 } from 'react-router-dom';
 
+import LoadingBar from './LoadingBar';
 import './PostsList.scss';
 
 export default class Editor extends React.Component {
@@ -15,7 +16,8 @@ export default class Editor extends React.Component {
 		this.state = {
 			newPost: null,
 			posts: [],
-			pages: []
+			pages: [],
+			isGeneratingPreview: false,
 		};
 	}
 
@@ -48,6 +50,14 @@ export default class Editor extends React.Component {
 		axios.put('/pages').then(res => {
 			const page = res.data;
 			this.setState({ newPost: page });
+		});
+	}
+
+	buildSiteAndOpenPreview = () => {
+		this.setState({ isGeneratingPreview: true });
+		axios.post('/build').then(() => {
+			this.setState({ isGeneratingPreview: false });
+			window.open('http://localhost:8082')
 		});
 	}
 
@@ -104,17 +114,22 @@ export default class Editor extends React.Component {
 			) 
 		}
 
+		const { isGeneratingPreview } = this.state;
+
 		// ATODO make preview site build site before opening up preview
 		return (
 			<div id="admin">
 				<h1>NeapolitanMakes Admin</h1>
 				<div className="preview">
-					<a href="/tags">
-						<button className="secondary">Manage Tags</button>
-					</a>
-					<a href="http://localhost:8082" target="_blank">
-						<button className="secondary">Preview Site</button>
-					</a>
+					<div>
+						<a href="/tags">
+							<button className="secondary">Manage Tags</button>
+						</a>
+						<button className="secondary" onClick={this.buildSiteAndOpenPreview} disabled={isGeneratingPreview}>
+							Preview Site
+						</button>
+						<LoadingBar show={isGeneratingPreview}></LoadingBar>
+					</div>
 				</div>
 				<div className="card">
 					<div className="title">Blog Posts</div>

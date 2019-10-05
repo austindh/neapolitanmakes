@@ -1,6 +1,4 @@
 const express = require('express');
-const fs = require('fs');
-const { exec } = require('child_process');
 
 const PORT = 8082;
 const app = express();
@@ -17,6 +15,7 @@ app.use('/pages', require('./admin/routes/pages'));
 app.use('/posttags', require('./admin/routes/tags'));
 app.use('/categories', require('./admin/routes/categories'));
 app.use('/images', require('./admin/routes/images'));
+app.use('/build', require('./admin/routes/build'));
 
 app.use('/', express.static('docs', { extensions: ['html'] }));
 app.use('/admin', express.static('admin/public'));
@@ -26,28 +25,3 @@ app.use('/admin', express.static('admin/public'));
 app.use( '*', function( req, res ) {
 	res.sendFile( __dirname + '/admin/index.html' );
 });
-
-
-
-let running = false;
-let waiting = false;
-function buildWebpack() {
-	if (running) {
-		waiting = true;
-		return;
-	}
-
-	waiting = false;
-	console.log( 'running webpack...' );
-	exec('webpack', (err, stdout, stderr) => {
-		if (err) {
-			console.log( 'err:', err );
-		} else {
-			console.log( stdout );
-			running = false;
-			if (waiting) {
-				buildWebpack();
-			}
-		}
-	});
-}

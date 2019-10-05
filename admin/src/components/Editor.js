@@ -144,6 +144,16 @@ export default class Editor extends React.Component {
 		this.setState({ bodyCursorPos });
 	}
 
+	hasChanges = () => {
+		const { savedPost, post } = this.state;
+		const saved = Object.assign({}, savedPost);
+		const current = Object.assign({}, post);
+		// Don't compare tags because those are updated separately
+		delete saved.tags;
+		delete current.tags;
+		return !_.isEqual(saved, current);
+	}
+
 	openTagModal = () => {
 		this.setState({ tagModalOpen: true });
 	}
@@ -159,8 +169,7 @@ export default class Editor extends React.Component {
 	}
 
 	goBack = () => {
-		const { savedPost, post } = this.state;
-		const hasChanges = !_.isEqual(savedPost, post);
+		const hasChanges = this.hasChanges();
 		let shouldGoBack = true;
 		if (hasChanges) {
 			const confirm = window.confirm('You have unsaved changes. Are you sure you want to go back?');
@@ -175,9 +184,9 @@ export default class Editor extends React.Component {
 	}
 	
 	render() {
-		const { savedPost, post, postDeleted, nonPost, tagModalOpen, goBack } = this.state;
+		const { post, postDeleted, nonPost, tagModalOpen, goBack } = this.state;
 
-		const hasChanges = !_.isEqual(savedPost, post);
+		const hasChanges = this.hasChanges();
 
 		if (postDeleted || goBack) {
 			return <Redirect to="/"/>

@@ -14,8 +14,6 @@ router.get( '/', async ( req, res ) => {
 // add new tag
 router.put('/', async(req, res) => {
 	const { name, categoryId } = req.body;
-	console.log('name', name);
-	console.log('categoryId', categoryId);
 	await db.addTagIfNeeded(name, categoryId);
 
 	res.writeHead( 200, { 'Content-Type': 'text/plain' });

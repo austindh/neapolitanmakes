@@ -58,7 +58,6 @@ export default class TagEditor extends React.Component {
 	}
 
 	delete = async () => {
-		console.log('delete');
 		const { tagName, tagId } = this.state;
 		const shouldDelete = window.confirm(`Are you sure you want to delete tag "${tagName}"?`);
 		if (!shouldDelete) {

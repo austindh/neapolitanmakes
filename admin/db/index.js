@@ -277,6 +277,9 @@ module.exports = {
 			group by t.name;
 		`);
 		tags.forEach(t => {
+			if (!t.posts) {
+				return;
+			}
 			const posts = t.posts.split(',').map(x => parseInt(x));
 			lookup[t.name] = posts;
 		});
