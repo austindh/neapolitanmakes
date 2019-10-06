@@ -150,12 +150,7 @@ $socialIconSize: 35px;
     color: $black;
     text-decoration: none;
 
-    &.active {
-        background: $white;
-        color: $black;
-    }
-
-    &:not(.active):hover {
+    &:hover, &.active {
         background: $pink;
         color: $white;
     }

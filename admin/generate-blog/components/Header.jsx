@@ -7,19 +7,13 @@ const addTab = (name, url) => {
 	const t = { name, url };
 	tabs.push(t)
 }
-addTab('Sewing', null);
-addTab('Food', null);
-addTab('Crafts', null);
-addTab('Home', null);
-addTab('Shop', null);
+addTab('Sewing', '/sewing');
+addTab('Food', '/food');
+addTab('Crafts', '/crafts');
+addTab('Home', '/home');
+addTab('Shop', '/shop');
 addTab('Etsy', '/etsy');
 addTab('About', '/about');
-
-const headerTabs = [<div className="divider"></div>];
-tabs.forEach((t, i) => {
-	headerTabs.push(<a href={t.url} className="tab"><div>{t.name}</div></a>);
-	headerTabs.push(<div className="divider"></div>)
-});
 
 export const blogTabs = tabs;
 
@@ -37,6 +31,24 @@ export const socialIcons = (
 );
 
 const Header = props => {
+	const { currentUrl } = props;
+	const headerTabs = [<div className="divider"></div>];
+	tabs.forEach((t, i) => {
+		let activePage = false;
+		if (currentUrl) {
+			const cleanUpRegex = /[^a-z]/ig;
+			const tabUrl = t.url.replace(cleanUpRegex, '').toLowerCase();
+			const pageUrl = currentUrl.replace(cleanUpRegex, '').toLowerCase();
+			activePage = tabUrl === pageUrl;
+		}
+		if (activePage) {
+			headerTabs.push(<div className="tab active">{t.name}</div>)
+		} else {
+			headerTabs.push(<a href={t.url} className="tab"><div>{t.name}</div></a>);
+		}
+		headerTabs.push(<div className="divider"></div>)
+	});
+
 	return(
 		[
 			<div id="header">

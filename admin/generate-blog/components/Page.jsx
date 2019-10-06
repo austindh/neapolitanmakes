@@ -7,7 +7,9 @@ import Header from './Header';
 import Sidebar from './Sidebar';
 import Sidenav from './Sidenav';
 
-export const getPageHtml = (postHtml, additionalJsFilename) => {
+export const getPageHtml = (postHtml, options = {}) => {
+
+	const { js: additionalJsFilename, currentUrl } = options;
 	
 	const cssUrl = '/css/style.css';
 	let additionalJs = additionalJsFilename ? <script src={`/js/${additionalJsFilename}`}></script> : '';
@@ -23,7 +25,7 @@ export const getPageHtml = (postHtml, additionalJsFilename) => {
 				<script src="/js/main.js"></script>
 			</head>
 			<body>
-				<Header />
+				<Header currentUrl={currentUrl} />
 				<div id="body">
 					<div className="spacer"></div>
 					<div className="spacer"></div>

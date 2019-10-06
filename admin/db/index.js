@@ -202,6 +202,25 @@ module.exports = {
 		return await selectAll('select * from categories');
 	},
 
+	async getCategoryPostsLookup() {
+		const map = new Map();
+		const categories = await this.getCategories();
+		for (let c of categories) {
+			map.set(c.id, new Set());
+		}
+		const rows = await selectAll(`
+			select c.id, post_id
+			from categories c
+			left join tags t on c.id = t.category_id
+			left join post_tag pt on t.id = pt.tag_id
+			group by c.id, pt.post_id;
+		`);
+		rows.forEach(r => {
+			map.get(r.id).add(r.post_id);
+		});
+		return map;
+	},
+
 	///////////////
 	// TAGS
 	///////////////

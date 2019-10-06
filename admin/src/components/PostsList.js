@@ -116,7 +116,6 @@ export default class Editor extends React.Component {
 
 		const { isGeneratingPreview } = this.state;
 
-		// ATODO make preview site build site before opening up preview
 		return (
 			<div id="admin">
 				<h1>NeapolitanMakes Admin</h1>

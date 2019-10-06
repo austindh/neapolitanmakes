@@ -4,7 +4,7 @@ const { exec } = require('child_process');
 
 const build = () => {
 	return new Promise((resolve, reject) => {
-		exec('npm run build:blog --prefix admin', (err, stdout) => {
+		exec('npm run build:js --prefix admin', (err, stdout) => {
 			if (err) {
 				reject(err);
 			} else {

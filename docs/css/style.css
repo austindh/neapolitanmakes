@@ -411,10 +411,7 @@ body {
   transition: background 200ms linear;
   color: #272727;
   text-decoration: none; }
-  .tab.active {
-    background: #fdfdfd;
-    color: #272727; }
-  .tab:not(.active):hover {
+  .tab:hover, .tab.active {
     background: #ff7289;
     color: #fdfdfd; }
 
@@ -596,6 +593,12 @@ body {
   #sidenav .tab {
     margin-bottom: 25px;
     display: block; }
+
+.empty-cat {
+  justify-content: center;
+  align-items: center;
+  color: gray;
+  font-style: italic; }
 
 .match-summary {
   display: flex;

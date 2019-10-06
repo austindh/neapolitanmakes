@@ -6,6 +6,7 @@ const { markdown } = require('markdown');
 
 const { getPageHtml } = require('./build/Page');
 const { getPostHtml } = require('./build/Post');
+const { getCategoryPageHtml } = require('./build/CategoryPage');
 
 const DOCS_DIR = path.resolve(__dirname, '../../docs');
 const ICONS_DIR = path.resolve(__dirname, 'icons');
@@ -45,7 +46,8 @@ module.exports = {
 			postsLookup[p.id] = {
 				title: p.title,
 				thumbnail: p.thumbnail,
-				url: p.fullUrl
+				url: p.fullUrl,
+				date: postDate
 			};
 		});
 
@@ -110,7 +112,7 @@ module.exports = {
 			const tree = markdown.parse(markdownText);
 			const html = markdown.renderJsonML(markdown.toHTMLTree(tree));
 			const postHtml = getPostHtml(html, { title, url });
-			const pageHtml = getPageHtml(postHtml);
+			const pageHtml = getPageHtml(postHtml, { currentUrl: url });
 
 			const pageLocation = path.join(DOCS_DIR, `${url}.html`);
 			await fse.writeFile(pageLocation, pageHtml);
@@ -123,9 +125,24 @@ module.exports = {
 		
 		const tagToPostLookup = await db.getTagToPostsLookup();
 		await fse.writeFile(path.join(jsonDir, 'tags.json'), JSON.stringify(tagToPostLookup));
+		
+		// Create category directory pages
+		const categories = await db.getCategories();
+		const catToPostIdsLookup = await db.getCategoryPostsLookup();
+		for (let c of categories) {
+			const pageName = c.name.toLowerCase();
+			const postIds = catToPostIdsLookup.get(c.id);
+			const posts = [...postIds].map(id => postsLookup[id]).filter(x => x);
+			const catPageHtml = getCategoryPageHtml(c, posts);
+			const pageHtml = getPageHtml(catPageHtml, { currentUrl: pageName });
+
+			const filePath = path.join(DOCS_DIR, `${pageName}.html`);
+			await fse.writeFile(filePath, pageHtml);
+		}
+
 
 		// Create tags page (page to see all posts with given tag)
-		const pageHtml = getPageHtml('<div class="post"></div>', 'tagSearch.js');
+		const pageHtml = getPageHtml('<div class="post"></div>', { js: 'tagSearch.js' });
 		await fse.writeFile(path.join(DOCS_DIR, 'tags.html'), pageHtml);
 
 	}
