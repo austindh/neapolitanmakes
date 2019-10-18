@@ -100,27 +100,27 @@ module.exports = {
 	async getPostByCleanTitle(cleanTitle) {
 		return await selectOne('select * from posts where cleanTitle = ?', cleanTitle);
 	},
-	
+
 	async createPost() {
 		const now = new Date();
 		const dateString = dateformat(now, 'm/d/yy');
 		const title = 'New Post 1';
-		
+
 		const newPostId = await run("insert into posts(title, date) values(?, ?)", title, dateString);
 		return await selectOne('select * from posts where id = ?', newPostId);
 	},
-	
+
 	async updatePost(post) {
 		let { id, date, title, cleanTitle, body, thumbnail } = post;
 		date = dateformat(new Date(date), 'm/d/yy');
 		if (!cleanTitle) {
 			cleanTitle = title.replace(/[^\w\s]/g, '').toLowerCase().split(/\s+/).join('-');
 		}
-		
-		return await run('update posts set date = ?, title = ?, cleanTitle = ?, body = ?, thumbnail = ? where id = ?', 
+
+		return await run('update posts set date = ?, title = ?, cleanTitle = ?, body = ?, thumbnail = ? where id = ?',
 		date, title, cleanTitle, body, thumbnail, id);
 	},
-	
+
 	async deletePost(postId) {
 		return await run('delete from posts where id = ?', postId);
 	},
@@ -147,7 +147,7 @@ module.exports = {
 	async createPage() {
 		const title = 'Page';
 		const url = 'page';
-		
+
 		const newPageId = await run("insert into pages(title, url) values(?, ?)", title, url);
 		return await selectOne('select * from pages where id = ?', newPageId);
 	},
@@ -303,6 +303,124 @@ module.exports = {
 			lookup[t.name] = posts;
 		});
 		return lookup;
+	},
+
+	///////////////
+	// RECIPES
+	///////////////
+	async insertRecipe(recipe) {
+		const newId = await run('insert into recipes(post_id, title, yield, time) values(?, ?, ?, ?)', recipe.postId, recipe.title, recipe.yield, recipe.time);
+		await this._updateRecipeIngredients(newId, recipe.ingredients);
+		await this._updateRecipeSteps(newId, recipe.steps);
+		return newId;
+	},
+
+	async updateRecipe(recipe) {
+		const { id, title, yield: rYield, time, ingredients, steps } = recipe;
+		await run('update recipes set title = ?, yield = ?, time = ? where id = ?', title, rYield, time, id);
+		await this._updateRecipeIngredients(id, ingredients);
+		await this._updateRecipeSteps(id, steps);
+	},
+
+	async deleteRecipe(id) {
+		await run('delete from recipes where id = ?', id);
+	},
+
+	async getRecipesForPost(postId) {
+		const recipes = await selectAll('select id, post_id as postId, title, yield, time from recipes where post_id = ?', postId);
+		for (let r of recipes) {
+			r.ingredients = await selectAll('select amount, name from recipe_ingredients where recipe_id = ? order by ordering', r.id);
+			r.steps = await selectAll('select description from recipe_steps where recipe_id = ? order by step_number', r.id);
+		}
+		return recipes;
+	},
+
+	async _updateRecipeIngredients(recipeId, ingredients) {
+		await run('delete from recipe_ingredients where recipe_id = ?', recipeId);
+		ingredients = ingredients.map((ingredient, i) => {
+			ingredient.order = i + 1;
+			return ingredient;
+		});
+		for (let i of ingredients) {
+			await run('insert into recipe_ingredients(recipe_id, ordering, amount, name) values(?, ?, ?, ?)', recipeId, i.order, i.amount, i.name);
+		}
+	},
+
+	async _updateRecipeSteps(recipeId, steps) {
+		await run('delete from recipe_steps where recipe_id = ?', recipeId);
+		steps = steps.map((s, i) => {
+			s.step_number = i + 1;
+			return s;
+		});
+		for (let s of steps) {
+			await run('insert into recipe_steps(recipe_id, step_number, description) values(?, ?, ?)', recipeId, s.step_number, s.description);
+		}
 	}
 
 };
+
+// ATODO temp
+const main = async () => {
+	const newRecipe = {
+		postId: 1,
+		title: 'Angel Biscuits',
+		yield: '12 biscuits',
+		time: '30 minutes',
+		ingredients: [
+			{ amount: '1 tbsp', name: 'active dry yeast' },
+			{ amount: '2 tbsp', name: 'warm water' },
+			{ amount: '2 3/4 cup', name: 'flour' },
+			{ amount: '2 tbsp', name: 'sugar' },
+			{ amount: '1 tsp', name: 'salt' },
+			{ amount: '3 tsp', name: 'baking powder' },
+			{ amount: '1/3 cup', name: 'vegetable shortening' },
+			{ amount: '1 cup', name: 'buttermilk' },
+			{ amount: '1 tsp', name: 'milk' },
+			{ amount: '1 tbsp', name: 'butter' },
+		],
+		steps: [
+			{ description: 'Preheat oven to 400 degrees. Line a skillet with parchment paper and spray with cooking spray.'	},
+			{ description: 'Combine warm water and yeast in a small bowl. Combine remaining dry ingredients in a large bowl.' },
+			{ description: 'Cut shortening into the dry ingredients. Mix yeast mixture with buttermilk and stir into the dry ingredients until just combined.' },
+			{ description: 'Roll out on a lightly floured surface to 1" thick. Cut with a 2 1/2" circle cutter and place in the lined skillet. Brush the tops of the biscuits with milk.' },
+			{ description: 'Bake 13-20 minutes, until they reach the desired golden color. Brush the tops of the baked biscuits with melted butter.' },
+		]
+	};
+
+	const newRecipe2 = {
+		postId: 1,
+		title: 'Angel Biscuits 2',
+		yield: '12 biscuits',
+		time: '30 minutes',
+		ingredients: [
+			{ amount: '1 tbsp', name: 'active dry yeast' },
+			{ amount: '2 tbsp', name: 'warm water' },
+			{ amount: '2 3/4 cup', name: 'flour' },
+			{ amount: '2 tbsp', name: 'sugar' },
+			{ amount: '1 tsp', name: 'salt' },
+			{ amount: '3 tsp', name: 'baking powder' },
+			{ amount: '1/3 cup', name: 'vegetable shortening' },
+			{ amount: '1 cup', name: 'buttermilk' },
+			{ amount: '1 tsp', name: 'milk' },
+			{ amount: '1 tbsp', name: 'butter' },
+		],
+		steps: [
+			{ description: 'Preheat oven to 400 degrees. Line a skillet with parchment paper and spray with cooking spray.'	},
+			{ description: 'Combine warm water and yeast in a small bowl. Combine remaining dry ingredients in a large bowl.' },
+			{ description: 'Cut shortening into the dry ingredients. Mix yeast mixture with buttermilk and stir into the dry ingredients until just combined.' },
+			{ description: 'Roll out on a lightly floured surface to 1" thick. Cut with a 2 1/2" circle cutter and place in the lined skillet. Brush the tops of the biscuits with milk.' },
+			{ description: 'Bake 13-20 minutes, until they reach the desired golden color. Brush the tops of the baked biscuits with melted butter.' },
+		]
+	};
+
+	try {
+		// await run('delete from recipes where id is not null');
+		// await module.exports.insertRecipe(newRecipe);
+		// await module.exports.insertRecipe(newRecipe2);
+		const recipes = await module.exports.getRecipesForPost(1);
+		console.log(JSON.stringify(recipes, null, 4));
+	} catch (e) {
+		console.log(e);
+	}
+};
+// main();

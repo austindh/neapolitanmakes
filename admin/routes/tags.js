@@ -6,7 +6,7 @@ const db = require('../db');
 // get all tags
 router.get( '/', async ( req, res ) => {
 	const tags = await db.getAllTags();
-	
+
 	res.writeHead( 200, { 'Content-Type': 'application/json' });
 	res.end( JSON.stringify(tags) );
 });

@@ -14,6 +14,12 @@
 		width: 50%;
 	}
 
+	.right-controls {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+
 	.buttons {
 		display: flex;
 		justify-content: flex-end;
@@ -90,7 +96,7 @@
 	flex-grow: 1;
 	display: flex;
 	overflow: auto;
-	
+
 	textarea {
 		padding: 30px;
 		width: 50%;

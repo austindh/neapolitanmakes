@@ -14,6 +14,7 @@ import ReactHtmlParser from 'react-html-parser';
 
 import Modal from './Modal';
 import PostTagEditor from './PostTagEditor';
+import RecipesList from './RecipesList';
 
 import './Editor.scss';
 import { getThumbnailUrlFromMarkdown } from '../js/util';
@@ -45,7 +46,7 @@ export default class Editor extends React.Component {
 		this.onBodyBlur = this.onBodyBlur.bind(this);
 		this.onFileChange = this.onFileChange.bind(this);
 	}
-	
+
 	componentDidMount() {
 		const { state } = this.props.location || {};
 		const { post } = state || {};
@@ -186,7 +187,7 @@ export default class Editor extends React.Component {
 			this.setState({ goBack: true });
 		}
 	}
-	
+
 	render() {
 		const { post, postDeleted, nonPost, tagModalOpen, goBack } = this.state;
 
@@ -202,7 +203,7 @@ export default class Editor extends React.Component {
 
 		const bodyHtml = markdown.toHTML(body);
 
-		const secondaryInputWithDisplay = nonPost ? 
+		const secondaryInputWithDisplay = nonPost ?
 			[
 				<label key="1">
 					Page Url:
@@ -241,16 +242,19 @@ export default class Editor extends React.Component {
 							<button className="edit-tags primary" onClick={this.openTagModal}>Edit tags</button>
 						</div>
 					</div>
-					<div className="buttons">
-						<button onClick={this.goBack}>Back</button>
-						<button className="secondary" onClick={() => this.fileInput.current.click() }>Add Image</button>
-						<input ref={this.fileInput} hidden={true} type="file" onChange={this.onFileChange}></input>
-						<button className="primary" disabled={!hasChanges} onClick={this.save}>Save</button>
-						<button className="warn" onClick={this.delete}>Delete</button>
+					<div className="right-controls">
+						<div className="buttons">
+							<button onClick={this.goBack}>Back</button>
+							<button className="secondary" onClick={() => this.fileInput.current.click() }>Add Image</button>
+							<input ref={this.fileInput} hidden={true} type="file" onChange={this.onFileChange}></input>
+							<button className="primary" disabled={!hasChanges} onClick={this.save}>Save</button>
+							<button className="warn" onClick={this.delete}>Delete</button>
+						</div>
+						<RecipesList postId={post.id}></RecipesList>
 					</div>
 				</div>
 				<div className="main">
-					<textarea ref={this.bodyText} value={body} onChange={this.onBodyChange} 
+					<textarea ref={this.bodyText} value={body} onChange={this.onBodyChange}
 						onBlur={this.onBodyBlur}></textarea>
 					<div className="post">
 						<h1>{title}</h1>

@@ -1,0 +1,96 @@
+#recipe-editor {
+
+	.header {
+		font-weight: bold;
+		margin-bottom: 10px;
+	}
+
+	.input-row {
+		display: flex;
+		margin-bottom: 10px;
+	}
+
+	span {
+		display: inline-block;
+		font-weight: bold;
+		width: 50px;
+		text-align: right;
+		margin: 0 10px;
+	}
+
+	input {
+		display: inline-block;
+		padding: 5px 10px;
+		box-sizing: border-box;
+		flex-grow: 1;
+	}
+
+	label {
+		flex-grow: 1;
+		display: flex;
+		align-items: center;
+	}
+
+	.list {
+		white-space: pre;
+		border: solid gray 1px;
+		padding: 10px;
+		line-height: 1.5em;
+	}
+
+	.ingredients {
+		margin-top: 30px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		// width: 400px;
+		// margin-left: 50%;
+		// transform: translateX(-50%);
+
+		input {
+			width: 100%;
+			font-size: 0.9em;
+		}
+
+		> div {
+			position: relative;
+			display: flex;
+			width: 100%;
+		}
+
+
+		.header {
+
+			> div {
+				display: flex;
+				justify-content: center;
+			}
+		}
+
+		.input-row {
+			span {
+				width: unset;
+			}
+		}
+
+		.amt {
+			width: 100px;
+			margin-right: 10px;
+		}
+
+		.ingredient {
+			flex-grow: 1;
+			margin-bottom: 10px;
+		}
+	}
+
+	.steps {
+		margin-top: 20px;
+
+		.step {
+			margin-bottom: 5px;
+			white-space: normal;
+			max-width: 500px;
+		}
+	}
+}

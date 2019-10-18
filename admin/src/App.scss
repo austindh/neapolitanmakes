@@ -13,10 +13,10 @@ body {
 	box-sizing: border-box;
 	display: flex;
 	flex-direction: column;
-	
+
 	a {
 		text-decoration: none;
-		
+
 		&:hover {
 			text-decoration: underline;
 		}
@@ -49,7 +49,7 @@ body {
 	margin: 20px 0px;
 	padding: 25px;
 	position: relative;
-	
+
 	.title {
 		font-size: 25px;
 		font-weight: bold;
@@ -70,7 +70,7 @@ button {
     border-radius: 2px;
     border: none;
     font-weight: bold;
-	
+
 	&.primary {
 		background: $pink;
 		color: white;

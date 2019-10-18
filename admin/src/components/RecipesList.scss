@@ -1,0 +1,60 @@
+#recipes-list {
+	margin-top: 10px;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+
+	.title {
+		font-weight: bold;
+		margin-right: 10px;
+	}
+
+	.recipes {
+		display: flex;
+	}
+
+
+	$chipPadding: 10px;
+	.recipe-chip {
+		display: flex;
+		padding-left: $chipPadding;
+		align-items: center;
+		cursor: pointer;
+		font-size: 0.9em;
+		background: lightgray;
+		border-radius: 20px;
+		margin-right: 5px;
+
+		&:hover {
+			background: darken(lightgray, 5%);
+
+			.insert {
+				background: darken(lightgray, 15%);
+			}
+		}
+
+		.insert {
+			font-size: 20px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+			background: darken(lightgray, 10%);
+			border-radius: 50px;
+			height: 30px;
+			width: 30px;
+			margin-left: $chipPadding;
+
+			&:hover {
+				background: gray;
+				color: white;
+				font-weight: bold;
+			}
+		}
+	}
+
+	button {
+		padding: 5px 10px;
+		min-width: 0;
+	}
+}

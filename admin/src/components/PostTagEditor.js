@@ -17,7 +17,7 @@ export default class PostTagEditor extends React.Component {
 
 		this.getAllTags();
 	}
-	
+
 	getAllTags = () => {
 		getAllTags().then(tags => {
 			this.setState({ allTags: tags });
@@ -47,7 +47,7 @@ export default class PostTagEditor extends React.Component {
 		currentTags.add(id);
 		this.setState({ currentTags });
 	}
-	
+
 	removeTag = id => {
 		const currentTags = new Set(this.state.currentTags);
 		currentTags.delete(id);
@@ -93,7 +93,7 @@ export default class PostTagEditor extends React.Component {
 		const makeTagCurrent = (t, i) => <div className="tag current" key={i} onClick={() => this.removeTag(t.id)}>{t.name}</div>;
 		const makeTag = (t, i) => <div className="tag" key={i} onClick={() => this.addTag(t.id)}>{t.name}</div>;
 		const current = allTags.filter(t => currentTags.has(t.id));
-		
+
 		const filterText = searchText.toLowerCase().trim();
 		const other = allTags.filter(t => {
 			if (currentTags.has(t.id)) {

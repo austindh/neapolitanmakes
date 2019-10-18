@@ -6,7 +6,7 @@ const db = require('../db');
 
 router.get( '/', async ( req, res ) => {
 	const posts = await db.getPostsWithTags();
-	
+
 	res.writeHead( 200, { 'Content-Type': 'application/json' });
 	res.end( JSON.stringify(posts) );
 
