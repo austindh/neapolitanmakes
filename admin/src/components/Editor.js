@@ -81,7 +81,9 @@ export default class Editor extends React.Component {
 	save() {
 		const { post, savedPost, nonPost } = this.state;
 		const endPoint = nonPost ? '/pages' : '/posts';
-		post.thumbnail = getThumbnailUrlFromMarkdown(post.body);
+		if (!post.thumbnail.includes('blogger')) { // don't to override blogger thumbnails
+			post.thumbnail = getThumbnailUrlFromMarkdown(post.body);
+		}
 		axios.post(endPoint, { post }).then(res => {
 			Object.assign(savedPost, post);
 			this.setState({ savedPost });
