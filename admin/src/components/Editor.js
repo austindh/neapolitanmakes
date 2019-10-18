@@ -16,6 +16,7 @@ import Modal from './Modal';
 import PostTagEditor from './PostTagEditor';
 
 import './Editor.scss';
+import { getThumbnailUrlFromMarkdown } from '../js/util';
 
 export default class Editor extends React.Component {
 
@@ -80,6 +81,7 @@ export default class Editor extends React.Component {
 	save() {
 		const { post, savedPost, nonPost } = this.state;
 		const endPoint = nonPost ? '/pages' : '/posts';
+		post.thumbnail = getThumbnailUrlFromMarkdown(post.body);
 		axios.post(endPoint, { post }).then(res => {
 			Object.assign(savedPost, post);
 			this.setState({ savedPost });
