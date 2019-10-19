@@ -1,7 +1,6 @@
 @import '../scss/mixins';
 
 #sidebar, #small-sidebar {
-	padding: 20px;
 	margin: 20px 0;
 	margin-right: 30px;
 }
@@ -11,7 +10,7 @@
     height: 250px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    // justify-content: center;
 	
 	.pic {
 		display: flex;

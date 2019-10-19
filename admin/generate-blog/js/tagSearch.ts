@@ -14,15 +14,21 @@ const main = async () => {
 		}
 
 		const cardHtml = `
-			<div class="card post-summary">
-				<img alt="${post.title}" src="${post.thumbnail}"></img>
-				<a href="${post.url}" class="title">${post.title}</a>
-			</div>
+			<a href=${post.url} class="post-card card" style="background-image:url(${post.thumbnail})">
+				<div class="title">${post.title}</div>
+			</a>
 		`;
 		return cardHtml;
 	});
-
 	const numMatches = posts.length;
+
+	const rows = [];
+	while (posts.length) {
+		rows.push(posts.splice(0, 3));
+	}
+
+	const rowEls = rows.map(posts => `<div class="row">${ posts.join('\n') }</div>`);
+
 	const targetEl = document.querySelector('.post');
 	const matches = numMatches === 1 ? 'match' : 'matches'
 	targetEl.innerHTML = `
@@ -30,8 +36,8 @@ const main = async () => {
 			<span>${numMatches} ${matches} for tag:</span>
 			<div class="tag active">${tagName}</div> 
 		</div>
-		<div class="matches">
-			${posts.join('\n')}
+		<div class="post-cards">
+			${rowEls.join('\n')}
 		</div>
 	`;
 	

@@ -1,9 +1,9 @@
 import React from 'react';
 import { renderToStaticMarkup } from 'react-dom/server';
 
-export const getCategoryPageHtml = (category, posts) => {
+const NUM_PER_ROW = 3;
 
-	// console.log('posts', posts);
+export const getCategoryPageHtml = (category, posts) => {
 
 	if (!posts.length) {
 		return renderToStaticMarkup(
@@ -13,9 +13,25 @@ export const getCategoryPageHtml = (category, posts) => {
 		);
 	}
 
+	
+	const postEls = posts.map((p, i) => (
+		<a href={p.url} key={i} className="post-card card" style={{ backgroundImage: `url(${p.thumbnail})`}}>
+			<div className="title">{p.title}</div>
+		</a>
+	));
+
+	const rows = [];
+	while (postEls.length) {
+		rows.push(postEls.splice(0, NUM_PER_ROW));
+	}
+
+	const rowEls = rows.map((posts, i) => (
+		<div className="row">{ posts }</div>
+	));
+
 	return renderToStaticMarkup(
-		<div className="">
-			HEY CATEGORY PAGE
+		<div className="post-cards">
+			{ rowEls }
 		</div>
 	);
 };

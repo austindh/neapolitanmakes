@@ -1,0 +1,51 @@
+@import '../scss/colors';
+
+.recent-posts-title {
+	font-size: 24px;
+    margin-top: 20px;
+}
+
+.post-cards {
+	margin-bottom: 50px;
+
+	.row {
+		display: flex;
+	}
+
+	.post-card {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		text-decoration: none;
+		color: $black;
+		width: 50%;
+		margin: 20px;
+		background-repeat: no-repeat;
+		background-size: cover;
+		height: 200px;
+		width: 200px;
+		box-shadow: 2px 2px 6px 1px #848484d1;
+
+		&:hover {
+			.title {
+				background: #ffffffd4;
+			}
+		}
+
+		.title {
+			font-weight: bold;
+			font-size: 20px;
+			background: #ffffffa3;
+			width: 100%;
+			padding: 10px 16px;
+			text-align: center;
+			transition: all 0.5s;
+		}
+
+		img {
+			max-width: 200px;
+			max-height: 200px;
+		}
+	}
+}

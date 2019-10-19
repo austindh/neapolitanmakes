@@ -15,6 +15,7 @@ body {
 	flex-grow: 1;
 }
 
+@import '../components//HomePage.scss';
 @import '../components/Header.scss';
 @import '../components/Post.scss';
 @import '../components/Page.scss';

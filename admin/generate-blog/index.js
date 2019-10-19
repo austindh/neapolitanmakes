@@ -6,6 +6,7 @@ const { markdown } = require('markdown');
 
 const { getPageHtml } = require('./build/Page');
 const { getPostHtml } = require('./build/Post');
+const { getHomePageHtml } = require('./build/HomePage');
 const { getCategoryPageHtml } = require('./build/CategoryPage');
 
 const DOCS_DIR = path.resolve(__dirname, '../../docs');
@@ -73,14 +74,8 @@ module.exports = {
 		await fse.copyFile(cssFile, path.join(cssDir, 'style.css'));
 	
 		// Create html files
-		let first = true;
-		posts = [posts[0], ...posts]; // duplicate first post for index
 		for (let post of posts) {
 			let { title, next, prev, date, fullUrl } = post;
-			let selfUrl;
-			if (first) {
-				selfUrl = fullUrl; // index page needs post title to link to post page
-			}
 
 			const tags = await db.getTagsForPost(post.id);
 
@@ -89,20 +84,21 @@ module.exports = {
 			
 			const tree = markdown.parse(markdownText);
 			const html = markdown.renderJsonML(markdown.toHTMLTree(tree));
-			const postHtml = getPostHtml(html, { title, next, prev, date, selfUrl }, tags);
+			const postHtml = getPostHtml(html, { title, next, prev, date }, tags);
 			const pageHtml = getPageHtml(postHtml);
 
-			await fse.writeFile(path.join(DOCS_DIR, post.fullUrl + '.html'), pageHtml);
+			await fse.writeFile(path.join(DOCS_DIR, fullUrl + '.html'), pageHtml);
 			
-			// newest post is new index.html
-			if (first) {
-				first = false;
-				const indexPath = path.join(DOCS_DIR, 'index.html');
-				await fse.writeFile(indexPath, pageHtml);
-			}
-
+			
 		}
 
+		// Create home page with recent posts
+		const indexPath = path.join(DOCS_DIR, 'index.html');
+		const homePageHtml = getPageHtml(
+			getHomePageHtml(posts)
+		);
+		await fse.writeFile(indexPath, homePageHtml);
+		
 		// Create other non-blog post pages
 		const pages = await db.getPages();
 		for (let page of pages) {
