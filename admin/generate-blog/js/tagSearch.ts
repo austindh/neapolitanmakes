@@ -2,7 +2,7 @@ import { loadJson } from './loadJson';
 
 const main = async () => {
 	const [postLookup, tagLookup] = await Promise.all([loadJson('posts.json'), loadJson('tags.json')]);
-	
+
 	const { search } = window.location;
 	const tagName = decodeURIComponent(search.split('?tag=')[1]);
 
@@ -34,13 +34,13 @@ const main = async () => {
 	targetEl.innerHTML = `
 		<div class="match-summary">
 			<span>${numMatches} ${matches} for tag:</span>
-			<div class="tag active">${tagName}</div> 
+			<div class="tag active">${tagName}</div>
 		</div>
 		<div class="post-cards">
 			${rowEls.join('\n')}
 		</div>
 	`;
-	
+
 
 };
 main();

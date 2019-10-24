@@ -1,4 +1,4 @@
-const express = require( 'express' );
+import * as express from 'express';
 const router = express.Router();
 const path = require('path');
 const fse = require('fs-extra');

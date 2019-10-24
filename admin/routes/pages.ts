@@ -1,7 +1,7 @@
-const express = require( 'express' );
+import * as express from 'express';
 const router = express.Router();
 
-const db = require('../db');
+import { db } from '../db';
 
 router.get( '/', async ( req, res ) => {
 

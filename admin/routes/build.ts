@@ -1,10 +1,10 @@
-const express = require( 'express' );
+import * as express from 'express';
 const router = express.Router();
 const { exec } = require('child_process');
 
 const build = () => {
 	return new Promise((resolve, reject) => {
-		exec('npm run build:js --prefix admin', (err, stdout) => {
+		exec('npm run build:js --prefix admin', (err, stdout) => { // TODO check that this works
 			if (err) {
 				reject(err);
 			} else {

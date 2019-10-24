@@ -1,10 +1,18 @@
-import React from 'react';
+import * as React from 'react';
 import ReactHtmlParser from 'react-html-parser';
 import { renderToStaticMarkup } from 'react-dom/server';
 
-export const getPostHtml = (html, props, tags) => {
+interface PostHtmlProps {
+	title: string
+	prev?: string
+	next?: string
+	date?: Date
+	url?: string
+}
 
-	const { title, prev, next, date, url, selfUrl } = props;
+export const getPostHtml = (html: string, props: PostHtmlProps, tags?) => {
+
+	const { title, prev, next, date, url } = props;
 
 	const nextLink = next ? <a href={next}>{'< Newer Post'}</a> : <span></span>;
 	const prevLink = prev ? <a href={prev}>{'Older Post >'}</a> : <span></span>;
@@ -12,11 +20,11 @@ export const getPostHtml = (html, props, tags) => {
 	let tagsContent;
 	if (tags && tags.length) {
 		tags = tags.map((t, i) => (
-				<a href={`/tags?tag=${encodeURIComponent(t)}`}>
-			<div key={i} className="tag">
+			<a href={`/tags?tag=${encodeURIComponent(t)}`}>
+				<div key={i} className="tag">
 					{t}
-			</div>
-				</a>
+				</div>
+			</a>
 		));
 		tagsContent = <div className="tags">{tags}</div>;
 	}
@@ -36,16 +44,7 @@ export const getPostHtml = (html, props, tags) => {
 		]);
 	}
 
-	// For index page to link to post page
 	let titleEl = <h1>{title}</h1>;
-	if (selfUrl) {
-		titleEl = (
-			<h1>
-				<a href={selfUrl}>{title}</a>
-			</h1>
-		);
-	}
-
 	return renderToStaticMarkup(
 		<div className="post card">
 			{ titleEl }

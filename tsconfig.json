@@ -2,7 +2,8 @@
 	"compilerOptions": {
 		"lib": ["esnext", "dom"],
 		"moduleResolution": "node",
-		"target": "es2015"
-	},
-	"include": ["./js"]
+		"target": "esnext",
+		"jsx": "react",
+		"allowSyntheticDefaultImports": true,
+	}
 }

@@ -2,6 +2,8 @@ const sqlite = require( 'sqlite3' ).verbose();
 const path = require( 'path' );
 const dateformat = require('dateformat');
 
+import { IPost, IPage, ICategory, ITag, IRecipe, IRecipeIngredient, IRecipeStep } from './interfaces';
+
 const dbPath = path.resolve( __dirname, '../../site.sqlite' );
 
 let connectionPromise;
@@ -36,7 +38,7 @@ const close = db => {
 	});
 };
 
-const selectAll = async ( sql, ...params ) => {
+const selectAll = async ( sql, ...params ): Promise<any[]> => {
 	const db = await getConnection();
 	return new Promise( ( resolve, reject ) => {
 		db.all( sql, [ ...params ], ( err, rows ) => {
@@ -54,7 +56,7 @@ const selectOne = async (sql, ...params) => {
 	return rows[0];
 };
 
-const run = async ( sql, ...params ) => {
+const run = async ( sql, ...params ): Promise<number> => {
 	const db = await getConnection();
 	return new Promise((resolve, reject) => {
 		db.run(sql, [...params], function (err, data) {
@@ -67,17 +69,18 @@ const run = async ( sql, ...params ) => {
 	});
 };
 
-module.exports = {
+export const db = {
 
 	///////////////
 	// POSTS
 	///////////////
-	async getPosts() {
+	async getPosts(): Promise<IPost[]> {
 		const posts = await selectAll('select * from posts');
+		posts.forEach(p => p.date = new Date(p.date));
 		return posts;
 	},
 
-	async getPostsWithTags() {
+	async getPostsWithTags(): Promise<IPost[]> {
 		const getPosts = selectAll(`
 			select p.id, p.date, p.title, p.cleanTitle, p.body, p.thumbnail, group_concat(pt.tag_id) as tags
 			from posts p
@@ -97,11 +100,11 @@ module.exports = {
 		});
 	},
 
-	async getPostByCleanTitle(cleanTitle) {
+	async getPostByCleanTitle(cleanTitle: string): Promise<IPost> {
 		return await selectOne('select * from posts where cleanTitle = ?', cleanTitle);
 	},
 
-	async createPost() {
+	async createPost(): Promise<IPost> {
 		const now = new Date();
 		const dateString = dateformat(now, 'm/d/yy');
 		const title = 'New Post 1';
@@ -110,7 +113,7 @@ module.exports = {
 		return await selectOne('select * from posts where id = ?', newPostId);
 	},
 
-	async updatePost(post) {
+	async updatePost(post: IPost): Promise<number> {
 		let { id, date, title, cleanTitle, body, thumbnail } = post;
 		date = dateformat(new Date(date), 'm/d/yy');
 		if (!cleanTitle) {
@@ -121,15 +124,15 @@ module.exports = {
 		date, title, cleanTitle, body, thumbnail, id);
 	},
 
-	async deletePost(postId) {
+	async deletePost(postId: number): Promise<number> {
 		return await run('delete from posts where id = ?', postId);
 	},
 
-	async addTagToPost(postId, tagId) {
+	async addTagToPost(postId: number, tagId: number) {
 		await run('insert into post_tag(post_id, tag_id) values(?, ?)', postId, tagId);
 	},
 
-	async updatePostTags(postId, tagIds) {
+	async updatePostTags(postId: number, tagIds: number[]) {
 		await run('delete from post_tag where post_id = ?', postId);
 		for (let tagId of tagIds) {
 			await this.addTagToPost(postId, tagId);
@@ -139,12 +142,12 @@ module.exports = {
 	///////////////
 	// PAGES
 	///////////////
-	async getPages() {
+	async getPages(): Promise<IPage[]> {
 		const pages = await selectAll('select * from pages');
 		return pages;
 	},
 
-	async createPage() {
+	async createPage(): Promise<IPage> {
 		const title = 'Page';
 		const url = 'page';
 
@@ -152,13 +155,13 @@ module.exports = {
 		return await selectOne('select * from pages where id = ?', newPageId);
 	},
 
-	async updatePage(page) {
+	async updatePage(page: IPage) {
 		let { id, title, url, body } = page;
 		return await run('update pages set title = ?, url = ?, body = ? where id = ?',
 			title, url, body, id);
 	},
 
-	async deletePage(pageId) {
+	async deletePage(pageId: number) {
 		return await run('delete from pages where id = ?', pageId);
 	},
 
@@ -198,13 +201,13 @@ module.exports = {
 	///////////////
 	// CATEGORIES
 	///////////////
-	async getCategories() {
+	async getCategories(): Promise<ICategory[]> {
 		return await selectAll('select * from categories');
 	},
 
 	async getCategoryPostsLookup() {
-		const map = new Map();
-		const categories = await this.getCategories();
+		const map: Map<number, Set<number>> = new Map();
+		const categories = await this.getCategories() as ICategory[];
 		for (let c of categories) {
 			map.set(c.id, new Set());
 		}
@@ -225,20 +228,23 @@ module.exports = {
 	// TAGS
 	///////////////
 	// Insert tag if it doesn't exist
-	async addTagIfNeeded(name, categoryId) {
+	async addTagIfNeeded(name: string, categoryId: number): Promise<ITag> {
 		if (!name || !categoryId) {
 			throw new Error('Tag needs name and categoryId')
 		}
 		const selectOneArgs = ['select * from tags where name = ?', name];
+		// @ts-ignore
 		const tag = await selectOne(...selectOneArgs);
 		if (tag) {
 			return tag;
 		}
 		await run('insert into tags(name, category_id) values(?, ?)', name, categoryId);
-		return await selectOne(...selectOneArgs);
+		// @ts-ignore
+		const t = await selectOne(...selectOneArgs);
+		return { id: t.id, name: t.name, categoryId: t.category_id };
 	},
 
-	async updateTag(tag) {
+	async updateTag(tag: ITag) {
 		const { id, name, categoryId } = tag;
 		return await run('update tags set name = ?, category_id = ? where id = ?', name, categoryId, id);
 	},
@@ -250,7 +256,7 @@ module.exports = {
 		return await run('delete from tags where id = ?', tagId);
 	},
 
-	async getTagsForPost(postId) {
+	async getTagsForPost(postId): Promise<string[]> {
 		let tags = await selectAll(`
 			select t.name
 			from post_tag pt
@@ -260,9 +266,9 @@ module.exports = {
 		return tags.map(x => x.name);
 	},
 
-	async getAllTags() {
+	async getAllTags(): Promise<ITag[]> {
 		return await selectAll(`
-			select t.*, ifnull(counts.count, 0) as count
+			select t.id, t.name, t.category_id as categoryId, ifnull(counts.count, 0) as count
 			from tags t
 			left join (
 				select tag_id, count(*) as count
@@ -274,21 +280,21 @@ module.exports = {
 	},
 
 	async getTagLookup() {
-		const tags = await this.getAllTags();
-		const lookup = {};
+		const tags = await this.getAllTags() as ITag[];
+		const lookup: {
+			[id: number]: ITag
+		} = {};
 		tags.forEach(t => {
-			lookup[t.id] = {
-				id: t.id,
-				name: t.name,
-				category: t.category_id
-			}
+			lookup[t.id] = t;
 		});
 		return lookup;
 	},
 
 	// Get lookup of tags to post
 	async getTagToPostsLookup() {
-		const lookup = {};
+		const lookup: {
+			[tagName: string]: number[]
+		} = {};
 		const tags = await selectAll(`
 			select t.name, group_concat(post_id) as posts
 			from tags t
@@ -308,25 +314,25 @@ module.exports = {
 	///////////////
 	// RECIPES
 	///////////////
-	async insertRecipe(recipe) {
+	async insertRecipe(recipe: IRecipe) {
 		const newId = await run('insert into recipes(post_id, title, yield, time) values(?, ?, ?, ?)', recipe.postId, recipe.title, recipe.yield, recipe.time);
 		await this._updateRecipeIngredients(newId, recipe.ingredients);
 		await this._updateRecipeSteps(newId, recipe.steps);
 		return newId;
 	},
 
-	async updateRecipe(recipe) {
+	async updateRecipe(recipe: IRecipe) {
 		const { id, title, yield: rYield, time, ingredients, steps } = recipe;
 		await run('update recipes set title = ?, yield = ?, time = ? where id = ?', title, rYield, time, id);
 		await this._updateRecipeIngredients(id, ingredients);
 		await this._updateRecipeSteps(id, steps);
 	},
 
-	async deleteRecipe(id) {
+	async deleteRecipe(id: number) {
 		await run('delete from recipes where id = ?', id);
 	},
 
-	async getRecipesForPost(postId) {
+	async getRecipesForPost(postId: number) {
 		const recipes = await selectAll('select id, post_id as postId, title, yield, time from recipes where post_id = ?', postId);
 		for (let r of recipes) {
 			r.ingredients = await selectAll('select amount, name from recipe_ingredients where recipe_id = ? order by ordering', r.id);
@@ -335,7 +341,7 @@ module.exports = {
 		return recipes;
 	},
 
-	async _updateRecipeIngredients(recipeId, ingredients) {
+	async _updateRecipeIngredients(recipeId: number, ingredients: IRecipeIngredient[]) {
 		await run('delete from recipe_ingredients where recipe_id = ?', recipeId);
 		ingredients = ingredients.map((ingredient, i) => {
 			ingredient.order = i + 1;
@@ -346,7 +352,7 @@ module.exports = {
 		}
 	},
 
-	async _updateRecipeSteps(recipeId, steps) {
+	async _updateRecipeSteps(recipeId: number, steps: IRecipeStep[]) {
 		await run('delete from recipe_steps where recipe_id = ?', recipeId);
 		steps = steps.map((s, i) => {
 			s.step_number = i + 1;

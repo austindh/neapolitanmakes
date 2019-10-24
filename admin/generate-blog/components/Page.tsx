@@ -1,5 +1,5 @@
 // Main page
-import React from 'react';
+import * as React from 'react';
 import ReactHtmlParser from 'react-html-parser';
 import { renderToStaticMarkup } from 'react-dom/server';
 
@@ -7,13 +7,18 @@ import Header from './Header';
 import Sidebar from './Sidebar';
 import Sidenav from './Sidenav';
 
-export const getPageHtml = (postHtml, options = {}) => {
+interface PageHtmlOptions {
+	js?: string
+	currentUrl?: string
+}
+
+export const getPageHtml = (postHtml: string, options: PageHtmlOptions = {}) => {
 
 	const { js: additionalJsFilename, currentUrl } = options;
-	
+
 	const cssUrl = '/css/style.css';
 	let additionalJs = additionalJsFilename ? <script src={`/js/${additionalJsFilename}`}></script> : '';
-	
+
 	return renderToStaticMarkup(
 		<html>
 			<head>

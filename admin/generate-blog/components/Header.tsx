@@ -1,6 +1,5 @@
 // Main page
-import React from 'react';
-
+import * as React from 'react';
 
 const tabs = [];
 const addTab = (name, url) => {
@@ -50,7 +49,7 @@ const Header = props => {
 	});
 
 	return(
-		[
+		<React.Fragment>
 			<div id="header">
 				<div className="logo">
 					<a className="main" href="/">
@@ -61,18 +60,18 @@ const Header = props => {
 					<div className="sub-title">Flavors of Creativity</div>
 				</div>
 				{ socialIcons }
-			</div>,
+			</div>
 			<div id="tabs">
 				<div className="container">
 					{headerTabs}
 				</div>
-			</div>,
+			</div>
 			<div id="hamburger">
 				<div className="top"></div>
 				<div className="middle"></div>
 				<div className="bottom"></div>
 			</div>
-		]
+		</React.Fragment>
 	);
 }
 

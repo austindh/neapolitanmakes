@@ -1,22 +1,22 @@
 // Pull info from database and build file structure of site
-const db = require('../db');
+import { db } from '../db';
+import { IBuildPost } from '../db/interfaces';
 const path = require('path');
 const fse = require('fs-extra');
 const { markdown } = require('markdown');
 
-const { getPageHtml } = require('./build/Page');
-const { getPostHtml } = require('./build/Post');
-const { getHomePageHtml } = require('./build/HomePage');
-const { getCategoryPageHtml } = require('./build/CategoryPage');
+import { getPageHtml } from './components/Page';
+import { getPostHtml } from './components/Post';
+import { getHomePageHtml } from './components/HomePage';
+import { getCategoryPageHtml } from './components/CategoryPage';
 
 const DOCS_DIR = path.resolve(__dirname, '../../docs');
-const ICONS_DIR = path.resolve(__dirname, 'icons');
 const cssFile = path.resolve(__dirname, 'build/index.css');
 
 // Empty out docs folder (except for images)
 const clearDocsFolder = async () => {
 
-	const foldersToKeep = new Set(['img', 'icons', 'js']);
+	const foldersToKeep = new Set(['img', 'icons', 'js', 'css']);
 	const files = await fse.readdir(DOCS_DIR);
 	const pathsToDelete = files.filter(f => !foldersToKeep.has(f));
 	for (let p of pathsToDelete) {
@@ -24,23 +24,33 @@ const clearDocsFolder = async () => {
 	}
 }
 
+interface LookupPost {
+	title: string,
+	thumbnail: string,
+	url: string,
+	date: Date
+}
+
+interface BuildPostLookup {
+	[id: number]: LookupPost
+}
 
 module.exports = {
 
 	async build() {
-		let posts = await db.getPosts();
-		
-		const postsLookup = {};
+		let posts = await db.getPosts() as IBuildPost[];
+
+		const postsLookup: BuildPostLookup = {};
 
 		// newest first
-		posts.sort((a, b) => new Date(a.date) > new Date(b.date) ? -1 : 1);
-		
+		posts.sort((a, b) => a.date >b.date ? -1 : 1);
+
 		// Get HTML path for post and create lookup table for json file
 		posts.forEach(p => {
 			const postDate = new Date(p.date);
 			const year = postDate.getFullYear();
 			const month = (postDate.getMonth() + 1).toString().padStart(2, '0');
-			
+
 			p.htmlPath = `/${year}/${month}/`;
 			p.fullUrl = p.htmlPath + p.cleanTitle;
 
@@ -63,16 +73,11 @@ module.exports = {
 				p.prev = prevPost.fullUrl;
 			}
 		});
-		
+
 		// Create proper folders for posts
 		const createFolders = posts.map(p => fse.ensureDir(path.join(DOCS_DIR, p.htmlPath)));
 		await Promise.all(createFolders);
 
-		// Copy over css
-		const cssDir = path.join(DOCS_DIR, 'css');
-		await fse.ensureDir(cssDir);
-		await fse.copyFile(cssFile, path.join(cssDir, 'style.css'));
-	
 		// Create html files
 		for (let post of posts) {
 			let { title, next, prev, date, fullUrl } = post;
@@ -81,15 +86,13 @@ module.exports = {
 
 			date = new Date(date);
 			const markdownText = post.body || '';
-			
+
 			const tree = markdown.parse(markdownText);
 			const html = markdown.renderJsonML(markdown.toHTMLTree(tree));
 			const postHtml = getPostHtml(html, { title, next, prev, date }, tags);
 			const pageHtml = getPageHtml(postHtml);
 
 			await fse.writeFile(path.join(DOCS_DIR, fullUrl + '.html'), pageHtml);
-			
-			
 		}
 
 		// Create home page with recent posts
@@ -98,7 +101,7 @@ module.exports = {
 			getHomePageHtml(posts)
 		);
 		await fse.writeFile(indexPath, homePageHtml);
-		
+
 		// Create other non-blog post pages
 		const pages = await db.getPages();
 		for (let page of pages) {
@@ -118,16 +121,17 @@ module.exports = {
 		const jsonDir = path.join(DOCS_DIR, 'json');
 		await fse.ensureDir(jsonDir);
 		await fse.writeFile(path.join(jsonDir, 'posts.json'), JSON.stringify(postsLookup));
-		
+
 		const tagToPostLookup = await db.getTagToPostsLookup();
 		await fse.writeFile(path.join(jsonDir, 'tags.json'), JSON.stringify(tagToPostLookup));
-		
+
 		// Create category directory pages
 		const categories = await db.getCategories();
 		const catToPostIdsLookup = await db.getCategoryPostsLookup();
 		for (let c of categories) {
 			const pageName = c.name.toLowerCase();
 			const postIds = catToPostIdsLookup.get(c.id);
+			// @ts-ignore
 			const posts = [...postIds].map(id => postsLookup[id]).filter(x => x);
 			const catPageHtml = getCategoryPageHtml(c, posts);
 			const pageHtml = getPageHtml(catPageHtml, { currentUrl: pageName });

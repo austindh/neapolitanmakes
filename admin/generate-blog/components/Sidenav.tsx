@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import { blogTabs } from './Header';
 
 const tabs = blogTabs.map(t => (
