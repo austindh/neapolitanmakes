@@ -7,7 +7,7 @@ import RecipeEditor from './RecipeEditor';
 function RecipesList({ postId }) {
 
 	const EMPTY_RECIPE = { postId };
-	const [recipes, setRecipes] = useState([]);
+	const [recipes, setRecipes] = useState<any>([]);
 	const [editorOpen, setEditorOpen] = useState(false);
 	const [selectedRecipe, setSelectedRecipe] = useState(EMPTY_RECIPE);
 

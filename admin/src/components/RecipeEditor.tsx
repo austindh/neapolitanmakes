@@ -6,7 +6,7 @@ import './RecipeEditor.scss';
 
 function RecipeEditor({ recipe, isOpen, onClose }) {
 
-	const [currentRecipe, setCurrentRecipe] = useState({ ingredients: [], steps: [] });
+	const [currentRecipe, setCurrentRecipe] = useState<any>({ ingredients: [], steps: [] });
 	const [isIngredientEdit, setIngredientEdit] = useState(false);
 	const [isStepsEdit, setStepsEdit] = useState(false);
 
@@ -196,6 +196,7 @@ function RecipeEditor({ recipe, isOpen, onClose }) {
 				</div>
 			</div>
 		</Modal>,
+		// @ts-ignore
 		document.getElementById('modal')
 	);
 

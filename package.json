@@ -39,7 +39,9 @@
     "react-html-parser": "^2.0.2",
     "sharp": "^0.23.1",
     "sqlite3": "^4.1.0",
+    "ts-node": "^8.4.1",
     "turndown": "^5.0.3",
+    "typescript": "^3.6.4",
     "unescape": "^1.0.1",
     "whatwg-fetch": "^3.0.0"
   }

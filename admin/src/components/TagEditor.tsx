@@ -6,7 +6,7 @@ import { getAllCategories } from '../js/categories';
 import './TagEditor.scss';
 import { addTag, updateTag, deleteTag } from '../js/tags';
 
-export default class TagEditor extends React.Component {
+export default class TagEditor extends React.Component<any, any> {
 	constructor(props) {
 		super(props);
 		this.state = {
@@ -103,10 +103,11 @@ export default class TagEditor extends React.Component {
 				</div>
 				<div className="buttons">
 					{deleteButton}
-					<button onClick={this.onClose}>Cancel</button>
+					<button onClick={() => this.onClose()}>Cancel</button>
 					<button className="primary" onClick={this.onSave} disabled={!tagName}>{actionButtonText}</button>
 				</div>
 			</Modal>,
+			// @ts-ignore
 			document.getElementById('tag-modal')
 		)
 	}

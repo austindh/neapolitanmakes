@@ -4,7 +4,7 @@ import { getAllTags, updateTags } from '../js/tags';
 import TagEditor from './TagEditor';
 import './PostTagEditor.scss';
 
-export default class PostTagEditor extends React.Component {
+export default class PostTagEditor extends React.Component<any, any> {
 	constructor(props) {
 		super(props);
 		this.state = {

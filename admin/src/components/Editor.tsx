@@ -19,7 +19,10 @@ import RecipesList from './RecipesList';
 import './Editor.scss';
 import { getThumbnailUrlFromMarkdown } from '../js/util';
 
-export default class Editor extends React.Component {
+export default class Editor extends React.Component<any, any> {
+
+	private bodyText: any;
+	private fileInput: any;
 
 	constructor(props) {
 		super(props);
@@ -129,6 +132,7 @@ export default class Editor extends React.Component {
 
 		const reader = new FileReader();
 		reader.onloadend = () => {
+			// @ts-ignore
 			const data = reader.result.split(",", 2)[1];
 			axios.post('/images', { imageData: data, filename: file.name }).then(res => {
 				this.addImage(`/img/${res.data.path}`)
@@ -202,6 +206,7 @@ export default class Editor extends React.Component {
 		let date = new Date(textDate).toDateString();
 
 		const bodyHtml = markdown.toHTML(body);
+		console.log('bodyHtml', bodyHtml);
 
 		const secondaryInputWithDisplay = nonPost ?
 			[
@@ -223,6 +228,7 @@ export default class Editor extends React.Component {
 			<Modal open={tagModalOpen} onClose={this.closeTagModal}>
 				<PostTagEditor post={post} onCancel={this.closeTagModal} onSave={this.tagsUpdated}></PostTagEditor>
 			</Modal>,
+			// @ts-ignore
 			document.getElementById('modal')
 		);
 

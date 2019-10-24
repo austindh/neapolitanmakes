@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import './Modal.scss';
 
-class Modal extends Component {
+class Modal extends Component<any, any> {
 
 	clickOutside = e => {
 		this.props.onClose( e );

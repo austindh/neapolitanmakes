@@ -8,7 +8,7 @@ import './Tags.scss';
 import { getAllTags } from '../js/tags';
 import TagEditor from './TagEditor';
 
-export default class Tags extends React.Component {
+export default class Tags extends React.Component<any, any> {
 	constructor(props) {
 		super(props);
 		this.state = {

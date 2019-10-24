@@ -9,7 +9,7 @@ import {
 import LoadingBar from './LoadingBar';
 import './PostsList.scss';
 
-export default class Editor extends React.Component {
+export default class Editor extends React.Component<any, any> {
 
 	constructor(props) {
 		super(props);
