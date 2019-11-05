@@ -5,7 +5,7 @@
 #### Run admin server:
 ```bash
 # from /
-$ node app
+$ ts-node app
 ```
 
 #### Run admin frontend:

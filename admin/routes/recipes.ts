@@ -1,4 +1,3 @@
-const express = require('express');
 import * as express from 'express';
 const router = express.Router();
 
@@ -32,4 +31,4 @@ router.delete('/:id', async (req, res) => {
 	res.send('OK');
 });
 
-module.exports = router;
+export default router;

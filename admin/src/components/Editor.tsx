@@ -3,10 +3,6 @@ import ReactDOM from 'react-dom';
 import axios from 'axios';
 import _ from 'underscore';
 import {
-	BrowserRouter as Router,
-	Route,
-	Link,
-	Switch,
 	Redirect
 } from 'react-router-dom';
 import { markdown } from 'markdown';
@@ -17,9 +13,23 @@ import PostTagEditor from './PostTagEditor';
 import RecipesList from './RecipesList';
 
 import './Editor.scss';
+import './Recipe.scss';
 import { getThumbnailUrlFromMarkdown } from '../js/util';
+import { IRecipe } from '../../db/interfaces';
+import { getRecipeHtml } from './Recipe';
 
-export default class Editor extends React.Component<any, any> {
+interface EditorState {
+	savedPost
+	post
+	bodyCursorPos: number
+	postDeleted: boolean
+	goBack: boolean
+	nonPost: boolean
+	tagModalOpen: boolean
+	recipes: IRecipe[]
+}
+
+export default class Editor extends React.Component<any, EditorState> {
 
 	private bodyText: any;
 	private fileInput: any;
@@ -34,6 +44,7 @@ export default class Editor extends React.Component<any, any> {
 			goBack: false,
 			nonPost: false, // used for other pages, like About Me, etc.
 			tagModalOpen: false,
+			recipes: []
 		}
 
 		this.bodyText = React.createRef();
@@ -58,7 +69,7 @@ export default class Editor extends React.Component<any, any> {
 		this.setState({ post, savedPost, nonPost });
 	}
 
-	addImage(url) {
+	_addTextAtCurrentPosition = (text: string) => {
 		const textarea = this.bodyText.current;
 
 		let { bodyCursorPos } = this.state;
@@ -66,10 +77,8 @@ export default class Editor extends React.Component<any, any> {
 		const beforeText = val.substring(0, bodyCursorPos);
 		const afterText = val.substring(bodyCursorPos, val.length);
 
-		const imgMarkdown = `![Image](${url})`;
-
-		const body = [beforeText, imgMarkdown, afterText].join('');
-		bodyCursorPos += imgMarkdown.length;
+		const body = [beforeText, text, afterText].join('');
+		bodyCursorPos += text.length;
 
 		let { post } = this.state;
 		post.body = body;
@@ -79,7 +88,11 @@ export default class Editor extends React.Component<any, any> {
 		setTimeout(() => {
 			this.bodyText.current.setSelectionRange(bodyCursorPos, bodyCursorPos);
 		});
+	}
 
+	addImage(url) {
+		const imgMarkdown = `![Image](${url})`;
+		this._addTextAtCurrentPosition(imgMarkdown);
 	}
 
 	save() {
@@ -177,6 +190,15 @@ export default class Editor extends React.Component<any, any> {
 		this.setState({ post });
 	}
 
+	recipesLoaded = (recipes: IRecipe[]) => {
+		this.setState({ recipes });
+	}
+
+	addRecipe = (recipe: IRecipe) => {
+		console.log('add here', recipe);
+		this._addTextAtCurrentPosition(`{{recipe_${recipe.id}}}`);
+	}
+
 	goBack = () => {
 		const hasChanges = this.hasChanges();
 		let shouldGoBack = true;
@@ -193,7 +215,7 @@ export default class Editor extends React.Component<any, any> {
 	}
 
 	render() {
-		const { post, postDeleted, nonPost, tagModalOpen, goBack } = this.state;
+		const { post, postDeleted, nonPost, tagModalOpen, goBack, recipes } = this.state;
 
 		const hasChanges = this.hasChanges();
 
@@ -205,8 +227,21 @@ export default class Editor extends React.Component<any, any> {
 		body = body || '';
 		let date = new Date(textDate).toDateString();
 
-		const bodyHtml = markdown.toHTML(body);
-		console.log('bodyHtml', bodyHtml);
+		// Extract recipe tags and insert recipe html
+		const recipeRegex = /({{recipe_\d+}})/g;
+		const bodyPieces = body.split(recipeRegex);
+		const bodyHtml = bodyPieces.map(piece => {
+			if (piece.match(recipeRegex)) {
+				const recipeId = parseInt(piece.split('_')[1]);
+				const selectedRecipe = recipes.find(r => r.id === recipeId);
+				return selectedRecipe ? getRecipeHtml(selectedRecipe) : '';
+			} else {
+				return markdown.toHTML(piece);
+			}
+		}).join('\n');
+
+		// const bodyHtml = markdown.toHTML(body);
+		// console.log('bodyHtml', bodyHtml);
 
 		const secondaryInputWithDisplay = nonPost ?
 			[
@@ -256,7 +291,7 @@ export default class Editor extends React.Component<any, any> {
 							<button className="primary" disabled={!hasChanges} onClick={this.save}>Save</button>
 							<button className="warn" onClick={this.delete}>Delete</button>
 						</div>
-						<RecipesList postId={post.id}></RecipesList>
+						<RecipesList postId={post.id} onRecipesLoad={this.recipesLoaded} onRecipeAdd={this.addRecipe}></RecipesList>
 					</div>
 				</div>
 				<div className="main">
