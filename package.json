@@ -10,7 +10,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "blogger": "node blogger_backup/index.js",
     "blogger-thumb": "node blogger_backup/thumbnail-generation.js",
-	"build:css": "node-sass admin/generate-blog/scss/Blog.scss docs/css/style.css",
+    "build:css": "node-sass admin/generate-blog/scss/Blog.scss docs/css/style.css",
     "build:blog": "npm run build:css && ts-node admin/generate-blog/index.ts"
   },
   "repository": {
@@ -45,7 +45,7 @@
     "sqlite3": "^4.1.0",
     "ts-node": "^8.4.1",
     "turndown": "^5.0.3",
-    "typescript": "^3.6.4",
+    "typescript": "^3.7.2",
     "unescape": "^1.0.1",
     "whatwg-fetch": "^3.0.0"
   }

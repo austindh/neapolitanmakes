@@ -2,7 +2,11 @@ import * as React from 'react';
 
 import './LoadingBar.scss';
 
-const LoadingBar = props => {
+interface LoadingBarProps {
+	show: boolean;
+}
+
+const LoadingBar = (props: LoadingBarProps) => {
 
 	const { show } = props;
 	const classes = ['container'];

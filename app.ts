@@ -10,11 +10,13 @@ app.listen(PORT, () => {
 const bodyParser = require( 'body-parser' );
 app.use( bodyParser.json({ limit: '50mb' }) );
 
+import RecipeRouter from './admin/routes/recipes';
+
 app.use('/posts', require('./admin/routes/posts'));
 app.use('/pages', require('./admin/routes/pages'));
 app.use('/posttags', require('./admin/routes/tags'));
 app.use('/categories', require('./admin/routes/categories'));
-app.use('/recipes', require('./admin/routes/recipes'));
+app.use('/recipes', RecipeRouter);
 app.use('/images', require('./admin/routes/images'));
 app.use('/build', require('./admin/routes/build'));
 

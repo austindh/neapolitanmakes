@@ -654,3 +654,28 @@ body {
       transform: unset;
       margin-right: 20px;
       width: 175px; }
+
+.recipe {
+  background: #fff7dd;
+  border: solid 1px lightgray;
+  padding: 20px;
+  line-height: 1.5em;
+  margin: 30px 0; }
+  .recipe .recipe-title {
+    font-weight: bold;
+    font-size: 1.4em;
+    margin-bottom: 20px; }
+  .recipe .recipe-summary {
+    margin-bottom: 20px; }
+    .recipe .recipe-summary span {
+      font-weight: bold;
+      margin-right: 4px; }
+  .recipe .recipe-ingredients {
+    margin-bottom: 20px; }
+    .recipe .recipe-ingredients .recipe-ingredient .amount {
+      margin-right: 4px; }
+  .recipe .recipe-step {
+    margin-bottom: 8px; }
+    .recipe .recipe-step .number {
+      font-weight: bold;
+      margin-right: 4px; }

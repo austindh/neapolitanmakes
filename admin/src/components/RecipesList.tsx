@@ -18,6 +18,7 @@ function RecipesList(props: RecipesListProps) {
 	const [recipes, setRecipes] = useState<IRecipe[]>([]);
 	const [editorOpen, setEditorOpen] = useState(false);
 	const [selectedRecipe, setSelectedRecipe] = useState(EMPTY_RECIPE);
+	const [reloadRecipes, setReloadRecipes] = useState(false);
 
 	useEffect(() => {
 		if (postId) {
@@ -26,7 +27,17 @@ function RecipesList(props: RecipesListProps) {
 				onRecipesLoad(r);
 			});
 		}
-	}, [postId]);
+	}, [postId, onRecipesLoad]);
+
+	useEffect(() => {
+		if (reloadRecipes) {
+			setReloadRecipes(false);
+			getRecipesForPost(postId).then(r => {
+				setRecipes(r);
+				onRecipesLoad(r);
+			})
+		}
+	}, [reloadRecipes, onRecipesLoad])
 
 	const newRecipe = () => {
 		setSelectedRecipe(EMPTY_RECIPE);
@@ -56,7 +67,7 @@ function RecipesList(props: RecipesListProps) {
 	));
 
 	return (
-		<React.Fragment>
+		<>
 			<div id="recipes-list">
 				<div className="title">Recipes</div>
 				<div className="recipes">
@@ -64,8 +75,8 @@ function RecipesList(props: RecipesListProps) {
 				</div>
 				<button className="primary" onClick={newRecipe}>New +</button>
 			</div>
-			<RecipeEditor isOpen={editorOpen} onClose={editorClose} recipe={selectedRecipe} />
-		</React.Fragment>
+			<RecipeEditor isOpen={editorOpen} onClose={editorClose} recipe={selectedRecipe} onUpdate={() => setReloadRecipes(true)} />
+		</>
 	);
 }
 

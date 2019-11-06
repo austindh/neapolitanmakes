@@ -74,6 +74,10 @@ button {
 	&.primary {
 		background: $pink;
 		color: white;
+
+		&:disabled {
+			color: lightgray;
+		}
 	}
 
 	&.secondary {
@@ -83,6 +87,10 @@ button {
 	&.warn {
 		background: #d80101;
 		color: white;
+
+		&:disabled {
+			color: lightgray;
+		}
 	}
 
 	&:hover {
@@ -92,6 +100,7 @@ button {
 	&:disabled {
 		opacity: 0.7;
 		cursor: default;
+		color: gray;
 
 		&:hover {
 			box-shadow: none;

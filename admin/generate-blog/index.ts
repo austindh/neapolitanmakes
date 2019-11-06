@@ -9,6 +9,7 @@ import { getPageHtml } from './components/Page';
 import { getPostHtml } from './components/Post';
 import { getHomePageHtml } from './components/HomePage';
 import { getCategoryPageHtml } from './components/CategoryPage';
+import { recipeTagRegex, getRecipeHtml } from '../src/components/Recipe';
 
 const DOCS_DIR = path.resolve(__dirname, '../../docs');
 const cssFile = path.resolve(__dirname, 'build/index.css');
@@ -83,13 +84,24 @@ module.exports = {
 			let { title, next, prev, date, fullUrl } = post;
 
 			const tags = await db.getTagsForPost(post.id);
+			const recipes = await db.getRecipesForPost(post.id);
 
 			date = new Date(date);
 			const markdownText = post.body || '';
 
-			const tree = markdown.parse(markdownText);
-			const html = markdown.renderJsonML(markdown.toHTMLTree(tree));
-			const postHtml = getPostHtml(html, { title, next, prev, date }, tags);
+			// render recipe tags into recipes
+			const bodyPieces = markdownText.split(recipeTagRegex);
+			const bodyHtml = bodyPieces.map(piece => {
+				if (piece.match(recipeTagRegex)) {
+					const recipeId = parseInt(piece.split('_')[1]);
+					const selectedRecipe = recipes.find(r => r.id === recipeId);
+					return selectedRecipe ? getRecipeHtml(selectedRecipe) : '';
+				} else {
+					return markdown.toHTML(piece);
+				}
+			}).join('\n');
+
+			const postHtml = getPostHtml(bodyHtml, { title, next, prev, date }, tags);
 			const pageHtml = getPageHtml(postHtml);
 
 			await fse.writeFile(path.join(DOCS_DIR, fullUrl + '.html'), pageHtml);

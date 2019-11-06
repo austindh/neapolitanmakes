@@ -16,7 +16,7 @@ import './Editor.scss';
 import './Recipe.scss';
 import { getThumbnailUrlFromMarkdown } from '../js/util';
 import { IRecipe } from '../../db/interfaces';
-import { getRecipeHtml } from './Recipe';
+import { getRecipeHtml, recipeTagRegex } from './Recipe';
 
 interface EditorState {
 	savedPost
@@ -228,10 +228,9 @@ export default class Editor extends React.Component<any, EditorState> {
 		let date = new Date(textDate).toDateString();
 
 		// Extract recipe tags and insert recipe html
-		const recipeRegex = /({{recipe_\d+}})/g;
-		const bodyPieces = body.split(recipeRegex);
+		const bodyPieces = body.split(recipeTagRegex);
 		const bodyHtml = bodyPieces.map(piece => {
-			if (piece.match(recipeRegex)) {
+			if (piece.match(recipeTagRegex)) {
 				const recipeId = parseInt(piece.split('_')[1]);
 				const selectedRecipe = recipes.find(r => r.id === recipeId);
 				return selectedRecipe ? getRecipeHtml(selectedRecipe) : '';

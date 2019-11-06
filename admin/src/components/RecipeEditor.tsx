@@ -4,12 +4,23 @@ import ReactDOM from 'react-dom';
 import Modal from './Modal';
 import './RecipeEditor.scss';
 
-function RecipeEditor({ recipe, isOpen, onClose }) {
+import { updateRecipe, addRecipe, deleteRecipe } from '../js/recipes';
+
+interface RecipeEditorProps {
+	recipe: any;
+	isOpen: boolean;
+	onClose: () => void;
+	onUpdate: () => void;
+}
+
+function RecipeEditor(props: RecipeEditorProps) {
+	const { recipe, isOpen, onClose } = props;
 
 	const [currentRecipe, setCurrentRecipe] = useState<any>({ ingredients: [], steps: [] });
 	const [isIngredientEdit, setIngredientEdit] = useState(false);
 	const [isStepsEdit, setStepsEdit] = useState(false);
 
+	const [isAdd, setIsAdd] = useState();
 	useEffect(() => {
 		const blankRecipe = {
 			title: '',
@@ -20,6 +31,7 @@ function RecipeEditor({ recipe, isOpen, onClose }) {
 		};
 		const copy = JSON.parse(JSON.stringify(Object.assign(blankRecipe, recipe)));
 		setCurrentRecipe(copy);
+		setIsAdd(!recipe.id);
 	}, [recipe]);
 
 	const updateTitle = e => setCurrentRecipe({ ...currentRecipe, title: e.target.value })
@@ -148,8 +160,38 @@ function RecipeEditor({ recipe, isOpen, onClose }) {
 	const close = () => {
 		setStepsEdit(false);
 		setIngredientEdit(false);
+		setSaving(false);
 		onClose();
 	}
+
+	const [isSaving, setSaving] = useState(false);
+	const save = async () => {
+		setSaving(true);
+		const saveFn = isAdd ? addRecipe : updateRecipe;
+		await saveFn(currentRecipe);
+		props.onUpdate();
+		close();
+	}
+
+	const onDelete = async () => {
+		const shouldDelete = window.confirm('Delete this recipe?');
+		if (!shouldDelete) {
+			return;
+		}
+		await deleteRecipe(currentRecipe);
+		props.onUpdate();
+		close();
+	}
+
+	const { title, yield: rYield, time, ingredients: rIngredients, steps: rSteps } = currentRecipe;
+	const validRecipe = title && rYield && time && rIngredients.length && rSteps.length;
+
+	const deleteButton = !isAdd ? (
+		<>
+			<button className="warn" onClick={onDelete}>Delete</button>
+			<div className="spacer"></div>
+		</>
+	) : '';
 
 	const modal = ReactDOM.createPortal(
 		<Modal open={isOpen} onClose={close}>
@@ -192,7 +234,9 @@ function RecipeEditor({ recipe, isOpen, onClose }) {
 					</div>
 				</div>
 				<div className="buttons">
-					<button onClick={close}>Cancel</button>
+					{ deleteButton }
+					<button onClick={close} disabled={isSaving}>Cancel</button>
+					<button className="primary" onClick={save} disabled={isSaving || !validRecipe}>{ isAdd ? 'Add' : 'Save'}</button>
 				</div>
 			</div>
 		</Modal>,

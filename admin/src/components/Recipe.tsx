@@ -3,6 +3,8 @@ import { renderToStaticMarkup } from 'react-dom/server';
 
 import { IRecipe } from '../../db/interfaces';
 
+export const recipeTagRegex = /({{recipe_\d+}})/g;
+
 export const getRecipeHtml = (recipe: IRecipe): string => {
 
 	const ingredients = recipe.ingredients.map((ingredient, i) => (

@@ -15,20 +15,18 @@ $ npm run start
 ```
 
 ## Building
-#### Build blog site components
+#### Build typescript files to be included in blog
 ```bash
 # from /admin
-$ npm run babel
+$ npm run build:ts
 ```
 
 #### Build site CSS
 ```bash
-# from /admin
-$ npm run css
+$ npm run build:css
 ```
 
-#### Build all pages for the site
-```js
-// /admin/generate-blog/index.js
-build();
+#### Build all pages for the site (and CSS)
+```bash
+$ npm run build:blog
 ```
