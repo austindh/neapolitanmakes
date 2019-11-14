@@ -2,6 +2,7 @@ import * as React from 'react';
 import { renderToStaticMarkup } from 'react-dom/server';
 
 const NUM_PER_ROW = 3;
+const NUM_PER_ROW_SMALL = 2;
 
 export const getCategoryPageHtml = (category, posts) => {
 
@@ -13,25 +14,32 @@ export const getCategoryPageHtml = (category, posts) => {
 		);
 	}
 
-
 	const postEls = posts.map((p, i) => (
 		<a href={p.url} key={i} className="post-card card" style={{ backgroundImage: `url(${p.thumbnail})`}}>
 			<div className="title">{p.title}</div>
 		</a>
 	));
 
-	const rows = [];
-	while (postEls.length) {
-		rows.push(postEls.splice(0, NUM_PER_ROW));
+	const getRows = (numPerRow: number): JSX.Element[] => {
+		const rows = [];
+		const allPosts = [...postEls];
+		while (allPosts.length) {
+			rows.push(allPosts.splice(0, numPerRow));
+		}
+		
+		return rows.map((posts, i) => (
+			<div key={i} className="row">{ posts }</div>
+		));
 	}
 
-	const rowEls = rows.map((posts, i) => (
-		<div className="row" key={i}>{ posts }</div>
-	));
-
 	return renderToStaticMarkup(
-		<div className="post-cards">
-			{ rowEls }
+		<>
+		<div className="post-cards large">
+			{ getRows(NUM_PER_ROW) }
 		</div>
+		<div className="post-cards small">
+			{ getRows(NUM_PER_ROW_SMALL) }
+		</div>
+		</>
 	);
 };

@@ -3,6 +3,7 @@ import { renderToStaticMarkup } from 'react-dom/server';
 
 const NUM_POSTS = 9;
 const NUM_PER_ROW = 3;
+const NUM_PER_ROW_SMALL = 2;
 
 export const getHomePageHtml = posts => {
 
@@ -15,20 +16,26 @@ export const getHomePageHtml = posts => {
 		)
 	});
 
-	const rows = [];
-	while (recentPosts.length) {
-		rows.push(recentPosts.splice(0, NUM_PER_ROW));
+	const getRows = (numPerRow: number): JSX.Element[] => {
+		const rows = [];
+		const posts = [...recentPosts];
+		while (posts.length) {
+			rows.push(posts.splice(0, numPerRow));
+		}
+		
+		return rows.map((posts, i) => (
+			<div key={i} className="row">{ posts }</div>
+		));
 	}
-
-	const rowEls = rows.map((posts, i) => (
-		<div className="row">{ posts }</div>
-	));
 
 	return renderToStaticMarkup(
 		<div>
 			<div className="recent-posts-title">Recent Posts</div>
-			<div className="post-cards">
-				{ rowEls }
+			<div className="post-cards large">
+				{ getRows(NUM_PER_ROW) }
+			</div>
+			<div className="post-cards small">
+				{ getRows(NUM_PER_ROW_SMALL) }
 			</div>
 		</div>
 	);

@@ -2,7 +2,12 @@ import React, { Component } from 'react';
 
 import './Modal.scss';
 
-class Modal extends Component<any, any> {
+interface ModalProps {
+	onClose: (e: any) => void
+	open: boolean
+}
+
+class Modal extends Component<ModalProps, any> {
 
 	clickOutside = e => {
 		this.props.onClose( e );

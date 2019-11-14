@@ -4,8 +4,20 @@
 	}
 }
 
+@mixin large {
+	@media (max-width: 1000px) {
+		@content;
+	}
+}
+
 @mixin narrow {
 	@media (max-width: 650px) {
+		@content;
+	}
+}
+
+@mixin phone {
+	@media (max-width: 500px) {
 		@content;
 	}
 }

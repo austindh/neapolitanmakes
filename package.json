@@ -11,7 +11,8 @@
     "blogger": "node blogger_backup/index.js",
     "blogger-thumb": "node blogger_backup/thumbnail-generation.js",
     "build:css": "node-sass admin/generate-blog/scss/Blog.scss docs/css/style.css",
-    "build:blog": "npm run build:css && ts-node admin/generate-blog/index.ts"
+    "build:html": "ts-node admin/generate-blog/index.ts",
+    "build:blog": "npm run build:css && npm run build:html"
   },
   "repository": {
     "type": "git",
@@ -48,5 +49,9 @@
     "typescript": "^3.7.2",
     "unescape": "^1.0.1",
     "whatwg-fetch": "^3.0.0"
+  },
+  "dependencies": {
+    "@types/ip": "^1.1.0",
+    "ip": "^1.1.5"
   }
 }

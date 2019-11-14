@@ -29,6 +29,10 @@ $socialIconSize: 35px;
             @include narrow {
                 font-size: 36px;
             }
+
+            @include phone {
+                font-size: 24px;
+            }
         }
 
         .sub-title {
@@ -40,6 +44,10 @@ $socialIconSize: 35px;
 
             @include narrow {
                 font-size: 14px;
+            }
+
+            @include phone {
+                font-size: 10px;
             }
         }
     }

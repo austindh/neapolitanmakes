@@ -17,6 +17,7 @@
 
 	@include narrow {
 		display: block;
+		overflow: auto;
 	}
 	
 	&.open {

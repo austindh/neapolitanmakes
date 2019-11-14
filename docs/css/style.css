@@ -310,7 +310,11 @@ body {
 
 .recent-posts-title {
   font-size: 24px;
-  margin-top: 20px; }
+  margin-top: 20px;
+  margin-left: 20px; }
+  @media (max-width: 650px) {
+    .recent-posts-title {
+      font-size: 20px; } }
 
 .post-cards {
   margin-bottom: 50px; }
@@ -323,12 +327,12 @@ body {
     justify-content: center;
     text-decoration: none;
     color: #272727;
-    width: 50%;
     margin: 20px;
     background-repeat: no-repeat;
     background-size: cover;
     height: 200px;
     width: 200px;
+    width: 50%;
     box-shadow: 2px 2px 6px 1px #848484d1; }
     .post-cards .post-card:hover .title {
       background: #ffffffd4; }
@@ -343,6 +347,21 @@ body {
     .post-cards .post-card img {
       max-width: 200px;
       max-height: 200px; }
+    @media (max-width: 650px) {
+      .post-cards .post-card {
+        height: 150px;
+        max-width: 150px; }
+        .post-cards .post-card .title {
+          font-size: 18px; } }
+  .post-cards.large {
+    display: block; }
+  .post-cards.small {
+    display: none; }
+  @media (max-width: 1000px) {
+    .post-cards.large {
+      display: none; }
+    .post-cards.small {
+      display: block; } }
 
 #header {
   background: #fdfdfd;
@@ -365,6 +384,9 @@ body {
       @media (max-width: 650px) {
         #header .logo .main {
           font-size: 36px; } }
+      @media (max-width: 500px) {
+        #header .logo .main {
+          font-size: 24px; } }
     #header .logo .sub-title {
       font-size: 18px;
       font-family: 'Homemade Apple';
@@ -374,6 +396,9 @@ body {
       @media (max-width: 650px) {
         #header .logo .sub-title {
           font-size: 14px; } }
+      @media (max-width: 500px) {
+        #header .logo .sub-title {
+          font-size: 10px; } }
   #header #nea {
     color: #ff7289; }
   #header #politan {
@@ -501,6 +526,9 @@ body {
   @media (max-width: 900px) {
     .post {
       min-width: unset; } }
+  @media (max-width: 500px) {
+    .post {
+      margin: 20px 10px; } }
   .post img {
     max-width: 100%;
     max-height: 500px;
@@ -544,7 +572,8 @@ body {
     background: #ff7289; }
 
 #body {
-  display: flex; }
+  display: flex;
+  overflow: hidden; }
 
 #backdrop {
   position: absolute;
@@ -594,6 +623,9 @@ body {
   @media (max-width: 900px) {
     #small-sidebar {
       display: block; } }
+  @media (max-width: 500px) {
+    #small-sidebar {
+      display: none; } }
   #small-sidebar .nea-social {
     display: flex;
     flex-direction: column; }
@@ -619,7 +651,8 @@ body {
   padding-top: 100px !important; }
   @media (max-width: 650px) {
     #sidenav {
-      display: block; } }
+      display: block;
+      overflow: auto; } }
   #sidenav.open {
     padding: 50px 20px;
     width: 250px;
@@ -672,8 +705,10 @@ body {
       margin-right: 4px; }
   .recipe .recipe-ingredients {
     margin-bottom: 20px; }
-    .recipe .recipe-ingredients .recipe-ingredient .amount {
-      margin-right: 4px; }
+    .recipe .recipe-ingredients .recipe-ingredient {
+      min-height: 1em; }
+      .recipe .recipe-ingredients .recipe-ingredient .amount {
+        margin-right: 4px; }
   .recipe .recipe-step {
     margin-bottom: 8px; }
     .recipe .recipe-step .number {

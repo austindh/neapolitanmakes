@@ -1,10 +1,17 @@
 import * as express from 'express';
+import * as ip from 'ip';
 
 const PORT = 8082;
 const app = express();
 
 app.listen(PORT, () => {
 	console.log( `App running on http://localhost:${PORT}` );
+});
+
+const localIp = ip.address();
+app.use('/ip', (req, res) => {
+	const address = `http://${localIp}:${PORT}`;
+	res.send(address);
 });
 
 const bodyParser = require( 'body-parser' );

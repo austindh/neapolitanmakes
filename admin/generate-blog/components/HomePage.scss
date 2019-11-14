@@ -1,8 +1,14 @@
 @import '../scss/colors';
+@import '../scss/mixins';
 
 .recent-posts-title {
 	font-size: 24px;
-    margin-top: 20px;
+	margin-top: 20px;
+	margin-left: 20px;
+	
+	@include narrow {
+		font-size: 20px;
+	}
 }
 
 .post-cards {
@@ -12,6 +18,8 @@
 		display: flex;
 	}
 
+	$cardSize: 200px;
+
 	.post-card {
 		display: flex;
 		flex-direction: column;
@@ -19,20 +27,21 @@
 		justify-content: center;
 		text-decoration: none;
 		color: $black;
-		width: 50%;
 		margin: 20px;
 		background-repeat: no-repeat;
 		background-size: cover;
-		height: 200px;
-		width: 200px;
+		height: $cardSize;
+		width: $cardSize;
+		width: 50%;
 		box-shadow: 2px 2px 6px 1px #848484d1;
 
+		
 		&:hover {
 			.title {
 				background: #ffffffd4;
 			}
 		}
-
+		
 		.title {
 			font-weight: bold;
 			font-size: 20px;
@@ -42,10 +51,49 @@
 			text-align: center;
 			transition: all 0.5s;
 		}
-
+		
 		img {
-			max-width: 200px;
-			max-height: 200px;
+			max-width: $cardSize;
+			max-height: $cardSize;
+		}
+
+		@include narrow {
+			$size: 150px;
+			height: $size;
+			max-width: $size;
+
+			.title {
+				font-size: 18px;
+			}
+		}
+
+		// @include phone {
+		// 	$size: 100px;
+		// 	height: $size;
+		// 	max-width: $size;
+
+		// 	.title {
+		// 		font-size: 14px;
+		// 	}
+		// }
+
+	}
+	
+	&.large {
+		display: block;
+	}
+
+	&.small {
+		display: none;
+	}
+
+	@include large {
+		&.large {
+			display: none;
+		}
+
+		&.small {
+			display: block;
 		}
 	}
 }

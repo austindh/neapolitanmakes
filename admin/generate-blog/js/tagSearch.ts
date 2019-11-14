@@ -22,12 +22,15 @@ const main = async () => {
 	});
 	const numMatches = posts.length;
 
-	const rows = [];
-	while (posts.length) {
-		rows.push(posts.splice(0, 3));
-	}
+	const getRows = (numPerRow: number): string => {
+		const rows = [];
+		const allPosts = [...posts];
+		while (allPosts.length) {
+			rows.push(allPosts.splice(0, numPerRow));
+		}
 
-	const rowEls = rows.map(posts => `<div class="row">${ posts.join('\n') }</div>`);
+		return rows.map(posts => `<div class="row">${ posts.join('\n') }</div>`).join('\n');
+	}
 
 	const targetEl = document.querySelector('.post');
 	const matches = numMatches === 1 ? 'match' : 'matches'
@@ -36,8 +39,11 @@ const main = async () => {
 			<span>${numMatches} ${matches} for tag:</span>
 			<div class="tag active">${tagName}</div>
 		</div>
-		<div class="post-cards">
-			${rowEls.join('\n')}
+		<div class="post-cards large">
+			${getRows(3)}
+		</div>
+		<div class="post-cards small">
+			${getRows(2)}
 		</div>
 	`;
 

@@ -8,8 +8,17 @@ import {
 
 import LoadingBar from './LoadingBar';
 import './PostsList.scss';
+import { QrModal } from './QrModal';
 
-export default class Editor extends React.Component<any, any> {
+interface PostsListState {
+	newPost: any
+	posts: any[]
+	pages: any[]
+	isGeneratingPreview: boolean
+	qrOpen: boolean
+}
+
+export default class Editor extends React.Component<any, PostsListState> {
 
 	constructor(props) {
 		super(props);
@@ -18,11 +27,16 @@ export default class Editor extends React.Component<any, any> {
 			posts: [],
 			pages: [],
 			isGeneratingPreview: false,
+			qrOpen: false
 		};
 	}
 
 	componentDidMount() {
 		this.reloadPostsAndPages();
+
+		axios.get('/ip').then(res => {
+			console.log('res.data', res.data);
+		})
 	}
 
 	reloadPostsAndPages() {
@@ -121,6 +135,7 @@ export default class Editor extends React.Component<any, any> {
 				<h1>NeapolitanMakes Admin</h1>
 				<div className="preview">
 					<div>
+						<button className="secondary qr-button" onClick={() => this.setState({ qrOpen: true })}>QR</button>
 						<a href="/tags">
 							<button className="secondary">Manage Tags</button>
 						</a>
@@ -149,6 +164,7 @@ export default class Editor extends React.Component<any, any> {
 						</table>
 					</div>
 				</div>
+				<QrModal open={this.state.qrOpen} onClose={() => this.setState({ qrOpen: false})} />
 				<div className="card">
 					<div className="title">Pages</div>
 					<div className="top-right">

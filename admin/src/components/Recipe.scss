@@ -26,6 +26,8 @@ $spacing: 20px;
 		margin-bottom: $spacing;
 
 		.recipe-ingredient {
+			min-height: 1em;
+
 			.amount {
 				margin-right: 4px;
 			}

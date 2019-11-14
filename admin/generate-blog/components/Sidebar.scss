@@ -45,6 +45,10 @@
 		display: block;
 	}
 
+	@include phone {
+		display: none;
+	}
+
 	.nea-social {
 		display: flex;
 		flex-direction: column;
