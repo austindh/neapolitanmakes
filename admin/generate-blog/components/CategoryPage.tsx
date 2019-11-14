@@ -34,12 +34,12 @@ export const getCategoryPageHtml = (category, posts) => {
 
 	return renderToStaticMarkup(
 		<>
-		<div className="post-cards large">
-			{ getRows(NUM_PER_ROW) }
-		</div>
-		<div className="post-cards small">
-			{ getRows(NUM_PER_ROW_SMALL) }
-		</div>
+			<div className="post-cards large">
+				{ getRows(NUM_PER_ROW) }
+			</div>
+			<div className="post-cards small">
+				{ getRows(NUM_PER_ROW_SMALL) }
+			</div>
 		</>
 	);
 };
