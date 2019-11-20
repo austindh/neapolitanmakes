@@ -25,6 +25,7 @@
   },
   "homepage": "https://github.com/austindh/neapolitanmakes#readme",
   "devDependencies": {
+    "@types/fs-extra": "^8.0.1",
     "@types/node": "^12.11.7",
     "@types/promise": "^7.1.30",
     "@types/whatwg-fetch": "0.0.33",

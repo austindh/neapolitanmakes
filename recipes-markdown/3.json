@@ -1,0 +1,71 @@
+[
+    {
+        "title": "Challah",
+        "yield": "2 large or 4 medium loaves",
+        "time": "2-3 hours",
+        "postId": 3,
+        "ingredients": [
+            {
+                "amount": "2 1/4 cup",
+                "name": "warm water"
+            },
+            {
+                "amount": "1 1/2 tbsp",
+                "name": "yeast"
+            },
+            {
+                "amount": "8 to 10",
+                "name": "egg yolks (6 oz. total)"
+            },
+            {
+                "amount": "5 tbsp",
+                "name": "veggie oil"
+            },
+            {
+                "amount": "5 tbsp",
+                "name": "honey"
+            },
+            {
+                "amount": "2 tsp",
+                "name": "vanilla"
+            },
+            {
+                "amount": "1 tbsp",
+                "name": "salt"
+            },
+            {
+                "amount": "7 to 8",
+                "name": "cups flour"
+            },
+            {
+                "amount": "",
+                "name": ""
+            },
+            {
+                "amount": "1",
+                "name": "egg, beaten"
+            },
+            {
+                "amount": "1 tsp",
+                "name": "water (for egg wash)"
+            }
+        ],
+        "steps": [
+            {
+                "description": "Combine water and yeast in a bowl and let activate for 5 minutes. Add yolks, oil, honey, vanilla, and salt and combine."
+            },
+            {
+                "description": "Add flour, about 1 cup at a time, until it holds together enough to knead it on the counter. It should be soft and supple, but not very sticky. Knead until it springs back when you press your finger into the dough. You can do this in a stand mixer, if desired."
+            },
+            {
+                "description": "Let dough rise, covered, in a greased bowl until doubled in size."
+            },
+            {
+                "description": "Divide dough into the number of loaves you want, then divide the loaves into strands. Braid dough, place on lined cookie sheets, brush egg wash on the dough, and let rise (uncovered) until very puffy."
+            },
+            {
+                "description": "Bake at 350 degrees fahrenheit for 25-35 minutes."
+            }
+        ]
+    }
+]

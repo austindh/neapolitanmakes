@@ -46,11 +46,11 @@ export interface IRecipeIngredient {
 }
 
 export interface IRecipe {
-	id: number
+	id?: number
 	postId: number
 	title: string
-	yield: string
-	time: string
+	yield?: string
+	time?: string
 	steps: IRecipeStep[]
 	ingredients: IRecipeIngredient[]
 }

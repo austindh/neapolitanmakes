@@ -1,0 +1,82 @@
+[
+    {
+        "title": "Peanut Butter Cup Cookies",
+        "yield": "2-3 dozen cookies, depending on the size.",
+        "time": "",
+        "postId": 6,
+        "ingredients": [
+            {
+                "amount": "1 2/3 cups (8 1/2 oz) ",
+                "name": "all purpose flour\\*"
+            },
+            {
+                "amount": "1 1/4 tsp",
+                "name": "baking soda"
+            },
+            {
+                "amount": "1 1/2 tsp",
+                "name": "baking powder"
+            },
+            {
+                "amount": "1 1/2 tsp",
+                "name": "coarse salt"
+            },
+            {
+                "amount": "1 1/4 cup (2 1/2 sticks)",
+                "name": "butter, softened"
+            },
+            {
+                "amount": "1 1/4 cup (10 oz)",
+                "name": "brown sugar"
+            },
+            {
+                "amount": "1 cup + 2 tbsp (8 oz)",
+                "name": "sugar"
+            },
+            {
+                "amount": "2",
+                "name": "eggs"
+            },
+            {
+                "amount": "2 tsp",
+                "name": "vanilla"
+            },
+            {
+                "amount": "1 cup",
+                "name": "mini peanut butter cups, chopped\\*\\*\\*"
+            },
+            {
+                "amount": "1/2 cup",
+                "name": "peanut butter chips"
+            },
+            {
+                "amount": "1/2 cup",
+                "name": "chocolate chips"
+            },
+            {
+                "amount": "",
+                "name": "Sea salt for sprinkling"
+            }
+        ],
+        "steps": [
+            {
+                "description": "Mix together flours, baking soda, baking powder, and salt in a bowl and set aside."
+            },
+            {
+                "description": "Cream together butter and sugars until light and fluffy. Add the eggs and vanilla and beat. Slowly add the dry ingredients until it is just incorporated."
+            },
+            {
+                "description": "Fold in the peanut butter cups and chips. Refrigerate for at least 2 hours and up to 3 days."
+            },
+            {
+                "description": "Scoop 2 oz balls (these are big cookies-- the dough should be at least 2\" in diameter) onto a cookie sheet lined with parchment or silpat. I only baked 6 cookies at a time-- they're that big! Sprinkle with sea salt and bake at 350 for 13-18 minutes, depending on the size of your cookies. Bake until the edges are golden brown and the middles no longer look raw."
+            },
+            {
+                "description": "* You can use whatever ratio of the two flours you have-- I was about 1/2 cup short on the cake flour, so I used AP flour for that 1/2 cup. Just make sure you have 17 oz flour altogether."
+            },
+            {
+                "description": "*\\*\\* I got mini peanut butter cups at Winco in the bulk section. They're adorable and perfect for baking! They work great in cookies, brownies, and ice cream."
+            }
+        ]
+    }
+]

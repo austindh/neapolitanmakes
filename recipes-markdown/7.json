@@ -1,0 +1,59 @@
+[
+    {
+        "title": "Mushroom Tart",
+        "yield": "two 9\" tarts (Serves 4 entrees or up to 12 as a side or an appetizer)",
+        "time": "",
+        "postId": 7,
+        "ingredients": [
+            {
+                "amount": "3 slices",
+                "name": "bacon"
+            },
+            {
+                "amount": "1 tsp",
+                "name": "minced garlic"
+            },
+            {
+                "amount": "2 cups",
+                "name": "sliced mushrooms"
+            },
+            {
+                "amount": "2 tsp",
+                "name": "Emeril's Essence\\*"
+            },
+            {
+                "amount": "3 tbsp",
+                "name": "water"
+            },
+            {
+                "amount": "1/4 cup",
+                "name": "shredded gruyère (or swiss, or parmesan)"
+            },
+            {
+                "amount": "1/2 cup",
+                "name": "sour cream (or cream cheese)"
+            },
+            {
+                "amount": "1",
+                "name": "egg, beaten"
+            }
+        ],
+        "steps": [
+            {
+                "description": "Preheat oven to 400 degrees. Cut puff pastry in half. Place on a cookie sheet lined with Silpat or parchment."
+            },
+            {
+                "description": "Cook bacon. Remove from pan, but leave the bacon grease in the pan. Sauté the garlic in the bacon grease for 1 minute, then add mushrooms, reserving about 10 slices to decorate the tart. Add Emeril's Essence. Cook until the mushrooms release all their liquid. Add water as necessary to prevent burning or sticking."
+            },
+            {
+                "description": "Remove from heat and add crumbled bacon, gruyère, and sour cream.\\*\\* Spread on the puff pastry. Top with reserved mushrooms. Brush the edges with beaten egg and bake for 15-20 minutes."
+            },
+            {
+                "description": "*Emeril's Essence is my go-to seasoning. I use it on everything!! You can also substitute this with your preferred seasoning."
+            },
+            {
+                "description": "*\\*You can make the mixture ahead of time and refrigerate. It will keep for a day or two."
+            }
+        ]
+    }
+]

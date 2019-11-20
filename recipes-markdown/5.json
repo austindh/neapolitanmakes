@@ -1,0 +1,75 @@
+[
+    {
+        "title": "Jam-filled Donuts",
+        "yield": "18-24 donuts",
+        "time": "2 hours",
+        "postId": 5,
+        "ingredients": [
+            {
+                "amount": "2 tbsp",
+                "name": "warm water"
+            },
+            {
+                "amount": "1 tbsp",
+                "name": "yeast"
+            },
+            {
+                "amount": "3/4 cup",
+                "name": "warm whole milk"
+            },
+            {
+                "amount": "1/4 cup",
+                "name": "sugar"
+            },
+            {
+                "amount": "1/2 tsp",
+                "name": "salt"
+            },
+            {
+                "amount": "1",
+                "name": "egg"
+            },
+            {
+                "amount": "3 tbsp",
+                "name": "butter, softened"
+            },
+            {
+                "amount": "2 1/2 to 3 cups",
+                "name": "flour"
+            },
+            {
+                "amount": "",
+                "name": "Vegetable oil (for frying)"
+            },
+            {
+                "amount": "",
+                "name": ""
+            },
+            {
+                "amount": "",
+                "name": "sugar"
+            },
+            {
+                "amount": "",
+                "name": "raspberry jam"
+            }
+        ],
+        "steps": [
+            {
+                "description": "Combine warm water, yeast, and a pinch of sugar in the bowl of a stand mixer. Let the yeast activate for 5 minutes."
+            },
+            {
+                "description": "To the yeast, add warm milk, sugar, salt, egg, butter, and 1 cup flour. Stir to combine. Slowly add the remaining flour, until the dough is mixed. I always take out the dough to knead by hand for about 30 seconds to 1 minute to make sure the dough is smooth. Let rise in a covered, greased bowl in a warm place until doubled in size."
+            },
+            {
+                "description": "Cut a piece of parchment paper into 4\" squares. Roll dough out on a floured surface until just over 1/2\" thick. Cut into circles with a 2\" cutter. Sprinkle flour onto parchment square before placing each donut on a square. Let rise, covered, until nearly doubled."
+            },
+            {
+                "description": "Heat oil to 350 degrees fahrenheit in a heavy-bottomed pan or fryer. Fry 2-3 donuts at a time, 1-2 minutes on each side, until golden brown. Remove and let sit for 1-2 minutes on a paper-towel lined drying rack. Then, throw the donuts around in a bag with sugar until coated."
+            },
+            {
+                "description": "Put jam into a freezer bag with the corner cut off or decorating bag with a round tip. Use a chopstick to poke a hole in the side of each donut, then fill with jam."
+            }
+        ]
+    }
+]

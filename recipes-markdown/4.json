@@ -1,0 +1,86 @@
+[
+    {
+        "title": "Chicken Pot Pie",
+        "yield": "9 x 13, 8-12 servings",
+        "time": "1 hour",
+        "postId": 4,
+        "ingredients": [
+            {
+                "amount": "1 sheet",
+                "name": "puff pastry"
+            },
+            {
+                "amount": "6 tbsp",
+                "name": "butter"
+            },
+            {
+                "amount": "1/2",
+                "name": "onion, medium, chopped"
+            },
+            {
+                "amount": "3 stalks",
+                "name": "celery, chopped"
+            },
+            {
+                "amount": "5",
+                "name": "large carrots, chopped"
+            },
+            {
+                "amount": "3",
+                "name": "medium potatoes"
+            },
+            {
+                "amount": "1/2 tsp",
+                "name": "salt"
+            },
+            {
+                "amount": "6 tbsp",
+                "name": "flour"
+            },
+            {
+                "amount": "4 cups",
+                "name": "milk"
+            },
+            {
+                "amount": "2/3 cup",
+                "name": "cream"
+            },
+            {
+                "amount": "1",
+                "name": "bouillon cube"
+            },
+            {
+                "amount": "2",
+                "name": "chicken breasts, cooked and shredded or chopped\\*"
+            },
+            {
+                "amount": "1 cup",
+                "name": "frozen peas"
+            },
+            {
+                "amount": "1",
+                "name": "egg"
+            }
+        ],
+        "steps": [
+            {
+                "description": "Put puff pastry on the counter to defrost. Preheat oven to 425 degrees fahrenheit. Unfold puff pastry and cut into equally-sized strips. Make a lattice on a cookie sheet and pop it in the freezer.\\*\\*\\*"
+            },
+            {
+                "description": "In a large pot, melt butter over medium-high heat. Add onion, celery, carrots, potatoes, and salt. Sauté until the vegetables start to soften. Sprinkle flour over vegetables and cook 1-2 minutes more."
+            },
+            {
+                "description": "Add milk, cream, and bouillon. Cook until the mixture thickens to the desired consistency. Turn heat to low and add chicken and peas and cook until thoroughly heated. Season with salt & pepper."
+            },
+            {
+                "description": "Pour mixture into a 9 x 13 and pop the puff pastry lattice on top. Brush with a beaten egg and bake for 25-35 minutes, or until golden brown. Let sit for 10 minutes before serving (this allows it to thicken up again and prevents you from burning your mouth)."
+            },
+            {
+                "description": "*You can cook the chicken any way you like. Sometimes I cook it in the crockpot and shred it. Other times, I cook it on the stove and chop it. Anything works! I season with Emeril's Essence."
+            },
+            {
+                "description": "*\\*\\*This method makes it way easier to pop the lattice on the pie and throw it in the oven. You can make the lattice right on the pot pie, but the puff pastry starts to get kind of melty."
+            }
+        ]
+    }
+]
