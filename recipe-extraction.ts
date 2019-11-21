@@ -20,10 +20,10 @@ interface RecipeFile {
 
 // get list of all remaining files
 const getRecipeFiles = async (): Promise<RecipeFile[]> => {
-	const data = await fse.readdir(postsFolder);
+	const data = await fse.readdir(recipesFolder);
 	return data.map(a => {
 		const id = parseInt(a.split('.md')[0]);
-		const filePath = path.join(postsFolder, a);
+		const filePath = path.join(recipesFolder, a);
 
 		return { id, filePath };
 	});
@@ -252,13 +252,58 @@ const writeRecipeJson = async (id: number, recipes: IRecipe[]) => {
 	await fse.writeFile(path.join(recipesFolder, `${id}.json`), JSON.stringify(recipes, null, 4));
 }
 
+const loadJson = async (file: RecipeFile): Promise<IRecipe[]> => {
+	const jsonString = (await fse.readFile(file.filePath)).toString();
+	const recipes = JSON.parse(jsonString) as IRecipe[];
+	return recipes;
+}
+
+const insertIntoDb = async () => {
+	let files = await getRecipeFiles();
+	files = files.filter(f => f.filePath.endsWith('.json'));
+
+	for (let file of files) {
+		const recipes = await loadJson(file);
+		for (let r of recipes) {
+			await db.insertRecipe(r);
+		}
+	}
+
+	// const one = await loadJson(files[0]);
+	// console.log('one', JSON.stringify(one, null, 4));
+}
+
+// Get posts with recipes attached that are not in the post bodies
+const getPostsWithUnaddedRecipes = async () => {
+	const posts = await db.getPosts();
+	interface TempPost {
+		name: string;
+		date: string;
+	}
+	let missing: TempPost[] = [];
+
+	for (let p of posts) {
+		const recipes = await db.getRecipesForPost(p.id);
+		const isMissing = recipes.some(r => !p.body.includes(`{{recipe_${r.id}`));
+		if (isMissing) {
+			missing.push({ name: p.title, date: p.date.toLocaleDateString() });
+		}
+	}
+
+	// console.log('posts', posts);
+	missing = missing.slice(0, 1);
+	console.log(missing.map(r => `${r.name} (${r.date})`).join('\n'));
+	// const recipes = await db.ge
+}
+
 const main = async () => {
 	// await extractToMarkdown();
 	// await determineFilesWithRecipes();
-	const ID = 107;
-	const recipes = await parseRecipes(ID);
-	await writeRecipeJson(ID, recipes);
-
+	// const ID = 107;
+	// const recipes = await parseRecipes(ID);
+	// await writeRecipeJson(ID, recipes);
+	// await insertIntoDb();
+	await getPostsWithUnaddedRecipes();
 };
 main();
 

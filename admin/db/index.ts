@@ -332,7 +332,7 @@ export const db = {
 		await run('delete from recipes where id = ?', id);
 	},
 
-	async getRecipesForPost(postId: number) {
+	async getRecipesForPost(postId: number): Promise<IRecipe[]> {
 		const recipes = await selectAll('select id, post_id as postId, title, yield, time from recipes where post_id = ?', postId);
 		for (let r of recipes) {
 			r.ingredients = await selectAll('select amount, name from recipe_ingredients where recipe_id = ? order by ordering', r.id);
@@ -364,69 +364,3 @@ export const db = {
 	}
 
 };
-
-// ATODO temp
-const main = async () => {
-	const newRecipe = {
-		postId: 1,
-		title: 'Angel Biscuits',
-		yield: '12 biscuits',
-		time: '30 minutes',
-		ingredients: [
-			{ amount: '1 tbsp', name: 'active dry yeast' },
-			{ amount: '2 tbsp', name: 'warm water' },
-			{ amount: '2 3/4 cup', name: 'flour' },
-			{ amount: '2 tbsp', name: 'sugar' },
-			{ amount: '1 tsp', name: 'salt' },
-			{ amount: '3 tsp', name: 'baking powder' },
-			{ amount: '1/3 cup', name: 'vegetable shortening' },
-			{ amount: '1 cup', name: 'buttermilk' },
-			{ amount: '1 tsp', name: 'milk' },
-			{ amount: '1 tbsp', name: 'butter' },
-		],
-		steps: [
-			{ description: 'Preheat oven to 400 degrees. Line a skillet with parchment paper and spray with cooking spray.'	},
-			{ description: 'Combine warm water and yeast in a small bowl. Combine remaining dry ingredients in a large bowl.' },
-			{ description: 'Cut shortening into the dry ingredients. Mix yeast mixture with buttermilk and stir into the dry ingredients until just combined.' },
-			{ description: 'Roll out on a lightly floured surface to 1" thick. Cut with a 2 1/2" circle cutter and place in the lined skillet. Brush the tops of the biscuits with milk.' },
-			{ description: 'Bake 13-20 minutes, until they reach the desired golden color. Brush the tops of the baked biscuits with melted butter.' },
-		]
-	};
-
-	const newRecipe2 = {
-		postId: 1,
-		title: 'Angel Biscuits 2',
-		yield: '12 biscuits',
-		time: '30 minutes',
-		ingredients: [
-			{ amount: '1 tbsp', name: 'active dry yeast' },
-			{ amount: '2 tbsp', name: 'warm water' },
-			{ amount: '2 3/4 cup', name: 'flour' },
-			{ amount: '2 tbsp', name: 'sugar' },
-			{ amount: '1 tsp', name: 'salt' },
-			{ amount: '3 tsp', name: 'baking powder' },
-			{ amount: '1/3 cup', name: 'vegetable shortening' },
-			{ amount: '1 cup', name: 'buttermilk' },
-			{ amount: '1 tsp', name: 'milk' },
-			{ amount: '1 tbsp', name: 'butter' },
-		],
-		steps: [
-			{ description: 'Preheat oven to 400 degrees. Line a skillet with parchment paper and spray with cooking spray.'	},
-			{ description: 'Combine warm water and yeast in a small bowl. Combine remaining dry ingredients in a large bowl.' },
-			{ description: 'Cut shortening into the dry ingredients. Mix yeast mixture with buttermilk and stir into the dry ingredients until just combined.' },
-			{ description: 'Roll out on a lightly floured surface to 1" thick. Cut with a 2 1/2" circle cutter and place in the lined skillet. Brush the tops of the biscuits with milk.' },
-			{ description: 'Bake 13-20 minutes, until they reach the desired golden color. Brush the tops of the baked biscuits with melted butter.' },
-		]
-	};
-
-	try {
-		// await run('delete from recipes where id is not null');
-		// await module.exports.insertRecipe(newRecipe);
-		// await module.exports.insertRecipe(newRecipe2);
-		const recipes = await module.exports.getRecipesForPost(1);
-		console.log(JSON.stringify(recipes, null, 4));
-	} catch (e) {
-		console.log(e);
-	}
-};
-// main();

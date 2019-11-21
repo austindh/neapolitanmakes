@@ -25,8 +25,12 @@ export const getRecipeHtml = (recipe: IRecipe): string => {
 		<div className="recipe card">
 			<div className="recipe-title">{ recipe.title }</div>
 			<div className="recipe-summary">
-				<div><span>Yields:</span>{ recipe.yield }</div>
-				<div><span>Time:</span>{ recipe.time }</div>
+				{recipe.yield && 
+					<div><span>Yields:</span>{ recipe.yield }</div>
+				}
+				{recipe.time &&
+					<div><span>Time:</span>{ recipe.time }</div>
+				}
 			</div>
 			<div className="recipe-ingredients">
 				{ ingredients }

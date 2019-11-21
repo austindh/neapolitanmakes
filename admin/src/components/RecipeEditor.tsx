@@ -183,8 +183,8 @@ function RecipeEditor(props: RecipeEditorProps) {
 		close();
 	}
 
-	const { title, yield: rYield, time, ingredients: rIngredients, steps: rSteps } = currentRecipe;
-	const validRecipe = title && rYield && time && rIngredients.length && rSteps.length;
+	const { title, ingredients: rIngredients, steps: rSteps } = currentRecipe;
+	const validRecipe = title && rIngredients.length && rSteps.length;
 
 	const deleteButton = !isAdd ? (
 		<>
