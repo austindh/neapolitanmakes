@@ -1,0 +1,140 @@
+[
+    {
+        "title": "Lemon Cupcakes  ",
+        "yield": "Yields 18-20 deliciously full-sized cupcakes  ",
+        "time": "",
+        "postId": 66,
+        "ingredients": [
+            {
+                "amount": "1 1/4 cup",
+                "name": "all purpose flour"
+            },
+            {
+                "amount": "1 cup",
+                "name": "cake flour (I used 1 cup minus 2 tbsp all purpose flour, then added 2 tbsp corn starch. This is my go-to cake flour recipe. Make sure to mix the flour and corn starch together really well.)"
+            },
+            {
+                "amount": "1 teaspoon",
+                "name": "baking powder"
+            },
+            {
+                "amount": "1/2 teaspoon",
+                "name": "baking soda"
+            },
+            {
+                "amount": "1/2 teaspoon",
+                "name": "salt"
+            },
+            {
+                "amount": "1 stick (8 tablespoons)",
+                "name": "unsalted butter, at room temperature"
+            },
+            {
+                "amount": "1 cup",
+                "name": "sugar"
+            },
+            {
+                "amount": "1 cup",
+                "name": "sour cream"
+            },
+            {
+                "amount": "1/2 cup",
+                "name": "milk"
+            },
+            {
+                "amount": "4",
+                "name": "large egg whites, room temperature (I put my cold eggs soaking in warm water for 3 minutes or so)"
+            },
+            {
+                "amount": "3 teaspoons",
+                "name": "lemon juice"
+            },
+            {
+                "amount": "",
+                "name": "zest of one lemon"
+            }
+        ],
+        "steps": [
+            {
+                "description": "Preheat oven to 375 fahrenheit (If you're at high altitude, preheat to 385). Line cupcake tins with adorable cupcake liners."
+            },
+            {
+                "description": "Mix together flours, baking powder, baking soda, and salt in a medium bowl. Whisk until incorporated."
+            },
+            {
+                "description": "In a medium bowl, whisk together sour cream, milk, and egg whites. **Set aside. **"
+            },
+            {
+                "description": "In a large bowl, cream together butter and sugar for about 5 minutes, or until light and fluffy."
+            },
+            {
+                "description": "Add the vanilla extract to the butter mixture. While the mixer is on low, add the flour mixture in 3 parts alternating with the milk/sour cream mixture. (You'll start and end with flour mixture)."
+            },
+            {
+                "description": "Bake for 18-20 minutes, or until a toothpick comes out clean. (If you make mini cupcakes, they take about 13 minutes.)"
+            }
+        ]
+    },
+    {
+        "title": "Mascarpone Filling  ",
+        "yield": "",
+        "time": "",
+        "postId": 66,
+        "ingredients": [
+            {
+                "amount": "1/2 cup (4 oz)",
+                "name": "mascarpone cheese"
+            },
+            {
+                "amount": "1 cup",
+                "name": "powdered sugar"
+            },
+            {
+                "amount": "1/2 tsp",
+                "name": "lemon juice"
+            }
+        ],
+        "steps": [
+            {
+                "description": "Beat it all together and pipe into cupcakes."
+            }
+        ]
+    },
+    {
+        "title": "Blackberry Cream Cheese Buttercream  ",
+        "yield": "",
+        "time": "",
+        "postId": 66,
+        "ingredients": [
+            {
+                "amount": "4 oz",
+                "name": "cream cheese"
+            },
+            {
+                "amount": "6 tbsp",
+                "name": "butter"
+            },
+            {
+                "amount": "4 cups",
+                "name": "powdered sugar"
+            },
+            {
+                "amount": "1/2 tsp",
+                "name": "clear vanilla extract"
+            },
+            {
+                "amount": "1 tsp",
+                "name": "lemon juice"
+            },
+            {
+                "amount": "1/4 cup",
+                "name": "blackberries plus some for topping"
+            }
+        ],
+        "steps": [
+            {
+                "description": "Heat the blackberries in the microwave to help release the juices. Mash them through a sieve to get the seeds out. Beat the cream cheese and butter in a mixer. Add the powdered sugar until it's smooth. Add vanilla and lemon and beat until it's fluffy. Add the blackberry juice and make sure it's beaten until it's fully incorporated. Pipe onto cupcakes and top with a blackberry and some sugar crystal sprinkles."
+            }
+        ]
+    }
+]

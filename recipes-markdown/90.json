@@ -1,0 +1,107 @@
+[
+    {
+        "title": "Oreo Cupcakes  ",
+        "yield": "12 regular cupcakes or 24 mini cupcakes",
+        "time": "",
+        "postId": 90,
+        "ingredients": [
+            {
+                "amount": "1 1/4 cup",
+                "name": "cake flour (you can use AP flour)"
+            },
+            {
+                "amount": "1 1/2 tsp",
+                "name": "baking powder"
+            },
+            {
+                "amount": "1/4 tsp",
+                "name": "salt"
+            },
+            {
+                "amount": "3/4 cup",
+                "name": "sugar"
+            },
+            {
+                "amount": "6 tbsp",
+                "name": "butter, room temperature"
+            },
+            {
+                "amount": "1",
+                "name": "large egg plus 1 egg white"
+            },
+            {
+                "amount": "1 tsp",
+                "name": "vanilla (I used clear)"
+            },
+            {
+                "amount": "1/2 cup",
+                "name": "half and half (I have used anything from skim milk to heavy whipping cream and it always works out fine)"
+            },
+            {
+                "amount": "",
+                "name": ""
+            },
+            {
+                "amount": "6-8",
+                "name": "Oreos, smashed to smithereens"
+            }
+        ],
+        "steps": [
+            {
+                "description": "Preheat oven to 350 fahrenheit (I used a toaster oven which always seems to overheat, so I heated my oven to 325)."
+            },
+            {
+                "description": "Line the cupcake pans with paper liners"
+            },
+            {
+                "description": "In a bowl or mixer, beat the sugar and butter until it's light and fluffy. Add the egg and egg white and beat until incorporated throughout. Scrape the bowl and beat for 15 more seconds."
+            },
+            {
+                "description": "Quickly mix the flour, baking powder, and salt in a dry ingredients bowl. Mix this in with the butter/sugar alternately with the half and half. Beat until no flour is visible, making sure to scrape the bowl often. **Don't overbeat!** Add the crushed Oreos and mix until just incorporated."
+            },
+            {
+                "description": "Scoop batter into the prepared cupcake liners. Spray a cookie scoop with cooking spray so the batter is easily removed. Divide batter evenly (Or, if you're me, you divide batter so they're all equal except one is giant and you claim that one as soon as they leave the oven)."
+            },
+            {
+                "description": "Bake for 18-20 minutes or until a toothpick comes out clean. Let the cupcakes cool on a drying rack (If you're impatient or time-crunched like me, you can refrigerate them on the rack for 15 minutes)."
+            }
+        ]
+    },
+    {
+        "title": " Fluffy Oreo Frosting  ",
+        "yield": "enough for 12 cupcakes",
+        "time": "",
+        "postId": 90,
+        "ingredients": [
+            {
+                "amount": "1 cup",
+                "name": "heavy whipping cream"
+            },
+            {
+                "amount": "1/2 tsp",
+                "name": "clear vanilla"
+            },
+            {
+                "amount": "2 tbsp",
+                "name": "powdered sugar"
+            },
+            {
+                "amount": "6",
+                "name": "crushed Oreos"
+            },
+            {
+                "amount": "",
+                "name": ""
+            },
+            {
+                "amount": "12",
+                "name": "mini Oreos or 6 regular Oreos, cut in half"
+            }
+        ],
+        "steps": [
+            {
+                "description": "Mix whipping cream, vanilla, and powdered sugar. Whip until stiff peaks form. Add crushed Oreos and pipe frosting onto cupcakes."
+            }
+        ]
+    }
+]

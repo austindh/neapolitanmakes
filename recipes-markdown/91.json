@@ -1,0 +1,88 @@
+[
+    {
+        "title": "S'mores Cheesecake  ",
+        "yield": "6\" cheesecake",
+        "time": "",
+        "postId": 91,
+        "ingredients": [
+            {
+                "amount": "3/4 cup",
+                "name": "graham cracker crumbs"
+            },
+            {
+                "amount": "4 tbsp",
+                "name": "butter (I used my [homemade butter](/2012/08/mason-jar-butter.html))"
+            },
+            {
+                "amount": "2 tbsp",
+                "name": "sugar"
+            },
+            {
+                "amount": "1",
+                "name": "Hershey king-size chocolate bar"
+            },
+            {
+                "amount": "2 packages (16 oz)",
+                "name": "cream cheese, room temperature"
+            },
+            {
+                "amount": "1/4 cup",
+                "name": "sugar"
+            },
+            {
+                "amount": "1",
+                "name": "egg"
+            },
+            {
+                "amount": "1/2 tsp",
+                "name": "vanilla (clear if you can)"
+            },
+            {
+                "amount": "1 tbsp",
+                "name": "cornstarch"
+            },
+            {
+                "amount": "1/3 cup",
+                "name": "sour cream"
+            },
+            {
+                "amount": "2/3 cup",
+                "name": "chocolate chips"
+            },
+            {
+                "amount": "3 tbsp",
+                "name": "whipping cream"
+            },
+            {
+                "amount": "",
+                "name": "[Kraft Mallow Bits, for decoration](http://www.amazon.com/Kraft-Jet-puffed-Mallow-Vanilla-Marshmallows/dp/B007HS7CRW)"
+            }
+        ],
+        "steps": [
+            {
+                "description": "Preheat oven to 350 degrees fahrenheit."
+            },
+            {
+                "description": "Mix graham cracker crumbs with 2 tbsp sugar and butter. Use a fork to mix it together until it's crumbly. Press it along the bottom of the springform pan. Bake it for 8 minutes."
+            },
+            {
+                "description": "Open the Hershey bar. Take a bite. _You deserve it_. Break up the rest of the bar you didn't eat and line the crust with it."
+            },
+            {
+                "description": "Beat cream cheese and sugar until light and fluffy. Scrape down bowl. Add egg, vanilla, and cornstarch. Mix until barely incorporated. Add sour cream and beat until smooth."
+            },
+            {
+                "description": "Pour the cream cheese mixture into the crust-lined pan. Tap the pan a few times to get rid of any bubbles (I do this with cake, too). Bake for 35-38 minutes. When a cheesecake is done, it still jiggles in the middle."
+            },
+            {
+                "description": "Turn the oven off and leave it open for 3 hours. Chill for at least 4 hours or overnight."
+            },
+            {
+                "description": "Melt chocolate chips with whipping cream and stir until it's smooth.  Pour over cheesecake. Sprinkle with mallow bits, and any leftover graham cracker crumbs."
+            },
+            {
+                "description": "Devour."
+            }
+        ]
+    }
+]

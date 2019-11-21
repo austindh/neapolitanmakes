@@ -1,0 +1,43 @@
+[
+    {
+        "title": "Crusty French Bread  ",
+        "yield": "1 loaf",
+        "time": "",
+        "postId": 56,
+        "ingredients": [
+            {
+                "amount": "3 cups",
+                "name": "unbleached all purpose flour"
+            },
+            {
+                "amount": "1 3/4 tsp",
+                "name": "salt"
+            },
+            {
+                "amount": "1/2 tsp",
+                "name": "active dry yeast (rapid rise)"
+            },
+            {
+                "amount": "1 1/2 cups",
+                "name": "water (room temp or a little warm will do)"
+            }
+        ],
+        "steps": [
+            {
+                "description": "Mix together the flour, salt, and yeast in a large mixing bowl. Add the water and stir until it's all incorporated. It will be a sticky mess in the bowl."
+            },
+            {
+                "description": "Let the bowl sit for 12-18 hours."
+            },
+            {
+                "description": "Heat your oven to 450 degrees fahrenheit. Pour the dough out onto a _heavily_ floured counter. Cover the top with plastic wrap to let it rest for 30 minutes. While the dough is resting, put a cast iron skillet or casserole dish or le Creuset in the oven to heat up."
+            },
+            {
+                "description": "Take the baking dish out of the oven and drop the dough into the bottom of the dish. Cover the dish with aluminum foil and bake for 30 minutes. After about 20 minutes, place a pan filled with water in the bottom of the oven and take the foil off of the bread. This will crisp the bread up."
+            },
+            {
+                "description": "Take the bread out and let it cool on a cooling rack."
+            }
+        ]
+    }
+]

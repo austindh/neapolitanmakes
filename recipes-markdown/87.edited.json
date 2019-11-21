@@ -1,0 +1,99 @@
+[
+    {
+        "title": "Perfect Flaky Pie Crust  ",
+        "yield": "1 single crust 9-inch pie",
+        "time": "",
+        "postId": 87,
+        "ingredients": [
+            {
+                "amount": "1 1/2 cups",
+                "name": "flour"
+            },
+            {
+                "amount": "1 tbsp",
+                "name": "sugar"
+            },
+            {
+                "amount": "1 tsp",
+                "name": "salt"
+            },
+            {
+                "amount": "9 tbsp",
+                "name": "butter (1 stick plus 1 tbsp), chilled and cut into 1 tbsp cubes"
+            },
+            {
+                "amount": "1/4 cup plus 1 tbsp",
+                "name": "ice-cold water"
+            }
+        ],
+        "steps": [
+            {
+                "description": "In a large bowl, whisk together flour, sugar, and salt."
+            },
+            {
+                "description": "Using a pastry cutter, cut in the butter until the mixture resembles crumbs."
+            },
+            {
+                "description": "Slowly add the water while cutting until it's incorporated and flaky but sticks together."
+            },
+            {
+                "description": "Form into a ball with your hands and flatten slightly so it's a disk shape. Wrap in plastic wrap and refrigerate for at least an hour, up to 1 day. You can freeze it for up to a month, as long as you thaw it for 24 hours in the fridge before using."
+            },
+            {
+                "description": "Roll it out and transfer to a pie pan. Cut the extra on the edges of the pie pan. \"Fork\" the crust. Preheat oven to 425 F. Refrigerate pie crust for 15 minutes while the oven is heating."
+            },
+            {
+                "description": "Bake for 15 minutes, making sure to puncture the crust with a fork if it gets puffy while it's baking."
+            }
+        ]
+    },
+    {
+        "title": "The Pumpkin Pie  ",
+        "yield": "",
+        "time": "",
+        "postId": 87,
+        "ingredients": [
+            {
+                "amount": "3/4 cup",
+                "name": "sugar"
+            },
+            {
+                "amount": "3 tsp",
+                "name": "pumpkin pie spice"
+            },
+            {
+                "amount": "2",
+                "name": "eggs"
+            },
+            {
+                "amount": "1 (15 oz or 1 3/4 cup)",
+                "name": "can of pumpkin puree"
+            },
+            {
+                "amount": "1 (12 oz) can",
+                "name": "of evaporated milk"
+            },
+            {
+                "amount": "1 recipe",
+                "name": "of the Perfect Flaky Pie Crust"
+            }
+        ],
+        "steps": [
+            {
+                "description": "In a large bowl, beat the two eggs with a whisk. In a separate bowl, whisk the two dry ingredients."
+            },
+            {
+                "description": "Add the sugar mixture to the eggs. Whisk. Add the pumpkin and whisk."
+            },
+            {
+                "description": "Slowly pour the evaporated milk into the pumpkin mixture and whisk until thoroughly incorporated."
+            },
+            {
+                "description": "Pour into prepared pie crust and bake at 425 Fahrenheit for 15 minutes. Reduce temperature to 350 Fahrenheit and bake for 40-50 more minutes, or until a toothpick inserted in the middle comes out clean."
+            },
+            {
+                "description": "Cool completely and top with fresh whipped cream."
+            }
+        ]
+    }
+]

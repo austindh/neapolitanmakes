@@ -1,0 +1,125 @@
+[
+    {
+        "title": "Cinnabon Copycat  ",
+        "yield": "12 cinnamon rolls",
+        "time": "",
+        "postId": 88,
+        "ingredients": [
+            {
+                "amount": "",
+                "name": "Dough"
+            },
+            {
+                "amount": "1 cup",
+                "name": "warm milk (microwaved for about 60 seconds or until it's warmer than your finger)"
+            },
+            {
+                "amount": "2",
+                "name": "eggs, room temperature"
+            },
+            {
+                "amount": "1/3 cup",
+                "name": "butter, melted, cooled down to room temperature"
+            },
+            {
+                "amount": "4 1/2 cups",
+                "name": "flour (I used all purpose although bread flour would be a good replacement)"
+            },
+            {
+                "amount": "1 tsp",
+                "name": "salt"
+            },
+            {
+                "amount": "1/2 cup",
+                "name": "sugar"
+            },
+            {
+                "amount": "1 package (1/4 oz)",
+                "name": "yeast"
+            },
+            {
+                "amount": "",
+                "name": ""
+            },
+            {
+                "amount": "",
+                "name": "Filling"
+            },
+            {
+                "amount": "1 cup",
+                "name": "brown sugar"
+            },
+            {
+                "amount": "2 1/2 tbsp",
+                "name": "cinnamon"
+            },
+            {
+                "amount": "1/3",
+                "name": "butter, softened"
+            },
+            {
+                "amount": "",
+                "name": ""
+            },
+            {
+                "amount": "",
+                "name": "Frosting"
+            },
+            {
+                "amount": "4 oz",
+                "name": "cream cheese, softened"
+            },
+            {
+                "amount": "4 tbsp",
+                "name": "butter, softened"
+            },
+            {
+                "amount": "1 1/2 cup",
+                "name": "powdered sugar"
+            },
+            {
+                "amount": "1/2 tsp",
+                "name": "vanilla extract"
+            },
+            {
+                "amount": "1/8 tsp",
+                "name": "salt"
+            }
+        ],
+        "steps": [
+            {
+                "description": "Dissolve yeast in warm milk for about 10 minutes."
+            },
+            {
+                "description": "Add eggs and butter. Combine flour, salt, and sugar, and add to the wet ingredients."
+            },
+            {
+                "description": "Mix well and knead with your hands (or your stand mixer if you're not a poor college student) for about 1 minute. Spray a bowl with cooking spray and put the dough inside. Cover with plastic wrap and let rise in warm place (I used my oven at 175) for 1 hour or until doubled in size."
+            },
+            {
+                "description": "In a separate bowl, combine brown sugar with cinnamon."
+            },
+            {
+                "description": "Once the dough has risen for 1 hour, roll it out on a lightly floured surface to 16\"x21\". Spread the softened butter across the dough and sprinkle the brown sugar/cinnamon mixture on top of the butter."
+            },
+            {
+                "description": "Roll up the dough so that it's 21\" long. Cut it in half, then each of those in half (so you have four equal pieces). Cut each of those into three so you end up with twelve equal pieces. Hopefully that wasn't _too_ confusing."
+            },
+            {
+                "description": "Butter up (or cooking spray if you're in a hurry) a 9x13 pan. Place the cinnamon rolls 4 by 3 in the pan. Let them rise another 30 minutes, or until doubled, covered in the warm place."
+            },
+            {
+                "description": "*\\*\\*If you're making them the night before, now is when you put them into the fridge\\*\\*\\*"
+            },
+            {
+                "description": "Preheat the oven to 350 fahrenheit. Bake cinnamon rolls for 20-24 minutes, or until golden brown."
+            },
+            {
+                "description": "While they're in the oven, beat the cream cheese, butter, powdered sugar, vanilla, and salt until well combined."
+            },
+            {
+                "description": "Slather the frosting all over the cinnamon rolls and devour!"
+            }
+        ]
+    }
+]

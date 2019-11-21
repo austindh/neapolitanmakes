@@ -1,0 +1,104 @@
+[
+    {
+        "title": "Auntie Anne's Copycat Soft Pretzels   ",
+        "yield": "6-8 large pretzels, or you could honestly probably make them HALF the size I did, so it could make about 14-16 small pretzels",
+        "time": "",
+        "postId": 71,
+        "ingredients": [
+            {
+                "amount": "1 1/2 cups",
+                "name": "warm water"
+            },
+            {
+                "amount": "1 1/4 tsp",
+                "name": "active dry yeast"
+            },
+            {
+                "amount": "2 tbsp",
+                "name": "light brown sugar"
+            },
+            {
+                "amount": "1 1/4 tsp",
+                "name": "salt"
+            },
+            {
+                "amount": "4 cups",
+                "name": "bread flour (original recipe calls for 1 cup bread flour + 3 cups AP flour)"
+            },
+            {
+                "amount": "",
+                "name": ""
+            },
+            {
+                "amount": "2 cups",
+                "name": "really warm water"
+            },
+            {
+                "amount": "2 tsp",
+                "name": "baking soda"
+            },
+            {
+                "amount": "",
+                "name": ""
+            },
+            {
+                "amount": "5 tbsp",
+                "name": "melted butter"
+            },
+            {
+                "amount": "about 1/3 cup",
+                "name": "sugar"
+            },
+            {
+                "amount": "about 1 tbsp",
+                "name": "cinnamon"
+            }
+        ],
+        "steps": [
+            {
+                "description": "Activate the yeast in the water for 5-10 minutes. Add the sugar and salt and mix. Add the flour and knead until elastic (7 ish minutes). I honestly just threw everything in the bread machine and to knead it for me, then I put it in a bowl in a warm oven (170 degrees fahrenheit) for 30 minutes or until it doubled. While it's rising, mix the warm water with the baking soda and stir until it dissolves. Put it in a dish that's shallow but still has sides so you're not spilling everywhere."
+            },
+            {
+                "description": "Pinch off a fist of dough and roll it into a 1/2 inch thick snake-- don't roll it out! Roll it into snakes! [Slithery snakes](http://www.youtube.com/watch?v=Ti4sqG85FU4)!"
+            },
+            {
+                "description": "Twist it up so it looks somewhat pretzel-like and then dip it in the baking soda water mixture. Put it on a greased or silpat-lined cookie sheet. Repeat with all the dough and let it rise for about 20-30 more minutes in a warm place. I put them on top of my oven while it was heating up."
+            },
+            {
+                "description": "Bake at 450 for 10 minutes."
+            },
+            {
+                "description": "Dip the pretzels in butter, then in cinnamon sugar."
+            }
+        ]
+    },
+    {
+        "title": "Cream Cheese Dipping Sauce  ",
+        "yield": "",
+        "time": "",
+        "postId": 71,
+        "ingredients": [
+            {
+                "amount": "3 oz",
+                "name": "cream cheese"
+            },
+            {
+                "amount": "1 1/2 cups",
+                "name": "powdered sugar"
+            },
+            {
+                "amount": "2 tbsp",
+                "name": "milk"
+            },
+            {
+                "amount": "2 tsp",
+                "name": "vanilla"
+            }
+        ],
+        "steps": [
+            {
+                "description": "[Beat it.](http://www.youtube.com/watch?v=Ym0hZG-zNOk)"
+            }
+        ]
+    }
+]

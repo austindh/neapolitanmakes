@@ -1,0 +1,124 @@
+[
+    {
+        "title": "White Cupcakes  ",
+        "yield": "Yields 18-20 deliciously full-sized cupcakes    ",
+        "time": "",
+        "postId": 81,
+        "ingredients": [
+            {
+                "amount": "1 1/4 cup",
+                "name": "all purpose flour"
+            },
+            {
+                "amount": "1 cup",
+                "name": "cake flour (I used 1 cup minus 2 tbsp all purpose flour, then added 2 tbsp corn starch. This is my go-to cake flour recipe. Make sure to mix the flour and corn starch together really well.)"
+            },
+            {
+                "amount": "1 teaspoon",
+                "name": "baking powder"
+            },
+            {
+                "amount": "1/2 teaspoon",
+                "name": "baking soda"
+            },
+            {
+                "amount": "1/2 teaspoon",
+                "name": "salt"
+            },
+            {
+                "amount": "1 stick (8 tablespoons)",
+                "name": "unsalted butter, at room temperature"
+            },
+            {
+                "amount": "1 cup",
+                "name": "sugar"
+            },
+            {
+                "amount": "1 cup",
+                "name": "sour cream"
+            },
+            {
+                "amount": "1/2 cup",
+                "name": "milk"
+            },
+            {
+                "amount": "4",
+                "name": "large egg whites, room temperature (I put my cold eggs soaking in warm water for 3 minutes or so)"
+            },
+            {
+                "amount": "3 teaspoons",
+                "name": "pure vanilla extract"
+            }
+        ],
+        "steps": [
+            {
+                "description": "Preheat oven to 375 fahrenheit (If you're at high altitude, preheat to 385). Line cupcake tins with adorable cupcake liners."
+            },
+            {
+                "description": "Mix together flours, baking powder, baking soda, and salt in a medium bowl. Whisk until incorporated."
+            },
+            {
+                "description": "In a medium bowl, whisk together sour cream, milk, and egg whites. **Set aside. **"
+            },
+            {
+                "description": "In a large bowl, cream together butter and sugar for about 5 minutes, or until light and fluffy."
+            },
+            {
+                "description": "Add the vanilla extract to the butter mixture. While the mixer is on low, add the flour mixture in 3 parts alternating with the milk/sour cream mixture. (You'll start and end with flour mixture)."
+            },
+            {
+                "description": "Bake for 18-20 minutes, or until a toothpick comes out clean. (If you make mini cupcakes, they take about 13 minutes.)"
+            }
+        ]
+    },
+    {
+        "title": "White Chocolate Filling  ",
+        "yield": "",
+        "time": "",
+        "postId": 81,
+        "ingredients": [
+            {
+                "amount": "1 1/4 cups",
+                "name": "heavy whipping cream"
+            },
+            {
+                "amount": "1/2 cup",
+                "name": "white chocolate chips (I used Guittard's white chocolate chips-- they're _so_ delicious!)"
+            }
+        ],
+        "steps": [
+            {
+                "description": "Whip the cream until it holds stiff peaks. Melt the white chocolate really slowly (15 seconds at a time, stirring between each time). Add the melted chocolate to the whipped cream and whip it until it's really stiff and incorporated. Set aside about 1 cup for the frosting recipe."
+            }
+        ]
+    },
+    {
+        "title": " White Chocolate Raspberry Frosting  ",
+        "yield": "",
+        "time": "",
+        "postId": 81,
+        "ingredients": [
+            {
+                "amount": "1 cup",
+                "name": "of the white chocolate mousse filling"
+            },
+            {
+                "amount": "1 stick",
+                "name": "butter"
+            },
+            {
+                "amount": "2 cups",
+                "name": "powdered sugar"
+            },
+            {
+                "amount": "1/4 cup",
+                "name": "frozen raspberries, microwaved for about 20 seconds (I had fresh but I used frozen because when you thaw them in the microwave, they release so many juices. If you use fresh, microwave them to release the juices, enhance the flavor, and enhance the color.)"
+            }
+        ],
+        "steps": [
+            {
+                "description": "Cream the butter and add the powdered sugar. Add the raspberries slowly and then lastly add the mousse filling. Beat until it's really fluffy and tasty."
+            }
+        ]
+    }
+]

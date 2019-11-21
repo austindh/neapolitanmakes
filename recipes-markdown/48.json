@@ -1,0 +1,80 @@
+[
+    {
+        "title": "Triple Chocolate Chip Cookies  ",
+        "yield": "3 dozen cookies",
+        "time": "",
+        "postId": 48,
+        "ingredients": [
+            {
+                "amount": "1 cup",
+                "name": "brown sugar"
+            },
+            {
+                "amount": "1 cup",
+                "name": "sugar"
+            },
+            {
+                "amount": "1/2 cup (1 stick)",
+                "name": "butter, softened"
+            },
+            {
+                "amount": "1/2 cup",
+                "name": "vegetable oil"
+            },
+            {
+                "amount": "2",
+                "name": "eggs"
+            },
+            {
+                "amount": "1 tsp",
+                "name": "baking soda"
+            },
+            {
+                "amount": "1 tsp",
+                "name": "baking powder"
+            },
+            {
+                "amount": "1/4 tsp",
+                "name": "cornstarch"
+            },
+            {
+                "amount": "1 tsp",
+                "name": "salt"
+            },
+            {
+                "amount": "1 tsp",
+                "name": "vanilla"
+            },
+            {
+                "amount": "3 cups",
+                "name": "flour"
+            },
+            {
+                "amount": "1/2 cup",
+                "name": "white chocolate chips"
+            },
+            {
+                "amount": "1/2 cup",
+                "name": "milk chocolate chips"
+            },
+            {
+                "amount": "1/2 cup",
+                "name": "dark chocolate chips"
+            }
+        ],
+        "steps": [
+            {
+                "description": "Cream butter, oil, and sugars for 3-5 minutes."
+            },
+            {
+                "description": "Add eggs, one at a time. Add the vanilla. Mix together the dry ingredients in a separate bowl."
+            },
+            {
+                "description": "Add the dry ingredients to the wet ingredients slowly. Add the chocolate chips."
+            },
+            {
+                "description": "Bake at 350 degrees fahrenheit for 7-8 minutes. I usually bake mine on a silpat or parchment paper."
+            }
+        ]
+    }
+]

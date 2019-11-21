@@ -1,0 +1,70 @@
+[
+    {
+        "title": "Brownie Cheesecake  ",
+        "yield": "1 9\" cheesecake",
+        "time": "",
+        "postId": 45,
+        "ingredients": [
+            {
+                "amount": "1 (18.4 oz)",
+                "name": "package brownie mix (I used Pillsbury Family Size Fudge Brownie Mix)"
+            },
+            {
+                "amount": "2/3 cup",
+                "name": "vegetable oil"
+            },
+            {
+                "amount": "1/4 cup",
+                "name": "water"
+            },
+            {
+                "amount": "5",
+                "name": "eggs (divided use)"
+            },
+            {
+                "amount": "3 (8 oz)",
+                "name": "packages cream cheese, softened"
+            },
+            {
+                "amount": "1 (14 oz)",
+                "name": "can sweetened condensed milk"
+            },
+            {
+                "amount": "2 tsp",
+                "name": "vanilla"
+            },
+            {
+                "amount": "1/2 cup",
+                "name": "mini chocolate chips"
+            },
+            {
+                "amount": "",
+                "name": ""
+            },
+            {
+                "amount": "",
+                "name": "Note: The oil, water, and 2 of the eggs are for the brownie mix. If you're using a different brownie mix, you may need different amounts or ingredients to make your brownie mix."
+            }
+        ],
+        "steps": [
+            {
+                "description": "Preheat oven to 350 degrees fahrenheit. Spray the bottom of a 9\" springform pan with cooking spray."
+            },
+            {
+                "description": "Prepare brownie mix with veggie oil, water, and 2 eggs. Pour the batter into the springform pan and bake for 35 minutes or until set."
+            },
+            {
+                "description": "Beat cream cheese with a mixer until fluffy. Add three eggs, one at a time, mixing well between each egg. Beat in the sweetened condensed milk and vanilla. Stir in the chocolate chips. Pour the batter into the prepared pan on top of the brownie."
+            },
+            {
+                "description": "Reduce the oven temperature to 300 degrees fahrenheit. Bake the cheesecake for 50 minutes or until set (to check doneness-- tap the side of the springform pan with a wooden spoon. If the entire thing jiggles a lot, it needs a little more time. The center should jiggle when the cheesecake it done, but it shouldn't seem \"liquidy.\")"
+            },
+            {
+                "description": "To prevent cracking: When the cheesecake is done, crack the oven open for 5-10 minutes with the oven turned off before taking the cheesecake out."
+            },
+            {
+                "description": "Refrigerate the cheesecake until set and cooled (at least 4 hours)."
+            }
+        ]
+    }
+]

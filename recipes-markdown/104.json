@@ -1,0 +1,74 @@
+[
+    {
+        "title": " Lemon Crinkle Cookies  ",
+        "yield": "about 30 cookies",
+        "time": "",
+        "postId": 104,
+        "ingredients": [
+            {
+                "amount": "1/2 cup (1 stick)",
+                "name": "butter, softened"
+            },
+            {
+                "amount": "1 cup",
+                "name": "sugar"
+            },
+            {
+                "amount": "1",
+                "name": "egg"
+            },
+            {
+                "amount": "1 tablespoon",
+                "name": "fresh lemon juice"
+            },
+            {
+                "amount": "1/2 teaspoon",
+                "name": "clear vanilla extract"
+            },
+            {
+                "amount": "1/4 teaspoon",
+                "name": "salt"
+            },
+            {
+                "amount": "1/4 teaspoon",
+                "name": "baking powder"
+            },
+            {
+                "amount": "1/8 teaspoon",
+                "name": "baking soda"
+            },
+            {
+                "amount": "1 1/2 cups",
+                "name": "all-purpose flour"
+            },
+            {
+                "amount": "",
+                "name": ""
+            },
+            {
+                "amount": "1/3 cup",
+                "name": "powdered sugar for rolling"
+            }
+        ],
+        "steps": [
+            {
+                "description": "Preheat oven to 350 degrees. Line baking sheets with silpat or parchment paper."
+            },
+            {
+                "description": "Cream butter and sugar together until light and fluffy. Add egg, lemon juice, and vanilla. Beat for about 30 more seconds."
+            },
+            {
+                "description": "Add dry ingredients and mix until just combined."
+            },
+            {
+                "description": "Place powdered sugar in a shallow bowl. Scoop cookies, about 1 tablespoon each, and roll them in the powdered sugar."
+            },
+            {
+                "description": "Bake cookies for 10-11 minutes, or until no longer shiny on top. Let them sit for a minute or two before transferring them to a cooling rack."
+            },
+            {
+                "description": "Eat one. Repeat this step until they are all gone."
+            }
+        ]
+    }
+]

@@ -1,0 +1,73 @@
+[
+    {
+        "title": "Mushroom, Onion, and Pepper Jack Tarts (AKA Magic Tarts)  ",
+        "yield": "9 three inch tarts",
+        "time": "",
+        "postId": 101,
+        "ingredients": [
+            {
+                "amount": "2 tbsp",
+                "name": "olive oil"
+            },
+            {
+                "amount": "1 tbsp",
+                "name": "butter"
+            },
+            {
+                "amount": "1/2 cup",
+                "name": "chopped white onion"
+            },
+            {
+                "amount": "2",
+                "name": "cloves garlic, chopped"
+            },
+            {
+                "amount": "1 cup",
+                "name": "chopped mushroom (any variety, I used shiitake and baby bella together)"
+            },
+            {
+                "amount": "1/4 cup",
+                "name": "chicken broth"
+            },
+            {
+                "amount": "1/2 cup",
+                "name": "shredded pepper jack cheese"
+            },
+            {
+                "amount": "1",
+                "name": "egg"
+            },
+            {
+                "amount": "1 tbsp",
+                "name": "half and half (or milk or cream)"
+            },
+            {
+                "amount": "1",
+                "name": "Sheet Pepperidge Farm Puff Pastry, thawed (if your local store has generic brand I'm really jealous. I've never found anything even close to Pepperidge Farm) The box comes with two sheets, but this recipe only needs one."
+            }
+        ],
+        "steps": [
+            {
+                "description": "In a pan on low-medium heat, melt the butter with the olive oil. Saute the onion and garlic until the onion is grilled (a little brown on the edges)"
+            },
+            {
+                "description": "Add the mushroom and chicken broth. Simmer until the chicken broth is evaporated. (15 minutes)"
+            },
+            {
+                "description": "Open up the trifold Puff Pastry. Using a biscuit cutter, cut out nine circles."
+            },
+            {
+                "description": "Beat the egg and half and half together. Using a pastry brush, brush a little of the egg wash on each circle of Puff Pastry."
+            },
+            {
+                "description": "When the mushroom and onion mixture is simmered down, divide it equally on each of the puffs."
+            },
+            {
+                "description": "Sprinkle the cheese equally on each of the puffs."
+            },
+            {
+                "description": "In an oven heated to 400 Fahrenheit, bake the puffs for 15 minutes or until golden and delicious looking."
+            }
+        ]
+    }
+]

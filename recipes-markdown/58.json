@@ -1,0 +1,69 @@
+[
+    {
+        "title": "Lemon White Chocolate Chip Cookies  ",
+        "yield": "18-20 cookies",
+        "time": "",
+        "postId": 58,
+        "ingredients": [
+            {
+                "amount": "1/2 cup (1 stick)",
+                "name": "butter, softened"
+            },
+            {
+                "amount": "1/2 cup",
+                "name": "light brown sugar"
+            },
+            {
+                "amount": "1/4 cup",
+                "name": "dark brown sugar"
+            },
+            {
+                "amount": "1/4 cup",
+                "name": "white sugar"
+            },
+            {
+                "amount": "1",
+                "name": "egg"
+            },
+            {
+                "amount": "1/2 tsp",
+                "name": "lemon juice"
+            },
+            {
+                "amount": "1 1/2 cups",
+                "name": "flour"
+            },
+            {
+                "amount": "1 tsp",
+                "name": "baking powder"
+            },
+            {
+                "amount": "1/2 tsp",
+                "name": "baking soda"
+            },
+            {
+                "amount": "1/2 tsp",
+                "name": "salt"
+            },
+            {
+                "amount": "",
+                "name": "zest of 1 lemon"
+            },
+            {
+                "amount": "3/4 cup",
+                "name": "white chocolate chips"
+            }
+        ],
+        "steps": [
+            {
+                "description": "Cream together butter and sugars until light and fluffy, about 4 minutes. Add egg and lemon juice and beat for about 1 more minute."
+            },
+            {
+                "description": "In a separate bowl, mix together flour, baking powder, baking soda, salt, and lemon zest. Add slowly to the butter/sugar mixture until just incorporated. Add in the white chocolate chips and mix until they're evenly distributed."
+            },
+            {
+                "description": "Refrigerate for at least 1 hour. Preheat oven to 350 degrees fahrenheit. Scoop cookies out onto a cookie sheet lined with silpat or parchment paper. Bake for 8 minutes \\[they will appear to be not done, but they will continue cooking after you take them out\\]. Let the cookies sit on the pan for 10 minutes before removing them to a cooling rack."
+            }
+        ]
+    }
+]

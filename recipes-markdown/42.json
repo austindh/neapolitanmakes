@@ -1,0 +1,108 @@
+[
+    {
+        "title": "Pumpkin Cheesecake Bread  ",
+        "yield": "2 loaves (either 8x4 or 9x5-- I did one of each!)",
+        "time": "",
+        "postId": 42,
+        "ingredients": [
+            {
+                "amount": "",
+                "name": "**Pumpkin Bread Batter**"
+            },
+            {
+                "amount": "3 1/2 cups",
+                "name": "flour"
+            },
+            {
+                "amount": "2 tsp",
+                "name": "baking soda"
+            },
+            {
+                "amount": "1 tsp",
+                "name": "baking powder"
+            },
+            {
+                "amount": "1 tsp",
+                "name": "salt"
+            },
+            {
+                "amount": "1 1/2 tbsp",
+                "name": "pumpkin pie spice"
+            },
+            {
+                "amount": "2 1/2 cups",
+                "name": "sugar"
+            },
+            {
+                "amount": "1 cup",
+                "name": "veggie oil (or canola oil)"
+            },
+            {
+                "amount": "4",
+                "name": "eggs"
+            },
+            {
+                "amount": "1 (15 oz",
+                "name": "can pumpkin purée"
+            },
+            {
+                "amount": "1/2 cup",
+                "name": "water"
+            },
+            {
+                "amount": "",
+                "name": ""
+            },
+            {
+                "amount": "",
+                "name": "**Cheesecake Swirl**"
+            },
+            {
+                "amount": "",
+                "name": ""
+            },
+            {
+                "amount": "1 (8 oz",
+                "name": "package cream cheese, room temperature"
+            },
+            {
+                "amount": "1/3 cup",
+                "name": "sugar"
+            },
+            {
+                "amount": "2 tbsp",
+                "name": "flour"
+            },
+            {
+                "amount": "2",
+                "name": "eggs"
+            }
+        ],
+        "steps": [
+            {
+                "description": "Preheat oven to 350 degrees fahrenheit. Grease two loaf pans (8x4 or 9x5 will work perfectly)."
+            },
+            {
+                "description": "Whisk together flour, baking soda, baking powder, salt, and pumpkin pie spice. Set aside."
+            },
+            {
+                "description": "Beat together in a large bowl (a stand mixer works well) the sugar with the veggie oil. Add the eggs one at a time, beating between each egg. Add the pumpkin."
+            },
+            {
+                "description": "Add the dry ingredients slowly alternating with the water. Mix until combined."
+            },
+            {
+                "description": "Beat together the cheesecake swirl ingredients until smooth."
+            },
+            {
+                "description": "Pour a little more than half the batter between the two pans. Spread all of the cheesecake swirl batter in the two pans. Try to spread it out evenly, extending almost to the edges. Pour the remaining pumpkin batter on top and completely cover up the cheesecake swirl."
+            },
+            {
+                "description": "Bake for 55-70 minutes, or until a toothpick or cake tester comes out clean."
+            },
+            {
+                "description": "Let the bread cool in the pans for 15 minutes, then remove them and let them finish cooling on a cooling rack. Store in plastic wrap."
+            }
+        ]
+    }
+]

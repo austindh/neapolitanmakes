@@ -1,0 +1,88 @@
+[
+    {
+        "title": "Cinnamon Sugar Tortilla Chips  ",
+        "yield": "40 chips",
+        "time": "",
+        "postId": 102,
+        "ingredients": [
+            {
+                "amount": "5",
+                "name": "tortillas (6 inch)"
+            },
+            {
+                "amount": "4 tbsp",
+                "name": "softened butter"
+            },
+            {
+                "amount": "1/4 cup",
+                "name": "sugar (you may need more or less depending on your taste)"
+            },
+            {
+                "amount": "2 tbsp",
+                "name": "cinnamon"
+            }
+        ],
+        "steps": [
+            {
+                "description": "Preheat oven to 350 f (if using toaster oven, preheat to 300 f)"
+            },
+            {
+                "description": "Brush butter on both sides of each tortilla."
+            },
+            {
+                "description": "Mix cinnamon and sugar together and put it on a flat plate. Flip each tortilla around in the cinnamon/sugar mixture to cover it completely with the mixture. Repeat until each is covered."
+            },
+            {
+                "description": "Bake until crispy, for about 8-9 minutes."
+            }
+        ]
+    },
+    {
+        "title": "Fruit Salsa  ",
+        "yield": "",
+        "time": "",
+        "postId": 102,
+        "ingredients": [
+            {
+                "amount": "1",
+                "name": "apple, peeled"
+            },
+            {
+                "amount": "2",
+                "name": "kiwis, peeled"
+            },
+            {
+                "amount": "1/2",
+                "name": "peach, peeled"
+            },
+            {
+                "amount": "5-6",
+                "name": "strawberries"
+            },
+            {
+                "amount": "15",
+                "name": "raspberries"
+            },
+            {
+                "amount": "",
+                "name": ""
+            },
+            {
+                "amount": "2 tbsp",
+                "name": "lemon juice"
+            },
+            {
+                "amount": "1 tbsp",
+                "name": "sugar"
+            }
+        ],
+        "steps": [
+            {
+                "description": "Dice all except raspberries into small cubes. Mix together in a bowl."
+            },
+            {
+                "description": "Mix lemon juice and sugar until the sugar dissolves. Pour over fruit mixture and coat all the fruit so it doesn't brown."
+            }
+        ]
+    }
+]

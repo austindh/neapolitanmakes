@@ -1,0 +1,72 @@
+[
+    {
+        "title": " Spiral Sugar Cookies  ",
+        "yield": "30 cookies",
+        "time": "",
+        "postId": 95,
+        "ingredients": [
+            {
+                "amount": "1/2 cup",
+                "name": "butter, softened"
+            },
+            {
+                "amount": "1 cup",
+                "name": "sugar"
+            },
+            {
+                "amount": "1",
+                "name": "egg"
+            },
+            {
+                "amount": "1 tsp",
+                "name": "vanilla"
+            },
+            {
+                "amount": "1/2 tsp",
+                "name": "baking powder"
+            },
+            {
+                "amount": "1/4 tsp",
+                "name": "salt"
+            },
+            {
+                "amount": "2 cups",
+                "name": "all purpose flour"
+            },
+            {
+                "amount": "",
+                "name": "Blue or red food coloring"
+            },
+            {
+                "amount": "",
+                "name": "Sprinkles"
+            }
+        ],
+        "steps": [
+            {
+                "description": "Cream butter and sugar. The butter should be softened, not room temperature. Here's the difference between softened and room temperature:"
+            },
+            {
+                "description": "Add vanilla and egg. Mix until it's mostly incorporated. Scrape bowl."
+            },
+            {
+                "description": "Mix dry ingredients. With the mixer on, slowly add the dry ingredients to the wet ingredients."
+            },
+            {
+                "description": "Cut dough in half. Take one half out and put it on wax paper. Make an impression with your fingers in the remaining half and add about 10 drops of food coloring. Mix until the dough is evenly colored."
+            },
+            {
+                "description": "Put another piece of wax or parchment paper atop the uncolored dough. Roll it out until it's about 1/8-1/4\" thick. Do the same with the colored dough."
+            },
+            {
+                "description": "Take the top layer of parchment paper off of each dough and put the colored on top of the uncolored dough. Roll it so it's long. Put the sprinkles on the plastic wrap and roll the dough in the sprinkles. Wrap it in plastic wrap and refrigerate it for about 1 hour."
+            },
+            {
+                "description": "Cut the dough into 1/4 inch cookies. Place them 1\"-2\" apart on a cookie sheet lined with silpat or parchment paper. Bake at 350 degrees fahrenheit for 10-12 minutes."
+            },
+            {
+                "description": "Remove and let them cool before eating (all of them)!"
+            }
+        ]
+    }
+]

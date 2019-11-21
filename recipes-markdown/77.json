@@ -1,0 +1,81 @@
+[
+    {
+        "title": "Banana Bundt",
+        "yield": "",
+        "time": "",
+        "postId": 77,
+        "ingredients": [
+            {
+                "amount": "4 tbsp",
+                "name": "melted butter"
+            },
+            {
+                "amount": "1 tbsp",
+                "name": "flour"
+            },
+            {
+                "amount": "3/4 cup",
+                "name": "light brown sugar"
+            },
+            {
+                "amount": "1",
+                "name": "banana, peeled and sliced"
+            },
+            {
+                "amount": "",
+                "name": ""
+            },
+            {
+                "amount": "2 cups",
+                "name": "all purpose flour"
+            },
+            {
+                "amount": "1 tsp",
+                "name": "baking powder"
+            },
+            {
+                "amount": "1 tsp",
+                "name": "baking soda"
+            },
+            {
+                "amount": "1/4 tsp",
+                "name": "salt"
+            },
+            {
+                "amount": "8 tbsp (1 stick)",
+                "name": "butter, softened"
+            },
+            {
+                "amount": "3/4 cup",
+                "name": "light brown sugar"
+            },
+            {
+                "amount": "3 tsp",
+                "name": "vanilla"
+            },
+            {
+                "amount": "2",
+                "name": "eggs"
+            },
+            {
+                "amount": "1 cup",
+                "name": "buttermilk (1 cup milk + 1 tsp vinegar)"
+            },
+            {
+                "amount": "2",
+                "name": "bananas, mashed"
+            }
+        ],
+        "steps": [
+            {
+                "description": "Preheat oven to 350 degrees fahrenheit. Butter and flour a bundt pan. Lightly tap the pan to release the extra flour. Line the pan with the brown sugar and then the banana slices."
+            },
+            {
+                "description": "Combine the flour, baking powder, baking soda, and salt. In a separate bowl, beat the softened butter and brown sugar. Add the eggs and vanilla and beat. Add the buttermilk and mix. Scrape the bowl. Add the mashed bananas and mix. Slowly add the dry ingredients until it's fully incorporated."
+            },
+            {
+                "description": "Pour into the prepared pan and bake for 45 minutes or until a toothpick comes out clean. Let it cool for about an hour before inverting it out of the pan."
+            }
+        ]
+    }
+]

@@ -1,0 +1,92 @@
+[
+    {
+        "title": "Lemon Cheesecake   ",
+        "yield": "1 9-inch cheesecake",
+        "time": "",
+        "postId": 75,
+        "ingredients": [
+            {
+                "amount": "1 1/2 cups",
+                "name": "gingersnaps, smashed to smithereens"
+            },
+            {
+                "amount": "3 tbsp",
+                "name": "sugar"
+            },
+            {
+                "amount": "5 tbsp",
+                "name": "butter, melted"
+            },
+            {
+                "amount": "",
+                "name": ""
+            },
+            {
+                "amount": "4-5 8 oz packages",
+                "name": "cream cheese, room temperature"
+            },
+            {
+                "amount": "1 cup",
+                "name": "sugar"
+            },
+            {
+                "amount": "3",
+                "name": "eggs"
+            },
+            {
+                "amount": "1 cup",
+                "name": "sour cream"
+            },
+            {
+                "amount": "1/2 tsp",
+                "name": "vanilla"
+            },
+            {
+                "amount": "3 tbsp",
+                "name": "fresh lemon juice"
+            },
+            {
+                "amount": "",
+                "name": "zest of 1 lemon"
+            }
+        ],
+        "steps": [
+            {
+                "description": "Mix the crushed gingersnaps, sugar, and butter together until all the gingersnaps are moistened (I used my pastry cutter). Press into the bottom of a 9 inch springform pan and bake at 325 for 10 minutes."
+            },
+            {
+                "description": "Beat the cream cheese and sugar together for about 2 minutes. Add the eggs, one at a time, and beat between each. Add the sour cream and beat. Add the vanilla, lemon juice, and zest. Beat."
+            },
+            {
+                "description": "Pour it into the crust and bake for approximately 1 hour at 325 degrees fahrenheit. Bake with a pan of water on a rack below the cheesecake."
+            },
+            {
+                "description": "When it's done, it will be jiggly all over and more jiggly in the middle. Don't remove it from the oven-- crack the oven and turn it off. Keep it open for about 10 minutes, then close for about 30. Do this twice."
+            },
+            {
+                "description": "Refrigerate for about 4 hours."
+            }
+        ]
+    },
+    {
+        "title": "White Chocolate Ganache  ",
+        "yield": "",
+        "time": "",
+        "postId": 75,
+        "ingredients": [
+            {
+                "amount": "1 cup",
+                "name": "white chocolate"
+            },
+            {
+                "amount": "1/2 cup",
+                "name": "heavy cream"
+            }
+        ],
+        "steps": [
+            {
+                "description": "Microwave heavy cream until it's really hot and pour it on top of the white chocolate. Whisk it until all the chocolate is melted. Pour it on top of the lemon cheesecake."
+            }
+        ]
+    }
+]

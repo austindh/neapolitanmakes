@@ -1,0 +1,104 @@
+[
+    {
+        "title": "Chocolate Ganache Cupcakes  ",
+        "yield": "12 cupcakes",
+        "time": "",
+        "postId": 36,
+        "ingredients": [
+            {
+                "amount": "3/4 cup",
+                "name": "hot water"
+            },
+            {
+                "amount": "1/2 cup (1 stick)",
+                "name": "butter"
+            },
+            {
+                "amount": "1/2 cup",
+                "name": "cocoa powder"
+            },
+            {
+                "amount": "1 cup",
+                "name": "sugar"
+            },
+            {
+                "amount": "1 cup",
+                "name": "flour"
+            },
+            {
+                "amount": "3/4 tsp",
+                "name": "baking soda"
+            },
+            {
+                "amount": "",
+                "name": "pinch of salt"
+            },
+            {
+                "amount": "1",
+                "name": "egg"
+            },
+            {
+                "amount": "1 tsp",
+                "name": "vanilla extract"
+            },
+            {
+                "amount": "",
+                "name": ""
+            },
+            {
+                "amount": "1/4 cup",
+                "name": "chocolate chips, any flavor (dark, milk, semisweet...)"
+            },
+            {
+                "amount": "1-2 tbsp",
+                "name": "whipping cream"
+            }
+        ],
+        "steps": [
+            {
+                "description": "Preheat the oven to 375 degrees fahrenheit. Line a cupcake pan with 12 cupcake liners."
+            },
+            {
+                "description": "Microwave butter until mostly melted. Pour into the bottom of a mixer and add hot water, cocoa powder, and sugar. Beat it for about 15 seconds, then let it cool down for 5 minutes."
+            },
+            {
+                "description": "Mix the flour, baking soda, and salt in a separate bowl. In another bowl, mix the egg and vanilla. Add the egg mixture to the butter mixture in the mixer and beat until incorporated. Slowly add the dry ingredients."
+            },
+            {
+                "description": "Divide batter evenly among 12 cupcake liners. Bake at 375 for 12-15 minutes."
+            },
+            {
+                "description": "Microwave chocolate chips and whipping cream for 20-30 seconds, then give it a good stir. It should melt. Once the cupcakes are cooled, dip the tops in the ganache. Let set before frosting."
+            }
+        ]
+    },
+    {
+        "title": "Raspberry Buttercream  ",
+        "yield": "",
+        "time": "",
+        "postId": 36,
+        "ingredients": [
+            {
+                "amount": "1/2 cup (1 stick)",
+                "name": "butter, softened"
+            },
+            {
+                "amount": "1/4 cup",
+                "name": "seedless raspberry jam"
+            },
+            {
+                "amount": "4 cups",
+                "name": "powdered sugar"
+            },
+            {
+                "amount": "1 tsp",
+                "name": "vanilla"
+            }
+        ],
+        "steps": [
+            {
+                "description": "Beat together butter and raspberry jam for 2 minutes. Slowly add powdered sugar. Beat in vanilla. Pipe onto cupcakes with a closed star tip. Top with sprinkles."
+            }
+        ]
+    }
+]

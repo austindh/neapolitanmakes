@@ -1,0 +1,36 @@
+[
+    {
+        "title": "Copycat Bonne Maman Raspberry Jam  ",
+        "yield": "2 pint jars or 4 half-pint jars",
+        "time": "",
+        "postId": 53,
+        "ingredients": [
+            {
+                "amount": "4 cups",
+                "name": "raspberries"
+            },
+            {
+                "amount": "4 cups",
+                "name": "sugar"
+            },
+            {
+                "amount": "1 tbsp",
+                "name": "lemon juice"
+            }
+        ],
+        "steps": [
+            {
+                "description": "Sterilize your jars, lids, and rims in simmering water."
+            },
+            {
+                "description": "Put your raspberries in a 2 quart pot on medium high heat. Stir constantly. Let the juices come out and add sugar and lemon juice. Let it boil rapidly for 5 minutes. Remove from heat."
+            },
+            {
+                "description": "Ladle it into your jars, leaving 1/4 inch at the top of empty space. Put the lids on and return to hot water bath on high heat with at least 2 inches of water on top of the tops of the jars. Boil for 15 minutes and remove from the water."
+            },
+            {
+                "description": "Let the jars sit out on the counter for 24 hours. If the tops on the jars popped in, they should be sealed correctly. They're good to sit out on the counter for up to 1 year!"
+            }
+        ]
+    }
+]

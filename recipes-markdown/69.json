@@ -1,0 +1,75 @@
+[
+    {
+        "title": "Lemon Raspberry Muffins  ",
+        "yield": "18 muffins",
+        "time": "",
+        "postId": 69,
+        "ingredients": [
+            {
+                "amount": "2 cups",
+                "name": "all-purpose flour"
+            },
+            {
+                "amount": "1 cup",
+                "name": "sugar"
+            },
+            {
+                "amount": "1 tablespoon",
+                "name": "baking powder"
+            },
+            {
+                "amount": "1/2 teaspoon",
+                "name": "salt"
+            },
+            {
+                "amount": "2",
+                "name": "eggs, lightly beaten"
+            },
+            {
+                "amount": "1 cup",
+                "name": "buttermilk (1 cup milk + 1 tsp vinegar)"
+            },
+            {
+                "amount": "1/2 cup",
+                "name": "veggie oil"
+            },
+            {
+                "amount": "1 teaspoon",
+                "name": "grated lemon zest"
+            },
+            {
+                "amount": "1 1/4 cups",
+                "name": "raspberries"
+            },
+            {
+                "amount": "",
+                "name": ""
+            },
+            {
+                "amount": "1 cup",
+                "name": "powdered sugar"
+            },
+            {
+                "amount": "3 tablespoons",
+                "name": "fresh lemon juice"
+            }
+        ],
+        "steps": [
+            {
+                "description": "Preheat oven to 400 degrees."
+            },
+            {
+                "description": "Combine dry ingredients (flour, sugar, baking powder, salt) in a large bowl."
+            },
+            {
+                "description": "In a separate bowl, beat eggs, buttermilk, oil, and lemon zest. Add the wet ingredients to the dry ingredients and mix until just incorporated. Gently fold in the raspberries."
+            },
+            {
+                "description": "Scoop the batter into 18 muffin papers or sprayed muffin tins 2/3 full and bake for 18-20 minutes."
+            },
+            {
+                "description": "Whisk together the powdered sugar and lemon juice and dip warm muffin tops in the glaze and let it harden slightly for about 3 minutes before eating."
+            }
+        ]
+    }
+]

@@ -1,0 +1,110 @@
+[
+    {
+        "title": "Lemon Sponge Cake  ",
+        "yield": "",
+        "time": "",
+        "postId": 55,
+        "ingredients": [
+            {
+                "amount": "6",
+                "name": "egg yolks"
+            },
+            {
+                "amount": "1 1/2 cup",
+                "name": "sugar"
+            },
+            {
+                "amount": "6 tablespoons",
+                "name": "lemon juice"
+            },
+            {
+                "amount": "1 1/2 cup",
+                "name": "cake flour"
+            },
+            {
+                "amount": "6",
+                "name": "egg whites"
+            },
+            {
+                "amount": "1 teaspoon",
+                "name": "baking powder"
+            },
+            {
+                "amount": "1/4 teaspoon",
+                "name": "salt"
+            }
+        ],
+        "steps": [
+            {
+                "description": "Beat egg yolks with sugar until lightly colored. Alternate adding lemon juice and flour and mix until incorporated."
+            },
+            {
+                "description": "Beat the egg whites in a separate bowl until they're stiff. Add baking powder and salt and beat until the egg whites hold a stiff peak."
+            },
+            {
+                "description": "Fold the egg whites into the egg yolk mixture. Put into two greased and floured 9\" pans and bake at 325 for about 20 minutes."
+            },
+            {
+                "description": "Remove from pan after cooling. Top with pastry cream and fresh raspberries."
+            }
+        ]
+    },
+    {
+        "title": "Pastry Cream  ",
+        "yield": "",
+        "time": "",
+        "postId": 55,
+        "ingredients": [
+            {
+                "amount": "1/2 cup",
+                "name": "sugar"
+            },
+            {
+                "amount": "",
+                "name": ""
+            },
+            {
+                "amount": "2 tbsp",
+                "name": "flour"
+            },
+            {
+                "amount": "",
+                "name": ""
+            },
+            {
+                "amount": "2 tbsp",
+                "name": "cornstarch"
+            },
+            {
+                "amount": "",
+                "name": ""
+            },
+            {
+                "amount": "2 cups",
+                "name": "whole milk"
+            },
+            {
+                "amount": "",
+                "name": ""
+            },
+            {
+                "amount": "1/2 tsp",
+                "name": "vanilla extract"
+            }
+        ],
+        "steps": [
+            {
+                "description": "Beat egg yolks and sugar until they're lightly colored. Beat in flour and cornstarch."
+            },
+            {
+                "description": "In a saucepan, bring the milk to a boil, making sure to whisk constantly. Remove from heat and add the milk slowly into the egg mixture."
+            },
+            {
+                "description": "Put the mixture back into the saucepan and bring it to a boil while whisking. Keep whisking and let it boil until it is thick (about 3 minutes)."
+            },
+            {
+                "description": "Remove from heat and return mixture to the mixer. Beat it with a paddle attachment. Add the vanilla and beat it for about 5-6 minutes, or until it's down to room temperature. Store it in the fridge to cool it down."
+            }
+        ]
+    }
+]

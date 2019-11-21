@@ -1,0 +1,77 @@
+[
+    {
+        "title": " Best Ever Chocolate Chip Muffins  ",
+        "yield": "12 muffins",
+        "time": "",
+        "postId": 86,
+        "ingredients": [
+            {
+                "amount": "2 cups",
+                "name": "AP flour"
+            },
+            {
+                "amount": "1/2 cup",
+                "name": "sugar"
+            },
+            {
+                "amount": "3 tsp",
+                "name": "baking powder"
+            },
+            {
+                "amount": "3/4 tsp",
+                "name": "salt"
+            },
+            {
+                "amount": "1 1/4 cups",
+                "name": "dark chocolate chips"
+            },
+            {
+                "amount": "1",
+                "name": "egg, beaten"
+            },
+            {
+                "amount": "3/4 cup",
+                "name": "milk"
+            },
+            {
+                "amount": "1/2 cup",
+                "name": "vegetable oil"
+            },
+            {
+                "amount": "",
+                "name": ""
+            },
+            {
+                "amount": "3 tbsp",
+                "name": "sugar"
+            },
+            {
+                "amount": "2 tbsp",
+                "name": "brown sugar"
+            }
+        ],
+        "steps": [
+            {
+                "description": "Preheat oven to 400 degrees F. Line a muffin tin with 12 muffin papers."
+            },
+            {
+                "description": "Combine the flour, sugar, baking powder, salt, and chocolate chips."
+            },
+            {
+                "description": "In a separate bowl, combine the beaten egg, milk, and vegetable oil."
+            },
+            {
+                "description": "Add the wet ingredients to the dry ingredients and mix until just incorporated."
+            },
+            {
+                "description": "Scoop into the lined muffin pan with a cookie scoop."
+            },
+            {
+                "description": "Stir together the brown sugar and white sugar until it's mixed. Sprinkle this evenly on all the muffins."
+            },
+            {
+                "description": "Bake at 400 for 20-23 minutes."
+            }
+        ]
+    }
+]

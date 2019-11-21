@@ -1,0 +1,72 @@
+[
+    {
+        "title": "Blueberry Streusel Muffins  ",
+        "yield": "",
+        "time": "",
+        "postId": 61,
+        "ingredients": [
+            {
+                "amount": "1 3/4 cups",
+                "name": "flour"
+            },
+            {
+                "amount": "3/4 teaspoon",
+                "name": "salt"
+            },
+            {
+                "amount": "1/4 cup",
+                "name": "sugar"
+            },
+            {
+                "amount": "2 1/2 teaspoons",
+                "name": "baking powder"
+            },
+            {
+                "amount": "1 1/2 cups",
+                "name": "blueberries (I used more like 2 cups-- hey, I like blueberries!)"
+            },
+            {
+                "amount": "1",
+                "name": "large egg, at room temperature"
+            },
+            {
+                "amount": "3/4 cup",
+                "name": "milk"
+            },
+            {
+                "amount": "1/3",
+                "name": "vegetable oil"
+            },
+            {
+                "amount": "",
+                "name": ""
+            },
+            {
+                "amount": "1/4 cup",
+                "name": "flour"
+            },
+            {
+                "amount": "1/4 cup",
+                "name": "sugar"
+            },
+            {
+                "amount": "2 tbsp",
+                "name": "cold butter"
+            }
+        ],
+        "steps": [
+            {
+                "description": "Sift the flour, salt, sugar and baking powder into a large bowl. Sprinkle over the blueberries. Beat the egg well then add the milk and oil and mix well together (don’t beat as this makes the muffins tough)."
+            },
+            {
+                "description": "Scoop using a cookie scoop into buttered muffin tins or paper-lined muffin tins, filling the tins to the top."
+            },
+            {
+                "description": "Using a pastry cutter or a fork, cut the butter into the flour and sugar for the streusel topping. Cut until it resembles large crumbs."
+            },
+            {
+                "description": "Bake in an oven preheated to 425°F for 15-16 minutes, or until risen and golden. Remove from the oven, leave in the tray for 5 minutes, then flip out with a small knife onto a cooling rack."
+            }
+        ]
+    }
+]

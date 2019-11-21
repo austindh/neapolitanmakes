@@ -1,0 +1,78 @@
+[
+    {
+        "title": " French Crêpes  ",
+        "yield": "15  9\" crêpes or 20  6\" crêpes",
+        "time": "",
+        "postId": 103,
+        "ingredients": [
+            {
+                "amount": "1 cup",
+                "name": "all purpose flour"
+            },
+            {
+                "amount": "1 tsp",
+                "name": "white sugar"
+            },
+            {
+                "amount": "1/4 tsp",
+                "name": "salt"
+            },
+            {
+                "amount": "3",
+                "name": "eggs"
+            },
+            {
+                "amount": "2 cups",
+                "name": "milk (I use skim, but whatever's in the fridge will work)"
+            },
+            {
+                "amount": "2 tbsp",
+                "name": "butter, melted"
+            },
+            {
+                "amount": "",
+                "name": "butter for pan (Use real butter. This is French food. Cooking spray is highly frowned upon.)"
+            },
+            {
+                "amount": "",
+                "name": ""
+            },
+            {
+                "amount": "",
+                "name": "Note: If you're making only dessert crêpes, you can use up to 2 tbsp of sugar to make a sweeter crêpe."
+            }
+        ],
+        "steps": [
+            {
+                "description": "Mix together eggs and milk. They need to warm up to room temperature. In the meantime, melt the butter, and let it get down to room temperature, too. You don't want the butter to solidify in the batter."
+            },
+            {
+                "description": "Mix flour, sugar, and salt. Sift."
+            },
+            {
+                "description": "Making sure the wet ingredients are all at room temperature, mix the butter with the egg/milk mixture. Add dry ingredients slowly, while stirring constantly. When it's all added in, I tap the bowl on the counter a few times to get out any major bubbles."
+            },
+            {
+                "description": "Now run all of the batter through the sift, making sure to throw out any stubborn flour clumps. Do this twice."
+            },
+            {
+                "description": "Turn the stove on medium heat and let the pan heat up for about a minute. You can check to see if the pan is properly heated by getting a cup of water, wetting your fingers, and sprinkling some of the water on the pan. If the water quickly sizzles away, the pan is heated up. If the water sits there not bubbling, the pan isn't hot enough yet."
+            },
+            {
+                "description": "After _generously_ buttering the bottom and sides of the pan, use a small measuring cup (about 3 tbsp for the 9\" or 2 tbsp for the 6\") to transfer the batter into the buttered pan. **Quickly** lift the pan off the burner and tilt the pan in a circular motion to spread the batter around the bottom of the pan."
+            },
+            {
+                "description": "After anywhere from 15-30 seconds (depending on the size and thickness), the middle of the crêpe will appear dry on top (much like when cooking American pancakes). Use a nonmetal spatula (so as to not ruin the nonstick surface of the pan) to flip the crêpe."
+            },
+            {
+                "description": "The other side needs about 15 seconds to cook it, but if you like a delicious buttery lace pattern on it, it may need up to 30 seconds."
+            },
+            {
+                "description": "Place the crêpes atop paper towels or cheesecloth, putting one layer of the towels in between each crêpe so they don't get soggy."
+            },
+            {
+                "description": "Fill the crêpes with either savory fillings such as mushroom and chicken, or sweet fillings such as creme fraiche (fresh whipped cream) and fruits."
+            }
+        ]
+    }
+]

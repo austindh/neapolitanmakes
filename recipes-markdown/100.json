@@ -1,0 +1,101 @@
+[
+    {
+        "title": " Italian Cream Cupcakes  ",
+        "yield": "6 cupcakes",
+        "time": "",
+        "postId": 100,
+        "ingredients": [
+            {
+                "amount": "1/2 cup",
+                "name": "plus 2 tbsp flour"
+            },
+            {
+                "amount": "3/4 tsp",
+                "name": "baking powder"
+            },
+            {
+                "amount": "",
+                "name": "pinch of salt"
+            },
+            {
+                "amount": "6 tbsp",
+                "name": "sugar"
+            },
+            {
+                "amount": "3 tbsp",
+                "name": "butter, room temperature"
+            },
+            {
+                "amount": "1",
+                "name": "large egg"
+            },
+            {
+                "amount": "1/2 tsp",
+                "name": "vanilla"
+            },
+            {
+                "amount": "1/4 cup",
+                "name": "heavy cream (or half and half)"
+            }
+        ],
+        "steps": [
+            {
+                "description": "Preheat oven to 350 fahrenheit (I used a toaster oven which always seems to overheat, so I heated my oven to 300)"
+            },
+            {
+                "description": "Line a 6-cup muffin pan with paper liners"
+            },
+            {
+                "description": "In a bowl or mixer, beat the sugar and butter until it's light and fluffy. Add the egg and beat until incorporated throughout. Scrape the bowl and beat for 15 more seconds."
+            },
+            {
+                "description": "Quickly mix the flour, baking powder, and salt in a dry ingredients bowl. Mix this in with the butter/sugar alternately with the heavy cream. Beat until no flour is visible, making sure to scrape the bowl often. **Don't overbeat!**"
+            },
+            {
+                "description": "Scoop batter into the prepared cupcake liners. Spray a cookie scoop with cooking spray so the batter is easily removed. Divide batter evenly (Or, if you're me, you divide batter so they're all equal except one is giant and you claim that one as soon as they leave the oven)."
+            },
+            {
+                "description": "Bake for 18-20 minutes or until a toothpick comes out clean. Let the cupcakes cool on a drying rack (If you're impatient or time-crunched like me, you can refrigerate them on the rack for 15 minutes)."
+            }
+        ]
+    },
+    {
+        "title": "Cream Cheese Frosting  ",
+        "yield": "",
+        "time": "",
+        "postId": 100,
+        "ingredients": [
+            {
+                "amount": "4 oz (half a package)",
+                "name": "of cream cheese (I used cold, but you can use room temperature)"
+            },
+            {
+                "amount": "2 tbsp",
+                "name": "butter, softened"
+            },
+            {
+                "amount": "1 tsp",
+                "name": "clear vanilla"
+            },
+            {
+                "amount": "1 tbsp",
+                "name": "milk"
+            },
+            {
+                "amount": "2-3 cups",
+                "name": "of powdered sugar, to taste"
+            }
+        ],
+        "steps": [
+            {
+                "description": "Beat cream cheese and butter until incorporated. Scrape bowl."
+            },
+            {
+                "description": "Add vanilla and milk."
+            },
+            {
+                "description": "Slowly add powdered sugar until it seems right to you."
+            }
+        ]
+    }
+]

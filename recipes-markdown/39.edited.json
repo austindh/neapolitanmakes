@@ -1,0 +1,137 @@
+[
+    {
+        "title": "Ultimate Chocolate Cupcakes",
+        "yield": "12-14 cupcakes, depending on how much you fill them",
+        "time": "",
+        "postId": 39,
+        "ingredients": [
+            {
+                "amount": "2 tbsp",
+                "name": "veggie oil"
+            },
+            {
+                "amount": "1 stick (1/2 cup)",
+                "name": "butter"
+            },
+            {
+                "amount": "1/2 cup",
+                "name": "dark chocolate chips"
+            },
+            {
+                "amount": "",
+                "name": ""
+            },
+            {
+                "amount": "3/4 cup + 3 tbsp",
+                "name": "flour"
+            },
+            {
+                "amount": "1/2 tsp",
+                "name": "baking soda"
+            },
+            {
+                "amount": "1 tsp",
+                "name": "baking powder"
+            },
+            {
+                "amount": "1/2 cup",
+                "name": "cocoa powder"
+            },
+            {
+                "amount": "3/4 tsp",
+                "name": "salt"
+            },
+            {
+                "amount": "",
+                "name": ""
+            },
+            {
+                "amount": "1/2 cup",
+                "name": "sugar"
+            },
+            {
+                "amount": "1/2 cup",
+                "name": "brown sugar"
+            },
+            {
+                "amount": "2",
+                "name": "eggs + 1 egg yolk, room temp"
+            },
+            {
+                "amount": "1/2 tsp",
+                "name": "vanilla"
+            },
+            {
+                "amount": "",
+                "name": ""
+            },
+            {
+                "amount": "1/2 cup",
+                "name": "greek yogurt or sour cream (I used regular yogurt)"
+            },
+            {
+                "amount": "1/2 cup",
+                "name": "hot water"
+            }
+        ],
+        "steps": [
+            {
+                "description": "Preheat oven to 350 degrees fahrenheit. Line a cupcake pan with liners."
+            },
+            {
+                "description": "Put veggie oil, chocolate chips, and butter into a microwave-safe bowl. Microwave in 30 second increments, stirring every 30 seconds, until just melted."
+            },
+            {
+                "description": "Combine flour, baking soda and powder, cocoa powder, and salt in a medium bowl. Whisk until combined."
+            },
+            {
+                "description": "In a large bowl, combine sugars, eggs, and vanilla. Whisk until combined. Add the melted chocolate mixture, then whisk until combined."
+            },
+            {
+                "description": "Alternate adding the flour mixture and the yogurt to the sugar mixture. Mix until just combined (I didn't even use my stand mixer. I just used a whisk). Add in the hot water last, and mix until it's combined."
+            },
+            {
+                "description": "Use a cookie scoop to divide the batter evenly between the cupcake liners. I filled mine about 3/4 of the way full, but I would fill a little bit less next time. (High altitude messes everything up!!!)"
+            },
+            {
+                "description": "Bake for 16-18 minutes, or until a toothpick comes out clean."
+            }
+        ]
+    },
+    {
+        "title": "Ultimate Chocolate Frosting  ",
+        "yield": "enough for 1 dozen cupcakes",
+        "time": "",
+        "postId": 39,
+        "ingredients": [
+            {
+                "amount": "1 stick (1/2 cup)",
+                "name": "butter, slightly softened"
+            },
+            {
+                "amount": "3 cups",
+                "name": "powdered sugar"
+            },
+            {
+                "amount": "3/4 cup",
+                "name": "cocoa powder"
+            },
+            {
+                "amount": "1 tsp",
+                "name": "vanilla"
+            },
+            {
+                "amount": "",
+                "name": "milk for thinning"
+            }
+        ],
+        "steps": [
+            {
+                "description": "Beat the butter on high with a mixer for about 2 minutes. Add the powdered sugar and cocoa powder, slowly. Add the vanilla. Add milk as needed for desired consistency. Beat for about 3 minutes to make it fluffier."
+            },
+            {
+                "description": "Pipe the frosting onto cupcakes using a closed star tip. Top with chocolate sprinkles."
+            }
+        ]
+    }
+]

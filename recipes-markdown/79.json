@@ -1,0 +1,118 @@
+[
+    {
+        "title": " Perfect Chocolate Cupcakes  ",
+        "yield": "18 cupcakes (I made 12 regular + 18 minis)",
+        "time": "",
+        "postId": 79,
+        "ingredients": [
+            {
+                "amount": "1 cup",
+                "name": "flour (I used 1 1/4 cups because I'm at high altitude)"
+            },
+            {
+                "amount": "3/4 cup",
+                "name": "sugar"
+            },
+            {
+                "amount": "1/2 tsp",
+                "name": "baking powder"
+            },
+            {
+                "amount": "1 tsp",
+                "name": "baking soda"
+            },
+            {
+                "amount": "1/2 tsp",
+                "name": "salt"
+            },
+            {
+                "amount": "1/2 cup",
+                "name": "unsweetened cocoa powder"
+            },
+            {
+                "amount": "1/2 cup",
+                "name": "oil (I used veggie oil)"
+            },
+            {
+                "amount": "1 cup",
+                "name": "hot water"
+            },
+            {
+                "amount": "1",
+                "name": "egg"
+            },
+            {
+                "amount": "1 1/2 tsp",
+                "name": "vanilla"
+            }
+        ],
+        "steps": [
+            {
+                "description": "Mix the dry ingredients in a bowl and the wet ingredients in a separate bowl. Add the dry ingredients to the wet while mixing. That's it! You could even probably do it all in one bowl at once (that's what the original recipe did). I mixed it by hand and it was super easy!"
+            },
+            {
+                "description": "Fill baking cups 2/3 of the way for sea level or 1/2 way for high altitude. Bake at 350 for about 12-15 minutes for full-sized or 9-11 for mini cupcakes."
+            }
+        ]
+    },
+    {
+        "title": " Andes Mint Mousse Filling  ",
+        "yield": "",
+        "time": "",
+        "postId": 79,
+        "ingredients": [
+            {
+                "amount": "2/3 cup",
+                "name": "whipping cream"
+            },
+            {
+                "amount": "1/3 cup",
+                "name": "Andes mints, melted (I used the Andes Creme de Menthe baking chips they came out with-- they're pre-broken up for you)"
+            }
+        ],
+        "steps": [
+            {
+                "description": "Whip up the cream until it holds stiff peaks. Add the melted chocolate mints and whip until it's just incorporated."
+            },
+            {
+                "description": "Cut the center of the cupcakes out with a knife or a handy-dandy cupcake cutter. I found this at Walmart (2 for $1!) and had to see if it worked. Much to my surprise, it worked like a charm! You just stick it in, twist, and pull up! Voilà! C'est magnifique!"
+            },
+            {
+                "description": "Fill each cupcake and put the top back on, if desired. I always do just because I like how it looks better."
+            }
+        ]
+    },
+    {
+        "title": "Cream Cheese Buttercream Frosting  ",
+        "yield": "",
+        "time": "",
+        "postId": 79,
+        "ingredients": [
+            {
+                "amount": "4 oz",
+                "name": "cream cheese"
+            },
+            {
+                "amount": "1 stick (8 tbsp)",
+                "name": "butter"
+            },
+            {
+                "amount": "3-4 cups",
+                "name": "powdered sugar"
+            },
+            {
+                "amount": "2 tsp",
+                "name": "vanilla"
+            },
+            {
+                "amount": "about 15 drops",
+                "name": "green food coloring"
+            }
+        ],
+        "steps": [
+            {
+                "description": "Beat the cream cheese and butter together. Add the food coloring and beat. Add the vanilla and then the powdered sugar, slowly. Beat it until it's stiff and lovely! Frost cupcakes with a star tip. Top with Andes Mints or drizzle a little bit of melted Andes Mints in a decorative pattern. Enjoy!"
+            }
+        ]
+    }
+]

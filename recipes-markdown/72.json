@@ -1,0 +1,130 @@
+[
+    {
+        "title": "Perfect Chocolate Cupcakes  ",
+        "yield": "18 cupcakes",
+        "time": "",
+        "postId": 72,
+        "ingredients": [
+            {
+                "amount": "1 cup",
+                "name": "flour (I used 1 1/4 cups because I'm at high altitude)"
+            },
+            {
+                "amount": "3/4 cup",
+                "name": "sugar"
+            },
+            {
+                "amount": "1/2 tsp",
+                "name": "baking powder"
+            },
+            {
+                "amount": "1 tsp",
+                "name": "baking soda"
+            },
+            {
+                "amount": "1/2 tsp",
+                "name": "salt"
+            },
+            {
+                "amount": "1/2 cup",
+                "name": "unsweetened cocoa powder"
+            },
+            {
+                "amount": "1/2 cup",
+                "name": "oil (I used veggie oil)"
+            },
+            {
+                "amount": "1 cup",
+                "name": "hot water"
+            },
+            {
+                "amount": "1",
+                "name": "egg"
+            },
+            {
+                "amount": "1 1/2 tsp",
+                "name": "vanilla"
+            }
+        ],
+        "steps": [
+            {
+                "description": "Mix the dry ingredients in a bowl and the wet ingredients in a separate bowl. Add the dry ingredients to the wet while mixing. That's it! You could even probably do it all in one bowl at once (that's what the original recipe did). I mixed it by hand and it was super easy!"
+            },
+            {
+                "description": "Fill baking cups 2/3 of the way for sea level or 1/2 way for high altitude. Bake at 350 for about 12-15 minutes for full-sized or 9-11 for mini cupcakes."
+            }
+        ]
+    },
+    {
+        "title": "White Cupcakes  ",
+        "yield": "18-20 deliciously full-sized cupcakes",
+        "time": "",
+        "postId": 72,
+        "ingredients": [
+            {
+                "amount": "1 1/4 cup",
+                "name": "all purpose flour"
+            },
+            {
+                "amount": "1 cup",
+                "name": "cake flour (I used 1 cup minus 2 tbsp all purpose flour, then added 2 tbsp corn starch. This is my go-to cake flour recipe. Make sure to mix the flour and corn starch together really well.)"
+            },
+            {
+                "amount": "1 teaspoon",
+                "name": "baking powder"
+            },
+            {
+                "amount": "1/2 teaspoon",
+                "name": "baking soda"
+            },
+            {
+                "amount": "1/2 teaspoon",
+                "name": "salt"
+            },
+            {
+                "amount": "1 stick (8 tablespoons)",
+                "name": "unsalted butter, at room temperature"
+            },
+            {
+                "amount": "1 cup",
+                "name": "sugar"
+            },
+            {
+                "amount": "1 cup",
+                "name": "sour cream"
+            },
+            {
+                "amount": "1/2 cup",
+                "name": "milk"
+            },
+            {
+                "amount": "4",
+                "name": "large egg whites, room temperature (I put my cold eggs soaking in warm water for 3 minutes or so)"
+            },
+            {
+                "amount": "3 teaspoons",
+                "name": "pure vanilla extract"
+            }
+        ],
+        "steps": [
+            {
+                "description": "Preheat oven to 375 fahrenheit (If you're at high altitude, preheat to 385). Line cupcake tins with adorable cupcake liners."
+            },
+            {
+                "description": "Mix together flours, baking powder, baking soda, and salt in a medium bowl. Whisk until incorporated."
+            },
+            {
+                "description": "In a medium bowl, whisk together sour cream, milk, and egg whites. **Set aside. **"
+            },
+            {
+                "description": "In a large bowl, cream together butter and sugar for about 5 minutes, or until light and fluffy."
+            },
+            {
+                "description": "Add the vanilla extract to the butter mixture. While the mixer is on low, add the flour mixture in 3 parts alternating with the milk/sour cream mixture. (You'll start and end with flour mixture)."
+            },
+            {
+                "description": "Bake for 18-20 minutes, or until a toothpick comes out clean. (If you make mini cupcakes, they take about 13 minutes.)"
+            }
+        ]
+    }
+]

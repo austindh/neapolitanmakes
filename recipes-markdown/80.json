@@ -1,0 +1,112 @@
+[
+    {
+        "title": "Perfect Flaky Pie Crust  ",
+        "yield": "1 single crust 9-inch pie (I doubled this because my pie had two crusts)",
+        "time": "",
+        "postId": 80,
+        "ingredients": [
+            {
+                "amount": "1 1/2 cups",
+                "name": "flour"
+            },
+            {
+                "amount": "1 tbsp",
+                "name": "sugar"
+            },
+            {
+                "amount": "1 tsp",
+                "name": "salt"
+            },
+            {
+                "amount": "9 tbsp",
+                "name": "butter (1 stick plus 1 tbsp), chilled and cut into 1 tbsp cubes"
+            },
+            {
+                "amount": "1/4 cup",
+                "name": "plus 1 tbsp ice-cold water"
+            }
+        ],
+        "steps": [
+            {
+                "description": "In a large bowl, whisk together flour, sugar, and salt."
+            },
+            {
+                "description": "Using a pastry cutter, cut in the butter until the mixture resembles crumbs."
+            },
+            {
+                "description": "Slowly add the water while cutting until it's incorporated and flaky but sticks together."
+            },
+            {
+                "description": "Form into a ball with your hands and flatten slightly so it's a disk shape. Wrap in plastic wrap and refrigerate for at least an hour, up to 1 day. You can freeze it for up to a month, as long as you thaw it for 24 hours in the fridge before using."
+            },
+            {
+                "description": "Roll it out and transfer to a pie pan. Cut the extra on the edges of the pie pan. \"Fork\" the crust. Preheat oven to 425 F. Refrigerate pie crust for 15 minutes while the oven is heating."
+            },
+            {
+                "description": "If desired, place foil in the bottom of the pie crust and add dried beans as pie weights. Bake for 15 minutes, making sure to puncture the crust with a fork if it gets puffy while it's baking."
+            }
+        ]
+    },
+    {
+        "title": "Apple Pie  ",
+        "yield": "1 9 inch pie",
+        "time": "",
+        "postId": 80,
+        "ingredients": [
+            {
+                "amount": "2 recipes",
+                "name": "flakiest pie crust (bottom crust pre-baked)"
+            },
+            {
+                "amount": "8 cups",
+                "name": "apples-- I love using honeycrisp, but they're out of season right now so I used 10 granny smiths"
+            },
+            {
+                "amount": "1/2 to 2/3 cup",
+                "name": "white sugar, depending on the sweetness of the apples"
+            },
+            {
+                "amount": "1/3 cup",
+                "name": "brown sugar"
+            },
+            {
+                "amount": "3/4 tsp",
+                "name": "cinnamon"
+            },
+            {
+                "amount": "1/2 tsp",
+                "name": "nutmeg"
+            },
+            {
+                "amount": "4 tbsp",
+                "name": "flour"
+            },
+            {
+                "amount": "1 tbsp",
+                "name": "lemon juice"
+            },
+            {
+                "amount": "1",
+                "name": "egg"
+            },
+            {
+                "amount": "1 tbsp",
+                "name": "half and half or cream"
+            }
+        ],
+        "steps": [
+            {
+                "description": "Peel, core, and slice apples into small (1/4 inch) slices. Put them into a large pot. Add all the ingredients on top and stir until the apples are coated with all the ingredients."
+            },
+            {
+                "description": "Cook at low-medium heat for about 8-10 minutes, or until the apples are slightly softened."
+            },
+            {
+                "description": "Pour all the warm apples into the pre-baked bottom pie crust. Roll out the top pie crust and make whatever pattern on the pie crust you like. Brush the top with an egg wash of egg and half and half."
+            },
+            {
+                "description": "Bake at 350 for 30 minutes or until the top crust is lightly golden."
+            }
+        ]
+    }
+]

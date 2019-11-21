@@ -1,0 +1,57 @@
+[
+    {
+        "title": "Quick French Baguettes  ",
+        "yield": "2 baguettes",
+        "time": "",
+        "postId": 57,
+        "ingredients": [
+            {
+                "amount": "1 1/2 tbsp",
+                "name": "active dry yeast"
+            },
+            {
+                "amount": "1 1/2 cups",
+                "name": "warm water (split)"
+            },
+            {
+                "amount": "2 tbsp",
+                "name": "honey"
+            },
+            {
+                "amount": "3 1/2 to 4 cups",
+                "name": "all purpose flour"
+            },
+            {
+                "amount": "2 tsp",
+                "name": "salt"
+            },
+            {
+                "amount": "5",
+                "name": "ice cubes"
+            }
+        ],
+        "steps": [
+            {
+                "description": "Combine honey with 1/2 cup warm water. Add the yeast and stir with your finger. Let it sit and activate for 5 minutes."
+            },
+            {
+                "description": "Mix the flour and salt in a mixer. Add the water with the yeast and mix with the dough hook. Mix with the mixer for 1 minute, or until combined."
+            },
+            {
+                "description": "Pour out of mixer bowl onto lightly floured surface. Knead for 2-6 minutes, or until elastic. Do the fingerprint test. If you can press your finger very lightly into the dough and the dough pops back out slowly, it is elastic enough. Put it back in a lightly oiled bowl and cover with plastic wrap. Let rise for 25-30 minutes or until doubled in size."
+            },
+            {
+                "description": "Punch down dough and divide in half. Shape into 2 baguettes by trifolding the dough (like you fold a letter). Pinch the seam closed and repeat the process twice until it's about 14 inches in length. Fold the ends round. Set in a [baguette pan](http://www.kingarthurflour.com/shop/items/baguette-pan) or a lined cookie sheet (baking stone would probably work well too). Cover with a dish cloth and let rise for 30 minutes, or until doubled in size."
+            },
+            {
+                "description": "Preheat oven to 450 degrees fahrenheit. Set an old (non-glass) baking dish on the bottom oven rack."
+            },
+            {
+                "description": "When the rising is done and the oven is ready, quickly put the baguettes in the oven and throw the ice cubes into the old baking dish in the bottom. It should steam."
+            },
+            {
+                "description": "Bake for about 15 minutes, or until golden brown."
+            }
+        ]
+    }
+]

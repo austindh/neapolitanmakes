@@ -1,0 +1,64 @@
+[
+    {
+        "title": "1 Hour Dinner Rolls  ",
+        "yield": "12 rolls",
+        "time": "",
+        "postId": 38,
+        "ingredients": [
+            {
+                "amount": "3/4 cup",
+                "name": "milk"
+            },
+            {
+                "amount": "4 tbsp",
+                "name": "butter"
+            },
+            {
+                "amount": "3/4 cup",
+                "name": "hot water"
+            },
+            {
+                "amount": "4 tbsp",
+                "name": "sugar"
+            },
+            {
+                "amount": "1 tsp",
+                "name": "salt"
+            },
+            {
+                "amount": "4 to 4 1/2 cups",
+                "name": "flour"
+            },
+            {
+                "amount": "1 tbsp",
+                "name": "yeast"
+            }
+        ],
+        "steps": [
+            {
+                "description": "Microwave milk and butter in a pyrex measuring cup or other microwave safe bowl for 2 minutes. Pour it into the bottom of a stand mixer fitted with the dough hook attachment."
+            },
+            {
+                "description": "Add the hot water, sugar, and salt. Add 2 cups of flour and mix with the dough hook for about 1 minute. Scrape the sides of the mixer with a spatula to get the excess flour incorporated."
+            },
+            {
+                "description": "Add the yeast and mix for 1 minute. Add the remaining flour, 1 cup at a time, just until the dough pulls away from the sides, leaving the bowl almost clean. (You may need less or more than called for based off your altitude, etc.) Once there's enough flour, mix on medium-low for 5 minutes."
+            },
+            {
+                "description": "Cover the mixer with plastic wrap or the like and let it sit for 5 minutes. While it's sitting, preheat your oven to 170 degrees fahrenheit."
+            },
+            {
+                "description": "After the dough has sat for 5 minutes, plop it onto the counter. Divide (using a dough cutter or a large knife) it into 12 equal pieces (I divided it in half (2), then those in half again (4), then each of those into 3 pieces (12).) I shape them by stretching them and then pinching the bottom together really well."
+            },
+            {
+                "description": "Butter the bottom of a 9 x 13 pan and put the rolls in the pan. Put them in the warm oven, uncovered, and let them rise for about 20-30 minutes. Leaving them in the oven, turn the oven up to 350 degrees fahrenheit. It took my rolls about 15-18 minutes to bake.\\*"
+            },
+            {
+                "description": "*Obviously, it depends on your oven. I also chose to turn the pan about halfway through because my oven bakes a little unevenly."
+            },
+            {
+                "description": "Brush with butter right when they come out of the oven. Bon appétit!"
+            }
+        ]
+    }
+]

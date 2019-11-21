@@ -1,0 +1,73 @@
+[
+    {
+        "title": " Original Girl Scout Sugar Cookies  ",
+        "yield": "6-7 dozen thin cookies",
+        "time": "",
+        "postId": 94,
+        "ingredients": [
+            {
+                "amount": "1 cup (2 sticks)",
+                "name": "butter (I used salted)"
+            },
+            {
+                "amount": "1 cup",
+                "name": "sugar"
+            },
+            {
+                "amount": "2",
+                "name": "eggs"
+            },
+            {
+                "amount": "2 tbsp",
+                "name": "milk"
+            },
+            {
+                "amount": "1 tsp",
+                "name": "vanilla (they're sugar cookies so try to use clear if you have it)"
+            },
+            {
+                "amount": "2 cups",
+                "name": "flour"
+            },
+            {
+                "amount": "1 tsp",
+                "name": "salt"
+            },
+            {
+                "amount": "2 tsp",
+                "name": "baking powder"
+            },
+            {
+                "amount": "",
+                "name": ""
+            },
+            {
+                "amount": "",
+                "name": "Sugar for topping, if desired"
+            }
+        ],
+        "steps": [
+            {
+                "description": "Cream butter and sugar until light and fluffy."
+            },
+            {
+                "description": "Add eggs, one at a time. Beat until it's mixed in fully."
+            },
+            {
+                "description": "Add milk and vanilla."
+            },
+            {
+                "description": "Mix together flour, salt, and baking powder. Add them in, slowly, to the wet mixture."
+            },
+            {
+                "description": "Refrigerate dough wrapped in plastic wrap for 1 hour."
+            },
+            {
+                "description": "Preheat oven to 375 degrees fahrenheit. Roll out dough onto floured surface with floured rolling pin. Cut into trefoil shapes, or just 2\"-3\" circles. I bent a football cutter into the best trefoil I could make, because seriously, I do not need a football cookie cutter."
+            },
+            {
+                "description": "Bake on a silpat or parchment paper-lined baking sheet for 8-10 minutes (if _really_ thin, 6-7 minutes), or until golden around the edges."
+            }
+        ]
+    }
+]

@@ -1,0 +1,53 @@
+[
+    {
+        "title": "Mason Jar Butter  ",
+        "yield": "",
+        "time": "",
+        "postId": 92,
+        "ingredients": [
+            {
+                "amount": "1",
+                "name": "mason jar"
+            },
+            {
+                "amount": "1 1/2 cups",
+                "name": "of heavy whipping cream (or however much fills your jar up 3/4 of the way)"
+            },
+            {
+                "amount": "1 tsp",
+                "name": "salt (optional- I didn't use this)"
+            },
+            {
+                "amount": "",
+                "name": ""
+            },
+            {
+                "amount": "",
+                "name": "You can add cinnamon, sugar, honey, garlic powder, whatever you want, depending on what you're making it for! I personally just did the cream so I can add whatever I want serving by serving."
+            }
+        ],
+        "steps": [
+            {
+                "description": "Wash the mason jar to make sure it doesn't have anything dusty/weird smelling in it (mine had obviously had pickles in it before so this step was necessary)."
+            },
+            {
+                "description": "Fill mason jar 3/4 of the way full with heavy whipping cream. Screw the lid on very tightly."
+            },
+            {
+                "description": "Shake vigorously for 20 minutes. Work those arm muscles!"
+            },
+            {
+                "description": "Open and look. There should be a buttery-looking substance floating in milky stuff. The milky stuff is buttercream (I can hear the lightbulbs turning on). Pour the buttercream out as best you can into a separate container."
+            },
+            {
+                "description": "Close the lid tightly and shake for 5 more minutes. Open and pour out some more buttercream. I actually spooned the butter out and stirred it a little to get the excess buttercream out."
+            },
+            {
+                "description": "If the butter still isn't thick enough, you can shake it for a few more minutes. Work it! Here you can add whatever you want, salt, honey, sugar, etc."
+            },
+            {
+                "description": "Store in the refrigerator if you like your butter cold. We actually keep our butter out for up to 5 days and it always stays fine and soft."
+            }
+        ]
+    }
+]

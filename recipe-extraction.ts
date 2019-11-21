@@ -146,7 +146,14 @@ const parseRecipe = (postId: number, recipeString: string): IRecipe => {
 				'lb',
 				'g',
 				'mL',
-				'stick'
+				'stick',
+				'can',
+				'tablespoon',
+				'teaspoon',
+				'recipe',
+				'package',
+				'drop',
+				'packet'
 			];
 			const units = new Set();
 			baseUnits.forEach(unit => {
@@ -165,7 +172,7 @@ const parseRecipe = (postId: number, recipeString: string): IRecipe => {
 				}
 				if (!numFound) {
 					const nums = [];
-					while (i.match(/[0-9]/g) || i.match('to')) {
+					while (i.match(/[0-9]/g) || i === 'to' || i === 'or' || i === 'about') {
 						nums.push(i);
 						i = ingredientPieces.shift();
 					}
@@ -248,7 +255,7 @@ const writeRecipeJson = async (id: number, recipes: IRecipe[]) => {
 const main = async () => {
 	// await extractToMarkdown();
 	// await determineFilesWithRecipes();
-	const ID = 34;
+	const ID = 107;
 	const recipes = await parseRecipes(ID);
 	await writeRecipeJson(ID, recipes);
 

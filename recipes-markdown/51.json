@@ -1,0 +1,97 @@
+[
+    {
+        "title": "Banana Cake  ",
+        "yield": "8x8 cake",
+        "time": "",
+        "postId": 51,
+        "ingredients": [
+            {
+                "amount": "2/3 cup",
+                "name": "sugar"
+            },
+            {
+                "amount": "1/2 cup",
+                "name": "sour cream (or buttermilk)"
+            },
+            {
+                "amount": "1",
+                "name": "egg"
+            },
+            {
+                "amount": "2 tbsp",
+                "name": "butter, softened"
+            },
+            {
+                "amount": "2-3",
+                "name": "overly ripe bananas"
+            },
+            {
+                "amount": "1 tsp",
+                "name": "vanilla extract"
+            },
+            {
+                "amount": "1 cup",
+                "name": "flour"
+            },
+            {
+                "amount": "1/4 tsp",
+                "name": "salt"
+            },
+            {
+                "amount": "1/2 tsp",
+                "name": "baking soda"
+            },
+            {
+                "amount": "1/4 tsp",
+                "name": "baking powder"
+            }
+        ],
+        "steps": [
+            {
+                "description": "Preheat oven to 375 degrees (350 for glass pan) fahrenheit."
+            },
+            {
+                "description": "Cream together sugar, sour cream, egg, and butter for about 3 minutes. Add mashed banana and vanilla and beat."
+            },
+            {
+                "description": "Mix together the dry ingredients in a separate bowl. Add them slowly to the wet ingredients."
+            },
+            {
+                "description": "Pour into a greased 8x8 pan and bake for 20-25 minutes or until a toothpick comes out clean when inserted in the middle of the cake."
+            }
+        ]
+    },
+    {
+        "title": "Brown Sugar Buttercream  ",
+        "yield": "",
+        "time": "",
+        "postId": 51,
+        "ingredients": [
+            {
+                "amount": "1 stick",
+                "name": "butter, softened"
+            },
+            {
+                "amount": "1 cup",
+                "name": "brown sugar"
+            },
+            {
+                "amount": "1 cup",
+                "name": "powdered sugar"
+            },
+            {
+                "amount": "1 tsp",
+                "name": "vanilla"
+            },
+            {
+                "amount": "1 tbsp",
+                "name": "milk, optional"
+            }
+        ],
+        "steps": [
+            {
+                "description": "In a stand mixer, cream together the butter and the brown sugar for 5 minutes, or until most of the graininess of the sugar is dissolved. Add the powdered sugar and vanilla slowly. If the frosting is too thick, add milk slowly. If it's too thin, add more powdered sugar."
+            }
+        ]
+    }
+]

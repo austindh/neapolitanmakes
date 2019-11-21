@@ -1,0 +1,123 @@
+[
+    {
+        "title": "Flaky Pie Crust  ",
+        "yield": "two 9\" pie crusts-- either 1 double crust/lattice pie or 2 single crust pies",
+        "time": "",
+        "postId": 47,
+        "ingredients": [
+            {
+                "amount": "3 1/2 cups",
+                "name": "all purpose flour"
+            },
+            {
+                "amount": "1 cup (2 sticks)",
+                "name": "chilled butter (cut into 1/2 inch cubes)"
+            },
+            {
+                "amount": "1/4 cup",
+                "name": "vegetable shortening"
+            },
+            {
+                "amount": "1",
+                "name": "tablespoon sugar"
+            },
+            {
+                "amount": "1/2 tbsp",
+                "name": "salt"
+            },
+            {
+                "amount": "3/4 cup",
+                "name": "ice cold water"
+            }
+        ],
+        "steps": [
+            {
+                "description": "Mix together the dry ingredients. Using either a food processor or a pastry cutter, cut butter and shortening into the dry ingredients."
+            },
+            {
+                "description": "Once it resembles crumbles, slowly add the ice cold water. It may not take all of the water. Once it is sticking together, it's done!"
+            },
+            {
+                "description": "Form it into two discs, flattened out until they're about 1\" thick. Wrap each one in plastic wrap and refrigerate it for at least 2 hours."
+            }
+        ]
+    },
+    {
+        "title": "Apple Pie  ",
+        "yield": "",
+        "time": "",
+        "postId": 47,
+        "ingredients": [
+            {
+                "amount": "10",
+                "name": "apples (about 4 lbs), peeled, cored, and sliced into 1/4 inch slices"
+            },
+            {
+                "amount": "1/2 cup",
+                "name": "light brown sugar"
+            },
+            {
+                "amount": "1/4 cup",
+                "name": "granulated sugar"
+            },
+            {
+                "amount": "1 tsp",
+                "name": "ground cinnamon"
+            },
+            {
+                "amount": "1/4 tsp",
+                "name": "salt"
+            },
+            {
+                "amount": "1/4 tsp",
+                "name": "freshly grated nutmeg"
+            },
+            {
+                "amount": "3 tsp",
+                "name": "cornstarch"
+            },
+            {
+                "amount": "1 tbsp",
+                "name": "fresh lemon juice"
+            },
+            {
+                "amount": "2 tbsp",
+                "name": "cold unsalted butter, cut into 1/2-inch pieces"
+            },
+            {
+                "amount": "1",
+                "name": "egg, beaten with 1 tbsp milk"
+            },
+            {
+                "amount": "2 tsp",
+                "name": "granulated sugar"
+            }
+        ],
+        "steps": [
+            {
+                "description": "In a large pot over medium-low heat, stir together apples, sugars, cinnamon, salt, nutmeg, and cornstarch. Cook, covered, for 20 minutes."
+            },
+            {
+                "description": "After about 20 minutes, take the top off, reduce heat to medium-low, and cook for 7-8 more minutes. Remove from heat, stir in lemon juice, and let it cool for 30 minutes."
+            },
+            {
+                "description": "Preheat oven to 350 degrees fahrenheit."
+            },
+            {
+                "description": "While the apples are cooling, roll out one of your pie crust dough discs on a lightly floured surface. Roll it out until it's about 13\" in diameter. Using the rolling pin, transfer the dough to your pie pan. Trim the edges, leaving at least 3/4\" overhang around the entire edge."
+            },
+            {
+                "description": "Roll out your other pie crust dough disc until it's about 12\" in diameter. Cut it into 3/4\" strips with a pizza cutter."
+            },
+            {
+                "description": "Pour your apple filling into the bottom pie crust. Dot with cold butter. Start with the middle strips to make the lattice. I used [this tutorial](http://www.butterbaking.com/2011/11/15/traditional-apple-pie/) to make my lattice. Press the outside overhang onto the edge."
+            },
+            {
+                "description": "Beat the egg and milk. Brush it atop the dough on top. Sprinkle with sugar."
+            },
+            {
+                "description": "Bake at 350 degrees fahrenheit for about 35-40 minutes, or until golden on top."
+            }
+        ]
+    }
+]

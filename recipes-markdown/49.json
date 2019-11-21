@@ -1,0 +1,114 @@
+[
+    {
+        "title": "Pumpkin Cream Cheese Muffins  ",
+        "yield": "Yields 24 muffins  ",
+        "time": "",
+        "postId": 49,
+        "ingredients": [
+            {
+                "amount": "8 oz",
+                "name": "cream cheese (room temp)"
+            },
+            {
+                "amount": "1 cup",
+                "name": "powdered sugar"
+            },
+            {
+                "amount": "1/2 tsp",
+                "name": "vanilla"
+            },
+            {
+                "amount": "",
+                "name": ""
+            },
+            {
+                "amount": "4",
+                "name": "eggs"
+            },
+            {
+                "amount": "1 1/2 cups",
+                "name": "sugar"
+            },
+            {
+                "amount": "1 can",
+                "name": "pumpkin purée"
+            },
+            {
+                "amount": "1 1/4 cup",
+                "name": "vegetable oil"
+            },
+            {
+                "amount": "",
+                "name": ""
+            },
+            {
+                "amount": "3 cups",
+                "name": "AP flour"
+            },
+            {
+                "amount": "1 tsp",
+                "name": "cinnamon"
+            },
+            {
+                "amount": "1 tsp",
+                "name": "nutmeg"
+            },
+            {
+                "amount": "1 tsp",
+                "name": "cloves"
+            },
+            {
+                "amount": "1 tsp",
+                "name": "pumpkin pie spice"
+            },
+            {
+                "amount": "1 tsp",
+                "name": "salt"
+            },
+            {
+                "amount": "1 tsp",
+                "name": "baking soda"
+            },
+            {
+                "amount": "",
+                "name": ""
+            },
+            {
+                "amount": "1/2 cup",
+                "name": "sugar"
+            },
+            {
+                "amount": "5 tbsp",
+                "name": "flour"
+            },
+            {
+                "amount": "1 1/2 tsp",
+                "name": "cinnamon"
+            },
+            {
+                "amount": "4 tbsp",
+                "name": "cold butter, cut into pieces"
+            }
+        ],
+        "steps": [
+            {
+                "description": "Beat together cream cheese, powdered sugar, and vanilla. Set aside."
+            },
+            {
+                "description": "Preheat oven to 350. In the bowl of a stand mixer, combine eggs, sugar, pumpkin, and veggie oil."
+            },
+            {
+                "description": "While that's beating, mix together flour, baking soda, salt, and spices. Slowly add this to the wet ingredients."
+            },
+            {
+                "description": "Using a food scoop, scoop batter about halfway up muffin papers in a muffin tin. Make small indents  in the batter and add about 1 tsp of the cream cheese mixture. Cover the cream cheese with about 1 tbsp more of the pumpkin batter."
+            },
+            {
+                "description": "Using a pastry cutter, cut together sugar, flour, cinnamon, and butter until it resembles crumbs. Sprinkle atop the unbaked muffins."
+            },
+            {
+                "description": "Bake at 350 for 20-25 minutes."
+            }
+        ]
+    }
+]

@@ -1,0 +1,95 @@
+[
+    {
+        "title": "Sweet Tart Dough  ",
+        "yield": "",
+        "time": "",
+        "postId": 106,
+        "ingredients": [
+            {
+                "amount": "1/2 cup",
+                "name": "plus 2 tbsp sugar"
+            },
+            {
+                "amount": "1 1/4 cups",
+                "name": "all purpose flour"
+            },
+            {
+                "amount": "1",
+                "name": "egg"
+            },
+            {
+                "amount": "1/2 cup (1 stick)",
+                "name": "butter, cut into small pieces, chilled (the recipe calls for unsalted, but I always use salted butter)"
+            }
+        ],
+        "steps": [
+            {
+                "description": "Mix the sugar and flour together in a bowl. Form a depression in the center and add the egg and butter."
+            },
+            {
+                "description": "Fork\" the egg and butter into the dry ingredients by rapidly pressing and sliding the fork along the bowl. It will take a few minutes. You'll get your arm workout in, as well. You can add cold water (a tiny bit) if the dough is too dry, but this has never been a problem for me."
+            },
+            {
+                "description": "Form a ball with your hands and chill in wax paper, parchment paper, or plastic wrap. Refrigerate for 1 hour."
+            }
+        ]
+    },
+    {
+        "title": "Apple Tart",
+        "yield": "",
+        "time": "",
+        "postId": 106,
+        "ingredients": [
+            {
+                "amount": "1 recipe",
+                "name": "sweet tart dough"
+            },
+            {
+                "amount": "1 1/4",
+                "name": "pounds tart apples"
+            },
+            {
+                "amount": "1/2 tsp",
+                "name": "cinnamon"
+            },
+            {
+                "amount": "8 tbsp (1 stick)",
+                "name": "butter (again, I used salted)"
+            },
+            {
+                "amount": "4 tbsp",
+                "name": "granulated sugar"
+            },
+            {
+                "amount": "1",
+                "name": "whole egg"
+            }
+        ],
+        "steps": [
+            {
+                "description": "Preheat oven to 400 degrees Fahrenheit."
+            },
+            {
+                "description": "Press dough into a tart pan (mine is 9x9) or roll out onto a cookie sheet or baking stone. If rolling out onto a pan without sides, be sure to bake \"barriers\" of dough, like a pizza crust, so the juices don't overflow."
+            },
+            {
+                "description": "Using a fork, poke holes in the bottom of the tart dough to prevent puffing of the dough. Bake for ten minutes."
+            },
+            {
+                "description": "Reduce oven to 350 degrees Fahrenheit."
+            },
+            {
+                "description": "Peel apples. Slice apples _very_ thin, making sure to exclude any seeds or the icky hard pieces in the core."
+            },
+            {
+                "description": "Arrange apple slices in decorative, tight circular patterns."
+            },
+            {
+                "description": "Melt butter over low heat, making sure not to brown it. Remove from heat and add the sugar, stirring until it dissolves. Let it cool down a little bit, and add the egg, beating until it's pretty smooth."
+            },
+            {
+                "description": "Sprinkle cinnamon on the apple tart and pour the sugar-butter-egg mixture over all the apples. Try to cover all the apples. Bake at 350 for 30-40 minutes or until the fruit is tender. (or you can be like me and forget to turn the oven on and sit for 30 minutes wondering why the fruit isn't tender)."
+            }
+        ]
+    }
+]

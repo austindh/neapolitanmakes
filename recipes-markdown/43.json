@@ -1,0 +1,112 @@
+[
+    {
+        "title": "Caramel Cupcakes   ",
+        "yield": "15 cupcakes",
+        "time": "",
+        "postId": 43,
+        "ingredients": [
+            {
+                "amount": "1 1/4 cups",
+                "name": "flour"
+            },
+            {
+                "amount": "1/2 tsp",
+                "name": "cornstarch"
+            },
+            {
+                "amount": "1 1/4 tsp",
+                "name": "baking powder"
+            },
+            {
+                "amount": "1/2 tsp",
+                "name": "baking soda"
+            },
+            {
+                "amount": "1/2 tsp",
+                "name": "salt"
+            },
+            {
+                "amount": "1/2 tsp",
+                "name": "cinnamon"
+            },
+            {
+                "amount": "2",
+                "name": "eggs"
+            },
+            {
+                "amount": "3/4 cup",
+                "name": "sugar"
+            },
+            {
+                "amount": "1 1/2 tsp",
+                "name": "vanilla"
+            },
+            {
+                "amount": "1/2 cup",
+                "name": "canola or veggie oil"
+            },
+            {
+                "amount": "1/2 cup",
+                "name": "buttermilk (I always use milk with 1/2 tsp white vinegar)"
+            },
+            {
+                "amount": "",
+                "name": ""
+            },
+            {
+                "amount": "1/3 cup",
+                "name": "caramel sauce (the ice cream topping kind is what I used)"
+            }
+        ],
+        "steps": [
+            {
+                "description": "Preheat the oven to 350 degrees fahrenheit. Line cupcake pans with 15 cupcake papers. Whisk together the flour, cornstarch, baking powder, baking soda, salt, and cinnamon. Whisk for about 1 minute. You want to get everything really well incorporated."
+            },
+            {
+                "description": "In the bowl of a stand mixer, beat together the eggs with the sugar for about 30 seconds. Add the vanilla and oil, then beat for 15 seconds."
+            },
+            {
+                "description": "Add the flour mixture and buttermilk slowly, alternating between the two. Use a cookie scoop to divide the batter evenly among the 15 cupcake papers. I filled my cupcake paper halfway up the paper."
+            },
+            {
+                "description": "Bake 12-14 minutes, or until a toothpick or cake tester comes out clean."
+            }
+        ]
+    },
+    {
+        "title": "Frosting  ",
+        "yield": "",
+        "time": "",
+        "postId": 43,
+        "ingredients": [
+            {
+                "amount": "1/2 cup (1 stick)",
+                "name": "butter"
+            },
+            {
+                "amount": "2 tbsp",
+                "name": "caramel sauce"
+            },
+            {
+                "amount": "4 cups",
+                "name": "powdered sugar"
+            },
+            {
+                "amount": "1 tsp",
+                "name": "vanilla"
+            },
+            {
+                "amount": "",
+                "name": "milk for thinning"
+            }
+        ],
+        "steps": [
+            {
+                "description": "Beat the slightly softened butter for about 1 minute in the stand mixer. Add the caramel sauce."
+            },
+            {
+                "description": "Slowly add the powdered sugar, then add the vanilla. You may need a few teaspoons of milk or cream to thin the frosting out enough to pipe it."
+            }
+        ]
+    }
+]

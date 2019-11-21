@@ -1,0 +1,90 @@
+[
+    {
+        "title": "Eggnog Pound Cake  ",
+        "yield": "1 loaf",
+        "time": "",
+        "postId": 35,
+        "ingredients": [
+            {
+                "amount": "",
+                "name": "**Loaf**:"
+            },
+            {
+                "amount": "1/2 cup (1 stick)",
+                "name": "butter, softened"
+            },
+            {
+                "amount": "1 cup",
+                "name": "sugar"
+            },
+            {
+                "amount": "2",
+                "name": "eggs"
+            },
+            {
+                "amount": "1 1/2 cup",
+                "name": "flour"
+            },
+            {
+                "amount": "",
+                "name": "pinch of salt"
+            },
+            {
+                "amount": "1 tsp",
+                "name": "baking powder"
+            },
+            {
+                "amount": "1/4 tsp",
+                "name": "cinnamon"
+            },
+            {
+                "amount": "1/4 tsp",
+                "name": "nutmeg"
+            },
+            {
+                "amount": "3/4 cup",
+                "name": "eggnog"
+            },
+            {
+                "amount": "1 tsp",
+                "name": "vanilla"
+            },
+            {
+                "amount": "",
+                "name": ""
+            },
+            {
+                "amount": "",
+                "name": "**Glaze**:"
+            },
+            {
+                "amount": "1/2 cup",
+                "name": "powdered sugar"
+            },
+            {
+                "amount": "1 tbsp (or more for desired consistency)",
+                "name": "eggnog"
+            }
+        ],
+        "steps": [
+            {
+                "description": "Preheat oven to 325 degrees fahrenheit. Grease an 8 x 4 loaf pan."
+            },
+            {
+                "description": "Cream the butter and sugar together for 3-4 minutes with a mixer. Add the eggs, one at a time."
+            },
+            {
+                "description": "Combine the flour, salt, baking powder, cinnamon, and nutmeg in a bowl."
+            },
+            {
+                "description": "Alternate adding the dry ingredients and the eggnog to the creamed butter/sugar combo. Add vanilla, then mix until _just_ combined."
+            },
+            {
+                "description": "Bake for 40-60 minutes, or until a toothpick comes out clean."
+            },
+            {
+                "description": "Let the cake cool for 10 minutes in the pan, then remove. Let it cool completely before adding the glaze."
+            }
+        ]
+    }
+]
