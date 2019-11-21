@@ -1,0 +1,79 @@
+[
+    {
+        "title": "Homemade Oreos",
+        "yield": "",
+        "time": "",
+        "postId": 14,
+        "ingredients": [
+            {
+                "amount": "1 cup (2 sticks)",
+                "name": "butter, softened"
+            },
+            {
+                "amount": "1 cup",
+                "name": "sugar"
+            },
+            {
+                "amount": "1",
+                "name": "egg"
+            },
+            {
+                "amount": "1 tsp",
+                "name": "vanilla"
+            },
+            {
+                "amount": "2 cups",
+                "name": "flour"
+            },
+            {
+                "amount": "3/4 cup",
+                "name": "cocoa powder, dutch process"
+            },
+            {
+                "amount": "1 1/2 tsp",
+                "name": "baking powder"
+            },
+            {
+                "amount": "1 tsp",
+                "name": "salt"
+            },
+            {
+                "amount": "",
+                "name": ""
+            },
+            {
+                "amount": "1/2 cup (1 stick)",
+                "name": "butter, softened"
+            },
+            {
+                "amount": "1 tsp",
+                "name": "vanilla"
+            },
+            {
+                "amount": "3 cups",
+                "name": "powdered sugar"
+            },
+            {
+                "amount": "2 tbsp",
+                "name": "cream (or half & half or milk)"
+            }
+        ],
+        "steps": [
+            {
+                "description": "Using a mixer, cream together the butter and the sugar until light and fluffy, about 2-3 minutes. Add the egg and vanilla and beat until incorporated."
+            },
+            {
+                "description": "Add the dry ingredients and mix until thoroughly combined. Divide the dough in half and wrap in plastic wrap. Refrigerate for 1 hour."
+            },
+            {
+                "description": "Preheat oven to 350 degrees. Roll out the dough on a lightly floured surface and cut out into desired shapes. Bake for 10-12 minutes on a lined baking sheet (I line it with my silpat, but you can use parchment paper)."
+            },
+            {
+                "description": "Let cool on a cooling rack and make the filling. Beat the butter for 30 seconds on medium, then add the vanilla. Add the powdered sugar, 1/2 cup at a time, then add the cream as necessary to thin it to the desired consistency."
+            },
+            {
+                "description": "Fill and serve. Store in an airtight container for up to a week."
+            }
+        ]
+    }
+]

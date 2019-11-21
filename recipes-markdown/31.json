@@ -1,0 +1,62 @@
+[
+    {
+        "title": "Homemade Milano Cookies  ",
+        "yield": "about 3 dozen sandwich cookies",
+        "time": "",
+        "postId": 31,
+        "ingredients": [
+            {
+                "amount": "12 tbsp",
+                "name": "butter, softened"
+            },
+            {
+                "amount": "2 1/2 cups",
+                "name": "powdered sugar"
+            },
+            {
+                "amount": "5",
+                "name": "egg whites"
+            },
+            {
+                "amount": "2 tbsp",
+                "name": "vanilla"
+            },
+            {
+                "amount": "1 1/2 cups",
+                "name": "flour"
+            },
+            {
+                "amount": "",
+                "name": ""
+            },
+            {
+                "amount": "1 cup",
+                "name": "dark chocolate chips (I used 60% Ghiradelli)"
+            },
+            {
+                "amount": "4 tbsp (give or take)",
+                "name": "cream"
+            }
+        ],
+        "steps": [
+            {
+                "description": "Preheat the oven to 375 degrees fahrenheit. Line two cookie sheets with silpat mats."
+            },
+            {
+                "description": "Cream the butter on medium high speed until it's smooth. Add the powdered sugar slowly."
+            },
+            {
+                "description": "Add the egg whites and vanilla, then add the flour. Beat until just combined."
+            },
+            {
+                "description": "Put the batter into a piping bag fitted with a 1/2\" round tip. Pipe 2\" long sections 2\" apart. At this point, I put my cookie sheets with the cookie batter on it into the freezer for 3-4 minutes so the cookies wouldn't spread so much. This made them a better consistency in the end."
+            },
+            {
+                "description": "Bake for 7-10 minutes, or until the edges are golden."
+            },
+            {
+                "description": "Microwave cream until scalding, then pour on top of chocolate chips. Stir until melted. Add more chocolate or cream to achieve the desired consistency. Pipe onto cookies and sandwich them together."
+            }
+        ]
+    }
+]

@@ -1,0 +1,89 @@
+[
+    {
+        "title": "Kentucky Butter Bundt",
+        "yield": "approximately 12 servings",
+        "time": "",
+        "postId": 16,
+        "ingredients": [
+            {
+                "amount": "1 cup",
+                "name": "(2 sticks) butter, softened"
+            },
+            {
+                "amount": "2 cups",
+                "name": "sugar"
+            },
+            {
+                "amount": "4",
+                "name": "eggs"
+            },
+            {
+                "amount": "1 tbsp",
+                "name": "vanilla"
+            },
+            {
+                "amount": "3 cups",
+                "name": "flour"
+            },
+            {
+                "amount": "1 tsp",
+                "name": "salt"
+            },
+            {
+                "amount": "1 tsp",
+                "name": "baking powder"
+            },
+            {
+                "amount": "1/2 tsp",
+                "name": "baking soda"
+            },
+            {
+                "amount": "1 cup",
+                "name": "buttermilk"
+            },
+            {
+                "amount": "",
+                "name": ""
+            },
+            {
+                "amount": "1/3 cup",
+                "name": "butter"
+            },
+            {
+                "amount": "3/4 cup",
+                "name": "sugar"
+            },
+            {
+                "amount": "2 tbsp",
+                "name": "water"
+            },
+            {
+                "amount": "2 tsp",
+                "name": "vanilla"
+            }
+        ],
+        "steps": [
+            {
+                "description": "Preheat oven to 325 degrees fahrenheit. Grease a bundt pan liberally with butter or shortening, getting into every nook and cranny. Lightly sprinkle with flour and tap out the excess."
+            },
+            {
+                "description": "Place all the cake ingredients in a stand mixer fitted with the paddle attachment (or a bowl with a hand mixer). Mix on low for 30 seconds, then up to medium (about a 4) for 3 minutes."
+            },
+            {
+                "description": "Pour the batter into the prepared pan and bake for 55-75 minutes (it totally depends on your oven and altitude), or until a toothpick inserted comes out clean."
+            },
+            {
+                "description": "Prepare the glaze by combining all of the glaze ingredients in a small saucepan over medium low. Stir until everything melts and dissolves together, but make sure you don't boil it."
+            },
+            {
+                "description": "Right when the cake comes out of the oven, poke holes in it with a knife. **Keep the cake in the pan**! Slowly pour the glaze over the cake, letting it soak in as you go."
+            },
+            {
+                "description": "Let the cake cool completely (I covered it and left it overnight) before inverting. Sprinkle with powdered sugar, if desired."
+            },
+            {
+                "description": "**Note**: Cake is best if you make it the day before so it can cool in the pan overnight."
+            }
+        ]
+    }
+]

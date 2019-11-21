@@ -1,0 +1,87 @@
+[
+    {
+        "title": "Cheesecake Brownies",
+        "yield": "15 brownies",
+        "time": "",
+        "postId": 22,
+        "ingredients": [
+            {
+                "amount": "1 cup (2 sticks)",
+                "name": "butter"
+            },
+            {
+                "amount": "2 cups",
+                "name": "sugar"
+            },
+            {
+                "amount": "4",
+                "name": "eggs"
+            },
+            {
+                "amount": "1 tbsp",
+                "name": "vanilla"
+            },
+            {
+                "amount": "1 1/4 cups",
+                "name": "cocoa powder"
+            },
+            {
+                "amount": "1/2 tsp",
+                "name": "salt"
+            },
+            {
+                "amount": "1 tsp",
+                "name": "baking powder"
+            },
+            {
+                "amount": "1 1/2 cups",
+                "name": "flour"
+            },
+            {
+                "amount": "1 cup",
+                "name": "chocolate chips"
+            },
+            {
+                "amount": "",
+                "name": ""
+            },
+            {
+                "amount": "8 oz",
+                "name": "cream cheese, softened"
+            },
+            {
+                "amount": "1/4 cup",
+                "name": "sour cream"
+            },
+            {
+                "amount": "1/2 cup",
+                "name": "sugar"
+            },
+            {
+                "amount": "1/2 tsp",
+                "name": "vanilla"
+            },
+            {
+                "amount": "1",
+                "name": "egg"
+            }
+        ],
+        "steps": [
+            {
+                "description": "Preheat oven to 350 degrees fahrenheit. Grease a 9x13\" baking dish and set aside."
+            },
+            {
+                "description": "Put butter and sugar in a microwave-safe bowl and microwave for 1-2 minutes, or until melted. Stir to incorporate. Set aside for 5 minutes to cool."
+            },
+            {
+                "description": "Add the butter/sugar to the bowl of a mixer and beat for 1 minute. Add eggs and vanilla and mix. Combine dry ingredients (not including chocolate chips) in a separate bowl and add the mixture slowly to the wet ingredients. Pour into the prepared pan."
+            },
+            {
+                "description": "Combine all of the cheesecake ingredients in a separate bowl and beat until smooth. Pour in dollops atop the brownie batter in the prepared pan and swirl around using a knife."
+            },
+            {
+                "description": "Bake at 350 for 30 minutes, or until desired consistency is achieved."
+            }
+        ]
+    }
+]

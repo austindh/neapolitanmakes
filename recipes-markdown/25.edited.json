@@ -1,0 +1,110 @@
+[
+    {
+        "title": "Kolaches",
+        "yield": "16 kolaches",
+        "time": "",
+        "postId": 25,
+        "ingredients": [
+            {
+                "amount": "1/2 cup",
+                "name": "warm water"
+            },
+            {
+                "amount": "1 tbsp",
+                "name": "active dry yeast (1/4 oz. package)"
+            },
+            {
+                "amount": "3 tbsp + 1 tsp ",
+                "name": "sugar"
+            },
+            {
+                "amount": "4 tbsp",
+                "name": "butter, softened"
+            },
+            {
+                "amount": "1/2 tsp",
+                "name": "salt"
+            },
+            {
+                "amount": "1",
+                "name": "egg yolk"
+            },
+            {
+                "amount": "3 1/2 cups",
+                "name": "flour"
+            },
+            {
+                "amount": "3/4 cup",
+                "name": "warm milk"
+            },
+            {
+                "amount": "",
+                "name": ""
+            },
+            {
+                "amount": "1 tbsp",
+                "name": "butter, melted"
+            },
+            {
+                "amount": "1/4 cup",
+                "name": "flour"
+            },
+            {
+                "amount": "1/4 cup",
+                "name": "sugar"
+            }
+        ],
+        "steps": [
+            {
+                "description": "Combine water, yeast, and 1 tsp sugar. Let sit for 5 minutes until activated."
+            },
+            {
+                "description": "Beat butter and remaining 3 tbsp sugar together. Add the egg yolk and salt. Then, add the yeast mixture, flour, and milk. Combine and knead until no longer really sticky."
+            },
+            {
+                "description": "Grease a bowl and add the dough. Cover and let rise in a warm place for 30 minutes, or until doubled. I turned on my oven for 3 minutes, then I turned it off and let the dough rise in there. It was about 140 degrees."
+            },
+            {
+                "description": "Preheat oven to 375. Line a baking sheet with parchment or a silpat."
+            },
+            {
+                "description": "Divide the dough into 16 pieces. Pinch them into round mounds, and place them 1/2\" apart on the prepared pan. Brush with 1 tbsp of melted butter. Cover and let rise for 30 minutes."
+            },
+            {
+                "description": "Prepare the filling (see below) and the crumble. (To make the crumble, combine the three ingredients until it's crumbly). When the kolaches have risen, press the center of each one down with your fingers. Put 1 tbsp of filling into each and sprinkle the crumble topping on each one."
+            },
+            {
+                "description": "Bake at 375 degrees fahrenheit for 25-30 minutes."
+            }
+        ]
+    },
+    {
+        "title": "Kolache Filling ",
+        "yield": "",
+        "time": "",
+        "postId": 25,
+        "ingredients": [
+            {
+                "amount": "6 oz",
+                "name": "cream cheese, softened"
+            },
+            {
+                "amount": "1/4 tsp",
+                "name": "lemon juice"
+            },
+            {
+                "amount": "3 tbsp",
+                "name": "sugar"
+            },
+            {
+                "amount": "1",
+                "name": "egg yolk"
+            }
+        ],
+        "steps": [
+            {
+                "description": "Combine all of the ingredients together until completely smooth."
+            }
+        ]
+    }
+]

@@ -1,0 +1,127 @@
+[
+    {
+        "title": "Rolls",
+        "yield": "",
+        "time": "",
+        "postId": 12,
+        "ingredients": [
+            {
+                "amount": "1 tbsp (1 packet)",
+                "name": "yeast"
+            },
+            {
+                "amount": "1 cup",
+                "name": "warm water"
+            },
+            {
+                "amount": "3-4 cups",
+                "name": "flour"
+            },
+            {
+                "amount": "1",
+                "name": "egg"
+            },
+            {
+                "amount": "1 tsp",
+                "name": "salt"
+            },
+            {
+                "amount": "1/2 cup",
+                "name": "sugar"
+            },
+            {
+                "amount": "1/4 cup",
+                "name": "veggie or canola oil"
+            },
+            {
+                "amount": "2 tbsp",
+                "name": "butter, melted"
+            }
+        ],
+        "steps": [
+            {
+                "description": "In a medium bowl, combine warm water, 1 tbsp of the sugar, and the yeast. Let it bloom for 5-10 minutes."
+            },
+            {
+                "description": "To the yeast mixture, add the egg, salt, remaining sugar, and oil. Stir with a spoon to mix, 20 seconds or so. Put flour into the bowl of a stand mixer fitted with a dough hook. Add the yeast mixture to the flour and mix/knead until all the flour is incorporated."
+            },
+            {
+                "description": "Let rise in a warm place until doubled in size, about 1 hour. Roll out to 1/2\" on a lightly floured surface. Butter a 9x13 pan and spread the remaining butter on the dough. Cut into 24 squares using a pizza cutter. Let rise, covered, until doubled in size."
+            },
+            {
+                "description": "Bake at 350 degrees fahrenheit for 20 minutes, or until the tops are golden. Brush with honey, if desired."
+            }
+        ]
+    },
+    {
+        "title": "Chick-fil-A Nuggets",
+        "yield": "24 chicken minis (6-8 servings)",
+        "time": "",
+        "postId": 12,
+        "ingredients": [
+            {
+                "amount": "1",
+                "name": "egg"
+            },
+            {
+                "amount": "1 cup",
+                "name": "milk"
+            },
+            {
+                "amount": "1 lb",
+                "name": "chicken breasts or tenders, cut into 1\" pieces"
+            },
+            {
+                "amount": "",
+                "name": ""
+            },
+            {
+                "amount": "1 1/4 cup",
+                "name": "flour"
+            },
+            {
+                "amount": "2 tbsp",
+                "name": "powdered sugar"
+            },
+            {
+                "amount": "2 tsp",
+                "name": "salt"
+            },
+            {
+                "amount": "1 tsp",
+                "name": "pepper"
+            },
+            {
+                "amount": "1/2 tsp",
+                "name": "chili powder"
+            },
+            {
+                "amount": "1/4 tsp",
+                "name": "cayenne"
+            },
+            {
+                "amount": "1/4 tsp",
+                "name": "paprika"
+            },
+            {
+                "amount": "",
+                "name": ""
+            },
+            {
+                "amount": "",
+                "name": "Oil for frying"
+            }
+        ],
+        "steps": [
+            {
+                "description": "Combine egg and milk. Add chicken and soak in the fridge for at least 30 minutes, up to overnight."
+            },
+            {
+                "description": "Combine the dry ingredients in a bag. Heat up oil to 350 degrees fahrenheit. Add a couple of pieces of chicken to the dry ingredients and shake. Add them to the hot oil and cook for 3-4 minutes, or until golden brown."
+            },
+            {
+                "description": "Remove onto a paper towel and put inside honey-butter rolls. Enjoy while they're hot!"
+            }
+        ]
+    }
+]

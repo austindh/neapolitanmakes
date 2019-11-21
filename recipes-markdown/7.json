@@ -6,6 +6,10 @@
         "postId": 7,
         "ingredients": [
             {
+                "amount": "1 sheet",
+                "name": "puff pastry"
+            },
+            {
                 "amount": "3 slices",
                 "name": "bacon"
             },

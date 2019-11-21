@@ -1,0 +1,57 @@
+[
+    {
+        "title": "Banana Bread Muffins",
+        "yield": "12 muffins",
+        "time": "",
+        "postId": 21,
+        "ingredients": [
+            {
+                "amount": "2 cups (10 oz)",
+                "name": "flour"
+            },
+            {
+                "amount": "3/4 cup (5 oz)",
+                "name": "sugar"
+            },
+            {
+                "amount": "3/4 tsp",
+                "name": "baking soda"
+            },
+            {
+                "amount": "1/2 tsp",
+                "name": "salt"
+            },
+            {
+                "amount": "3",
+                "name": "overly ripe medium bananas"
+            },
+            {
+                "amount": "1/4 cup",
+                "name": "sour cream (or plain yogurt)"
+            },
+            {
+                "amount": "2",
+                "name": "eggs"
+            },
+            {
+                "amount": "6 tbsp",
+                "name": "vegetable oil"
+            },
+            {
+                "amount": "1 tsp",
+                "name": "vanilla"
+            }
+        ],
+        "steps": [
+            {
+                "description": "Preheat oven to 350 degrees fahrenheit. Line a muffin tin with paper liners."
+            },
+            {
+                "description": "Combine dry ingredients in a large bowl. In a separate bowl, combine wet ingredients. Mix together until just combined."
+            },
+            {
+                "description": "Scoop the batter evenly into 12 muffin liners and bake for 20-25 minutes, or until a toothpick inserted comes out clean."
+            }
+        ]
+    }
+]

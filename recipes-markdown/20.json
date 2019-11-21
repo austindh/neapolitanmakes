@@ -1,0 +1,72 @@
+[
+    {
+        "title": "Blueberry Cinnamon Toast Crunch Muffins",
+        "yield": "15-18 muffins",
+        "time": "",
+        "postId": 20,
+        "ingredients": [
+            {
+                "amount": "2 cups",
+                "name": "flour"
+            },
+            {
+                "amount": "1 cup",
+                "name": "sugar"
+            },
+            {
+                "amount": "1 tbsp",
+                "name": "baking powder"
+            },
+            {
+                "amount": "1/4 tsp",
+                "name": "salt"
+            },
+            {
+                "amount": "1/4 tsp",
+                "name": "cinnamon"
+            },
+            {
+                "amount": "2",
+                "name": "eggs"
+            },
+            {
+                "amount": "1 cup",
+                "name": "milk"
+            },
+            {
+                "amount": "1/4 cup",
+                "name": "vegetable oil"
+            },
+            {
+                "amount": "1 tsp",
+                "name": "vanilla"
+            },
+            {
+                "amount": "1 cup",
+                "name": "fresh blueberries"
+            },
+            {
+                "amount": "1/2 cup",
+                "name": "Cinnamon Toast Crunch"
+            },
+            {
+                "amount": "1 tbsp",
+                "name": "butter, melted"
+            }
+        ],
+        "steps": [
+            {
+                "description": "Preheat oven to 400 degrees fahrenheit. Line a muffin tin with muffin papers. Crush the Cinnamon Toast Crunch in a food processor or in a bag using a rolling pin."
+            },
+            {
+                "description": "In a large bowl, combine the dry ingredients (flour, sugar, baking powder, salt, cinnamon) with a whisk."
+            },
+            {
+                "description": "In a medium bowl, combine wet ingredients (eggs, milk, oil, vanilla). Pour into the dry ingredients and stir with a silicone spatula until just combined, but still lumpy. Fold in the blueberries. Fold in half of the crushed cereal."
+            },
+            {
+                "description": "Scoop the muffin batter evenly into the liners, until about 3/4 full. Combine the remaining crushed cereal and the melted butter. Sprinkle atop the muffins and bake for 15-20 minutes, or until a toothpick inserted in the middle comes out clean."
+            }
+        ]
+    }
+]

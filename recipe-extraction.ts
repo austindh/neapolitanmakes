@@ -96,6 +96,8 @@ const parseRecipe = (postId: number, recipeString: string): IRecipe => {
 			if (lineVal.includes('yield') || lineVal.includes('makes')) {
 				if (lineVal.includes(':')) {
 					line = line.split(':')[1].trim()
+				} else if (lineVal.includes('make')) {
+					line = line.split(/make(?:s)?/i)[1].trim();
 				}
 				recipe.yield = line;
 				yieldFound = true;
@@ -111,12 +113,13 @@ const parseRecipe = (postId: number, recipeString: string): IRecipe => {
 				// No yield/time, so onto ingredients
 				yieldFound = true;
 				timeFound = true;
-				continue;
 			}
 		}
 
 		// Get Ingredients
 		let blanksInARow = 0;
+		if (!line.trim()) continue;
+
 		while (!ingredients) {
 			if (!line.trim()) {
 				blanksInARow++;
@@ -139,7 +142,11 @@ const parseRecipe = (postId: number, recipeString: string): IRecipe => {
 				'tsp',
 				'sheet',
 				'stalk',
-				'slice'
+				'slice',
+				'lb',
+				'g',
+				'mL',
+				'stick'
 			];
 			const units = new Set();
 			baseUnits.forEach(unit => {
@@ -211,6 +218,20 @@ const parseRecipe = (postId: number, recipeString: string): IRecipe => {
 		throw `can't find steps for ${recipe.title}`
 	}
 
+	// if parenthetical at start of ingredient name,
+	// move to end of amount instead
+	recipe.ingredients.forEach(i => {
+		if (i.name.startsWith('(')) {
+			const endParen = i.name.indexOf(')');
+			const parenthetical = i.name.slice(0, endParen + 1);
+			const name = i.name.slice(endParen + 1);
+
+			i.amount += ' ' + parenthetical;
+			i.amount = i.amount.trim();
+			i.name = name.trim();
+		}
+	});
+
 	return recipe;
 }
 
@@ -227,9 +248,13 @@ const writeRecipeJson = async (id: number, recipes: IRecipe[]) => {
 const main = async () => {
 	// await extractToMarkdown();
 	// await determineFilesWithRecipes();
-	const ID = 8;
+	const ID = 34;
 	const recipes = await parseRecipes(ID);
 	await writeRecipeJson(ID, recipes);
 
 };
 main();
+
+// TODO Render steps/ingredients as markdown
+// Look specifically at posts 26, 29
+// TODO make sure all titles/other fields are trimmed on db insert

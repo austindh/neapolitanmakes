@@ -1,0 +1,112 @@
+[
+    {
+        "title": "Cream-Filled Donuts",
+        "yield": "12 donuts",
+        "time": "2 hours (or overnight)",
+        "postId": 18,
+        "ingredients": [
+            {
+                "amount": "1 tbsp",
+                "name": "active dry yeast"
+            },
+            {
+                "amount": "2/3 cup",
+                "name": "milk, warm"
+            },
+            {
+                "amount": "3 1/2 cups",
+                "name": "flour"
+            },
+            {
+                "amount": "1/3 cup",
+                "name": "sugar"
+            },
+            {
+                "amount": "2 tsp",
+                "name": "salt"
+            },
+            {
+                "amount": "3",
+                "name": "eggs"
+            },
+            {
+                "amount": "7 tbsp",
+                "name": "butter, softened and cut into cubes"
+            },
+            {
+                "amount": "",
+                "name": ""
+            },
+            {
+                "amount": "1 1/2 cups",
+                "name": "whole milk"
+            },
+            {
+                "amount": "1/2 cup",
+                "name": "sugar"
+            },
+            {
+                "amount": "3-4 tbsp",
+                "name": "flour"
+            },
+            {
+                "amount": "1/2 tsp",
+                "name": "salt"
+            },
+            {
+                "amount": "4",
+                "name": "egg yolks"
+            },
+            {
+                "amount": "1 tsp",
+                "name": "vanilla"
+            },
+            {
+                "amount": "6 tbsp",
+                "name": "heavy cream"
+            },
+            {
+                "amount": "",
+                "name": ""
+            },
+            {
+                "amount": "",
+                "name": "Oil for frying (enough to go 3 inches up the side of your pan)"
+            },
+            {
+                "amount": "",
+                "name": ""
+            },
+            {
+                "amount": "1 cup",
+                "name": "sugar for coating"
+            }
+        ],
+        "steps": [
+            {
+                "description": "Combine milk, yeast, and a pinch of sugar. Let it sit for 5 minutes to activate. Add flour, sugar, salt, and eggs. Using a dough hook, mix until combined, about 3 minutes."
+            },
+            {
+                "description": "Add the butter, a little bit at a time, and knead (in the mixer, if you want) for 5-6 minutes, or until combined. At this point, you can wrap the dough and let it sit overnight. If you want the donuts sooner, let the dough rise, covered, in an oiled bowl in a warm place. Let rise until doubled, about 30-45 minutes. (I turn on my oven and put the dough bowl on top of the oven to get some heat)."
+            },
+            {
+                "description": "Make the pastry cream: Put the milk in a small saucepan over medium-low heat. While it's heating, combine sugar, flour, salt, and egg yolks until thoroughly combined. Once the milk is simmering but not boiling, remove the milk from the heat and spoon a few tablespoons into the egg yolk mixture while stirring. Continue to add the milk slowly. Once it's all been added, return it to the saucepan. Cook until it comes up to a boil and reaches the desired consistency. Add the vanilla and refrigerate, covered with plastic wrap."
+            },
+            {
+                "description": "Roll out the risen donut dough and cut into 3\" circles. Place on a greased cookie sheet, cover, and let them rise in a warm place until almost doubled in height. They will be pillowy when they're ready."
+            },
+            {
+                "description": "Heat the oil over medium-high heat until it reaches 350 degrees fahrenheit. Put the coating sugar in a shallow bowl to dip the donuts after they're fried. Use a spatula to get the donuts off of the cookie sheet into the oil. I did them one at a time. Flip after 2 minutes or so. Place the donuts on a paper towel-lined plate."
+            },
+            {
+                "description": "Once the donuts are still hot but cool enough to handle, dip them in the sugar and place on a cooling rack. I would have one in the oil at all times, and while another was cooking I would dip another in sugar. Don't let them cool too much or the sugar won't stick well."
+            },
+            {
+                "description": "Whip the cream until very stiff. Combine it with the cooled pastry cream. Poke a hole in the donuts with a chopstick and fill using a pastry bag and a round tip (or a bag with the corner cut off)."
+            },
+            {
+                "description": "They're best the same day (but definitely still tasty on day two)."
+            }
+        ]
+    }
+]

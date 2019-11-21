@@ -1,0 +1,68 @@
+[
+    {
+        "title": "Chocolate Sea Salt Muffins  ",
+        "yield": "",
+        "time": "",
+        "postId": 28,
+        "ingredients": [
+            {
+                "amount": "300 g (2 1/2 cups)",
+                "name": "flour"
+            },
+            {
+                "amount": "80 g (2/3 cup)",
+                "name": "dutch process cocoa powder"
+            },
+            {
+                "amount": "1 tbsp",
+                "name": "baking powder"
+            },
+            {
+                "amount": "1/2 tsp",
+                "name": "baking soda"
+            },
+            {
+                "amount": "1/4 tsp",
+                "name": "sea salt"
+            },
+            {
+                "amount": "250 g (1 1/4 cups)",
+                "name": "sugar"
+            },
+            {
+                "amount": "100 g (7 tbsp)",
+                "name": "butter, melted"
+            },
+            {
+                "amount": "250 mL (1 cup)",
+                "name": "buttermilk"
+            },
+            {
+                "amount": "2",
+                "name": "eggs"
+            },
+            {
+                "amount": "100 g",
+                "name": "dark chocolate, finely chopped"
+            },
+            {
+                "amount": "1 tbsp",
+                "name": "sea salt"
+            }
+        ],
+        "steps": [
+            {
+                "description": "Preheat oven to 400 degrees fahrenheit. Line a muffin tin with 12 papers."
+            },
+            {
+                "description": "Combine flour, cocoa powder, baking powder, baking soda, and sea salt in a medium bowl."
+            },
+            {
+                "description": "In a large bowl, combine sugar, butter, buttermilk, and eggs. Beat until combined. Slowly add dry ingredients and mix until combined."
+            },
+            {
+                "description": "Add dark chocolate and mix. Scoop into muffin cups and sprinkle with sea salt. Bake 18-21 minutes, or until toothpick comes out clean."
+            }
+        ]
+    }
+]

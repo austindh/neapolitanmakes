@@ -1,0 +1,71 @@
+[
+    {
+        "title": "Brownie Chunk Chocolate Chip Cookies",
+        "yield": "24 cookies",
+        "time": "",
+        "postId": 10,
+        "ingredients": [
+            {
+                "amount": "1 1/2 cups",
+                "name": "flour"
+            },
+            {
+                "amount": "3/4 tsp",
+                "name": "baking powder"
+            },
+            {
+                "amount": "1/2 tsp",
+                "name": "baking soda"
+            },
+            {
+                "amount": "1/2 tsp",
+                "name": "salt"
+            },
+            {
+                "amount": "1/2 cup",
+                "name": "butter, softened"
+            },
+            {
+                "amount": "1/4 cup",
+                "name": "sugar"
+            },
+            {
+                "amount": "3/4 cup",
+                "name": "brown sugar"
+            },
+            {
+                "amount": "1",
+                "name": "egg"
+            },
+            {
+                "amount": "1 tsp",
+                "name": "vanilla"
+            },
+            {
+                "amount": "3/4 cup",
+                "name": "chocolate chips"
+            },
+            {
+                "amount": "3/4 cup",
+                "name": "brownie chunks"
+            }
+        ],
+        "steps": [
+            {
+                "description": "Preheat oven to 350 degrees fahrenheit. Line a cookie sheet with parchment or a silpat."
+            },
+            {
+                "description": "Combine flour, baking soda & powder, and salt. Set aside."
+            },
+            {
+                "description": "Cream together butter and sugars until light and fluffy. Add the egg and vanilla and beat until smooth. Add the dry ingredients and stir until combined. Add the chocolate chips and brownie chunks and stir until combined."
+            },
+            {
+                "description": "Scoop using a spoon or cookie scoop onto the baking sheet. Bake 9-11 minutes, or until the edges are golden. Let the cookies cool on the cookie sheet for 2-3 minutes before removing them to a cooling rack."
+            },
+            {
+                "description": "Store in an airtight container for up to a week."
+            }
+        ]
+    }
+]

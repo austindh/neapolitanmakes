@@ -1,0 +1,74 @@
+[
+    {
+        "title": "Copycat Cheesecake Factory Honey Wheat Bread",
+        "yield": "5-6 small loaves",
+        "time": "",
+        "postId": 15,
+        "ingredients": [
+            {
+                "amount": "1 1/2 cups",
+                "name": "warm water"
+            },
+            {
+                "amount": "1 tbsp",
+                "name": "sugar"
+            },
+            {
+                "amount": "1 tbsp",
+                "name": "instant dry yeast"
+            },
+            {
+                "amount": "2 1/2 cups",
+                "name": "bread flour"
+            },
+            {
+                "amount": "2 1/2 cups",
+                "name": "whole wheat flour"
+            },
+            {
+                "amount": "1 tbsp",
+                "name": "cocoa powder"
+            },
+            {
+                "amount": "1 tsp",
+                "name": "salt"
+            },
+            {
+                "amount": "3 tbsp",
+                "name": "butter, softened"
+            },
+            {
+                "amount": "3 tbsp",
+                "name": "molasses"
+            },
+            {
+                "amount": "1/4 cup",
+                "name": "honey"
+            },
+            {
+                "amount": "",
+                "name": "oats for decoration"
+            }
+        ],
+        "steps": [
+            {
+                "description": "In a medium bowl, combine the warm water, sugar, and yeast. Stir until combined and let it sit for 5 minutes to activate."
+            },
+            {
+                "description": "In the bowl of a stand mixer, combine 2 cups bread flour, 2 cups whole wheat flour, cocoa powder, and salt. Stir to combine."
+            },
+            {
+                "description": "Pour the yeast mixture into the dry ingredients and add the butter, molasses, and honey. Stir to roughly combine, then attach the dough hook. Add more flour if needed (the dough should not stick to the sides or bottom of the bowl). Knead on medium-low speed for 8-10 minutes, or until it passes the fingerprint test (meaning, when you poke it with your finger, it should bounce back slowly.)"
+            },
+            {
+                "description": "Let dough rise in a covered greased bowl in a warm place until doubled. Mine took about 30 minutes because I put it in a 100 degree oven."
+            },
+            {
+                "description": "Divide the dough and form it into the desired shapes. Spray the tops with water and sprinkle oats, if desired. Spray a piece of plastic wrap with cooking spray and cover the loaves with it, then let them rise until doubled."
+            },
+            {
+                "description": "Bake at 350 for 25-35 minutes, depending on the shape. Loaves are done when they sound hollow when you tap on them."
+            }
+        ]
+    }
+]

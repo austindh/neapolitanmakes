@@ -1,0 +1,76 @@
+[
+    {
+        "title": "Cinnamon Crunch Bagels",
+        "yield": "12 bagels",
+        "time": "",
+        "postId": 24,
+        "ingredients": [
+            {
+                "amount": "1 1/2 cups",
+                "name": "warm water"
+            },
+            {
+                "amount": "1/4 cup",
+                "name": "brown sugar, divided use"
+            },
+            {
+                "amount": "2 tsp",
+                "name": "active dry yeast"
+            },
+            {
+                "amount": "3 tsp",
+                "name": "cinnamon"
+            },
+            {
+                "amount": "1 1/2 tsp",
+                "name": "salt"
+            },
+            {
+                "amount": "5 cups",
+                "name": "flour"
+            },
+            {
+                "amount": "",
+                "name": ""
+            },
+            {
+                "amount": "1/4 cup",
+                "name": "sugar"
+            },
+            {
+                "amount": "1/4 cup",
+                "name": "brown sugar"
+            },
+            {
+                "amount": "3 tsp",
+                "name": "cinnamon"
+            }
+        ],
+        "steps": [
+            {
+                "description": "In the bowl of a stand mixer, combine water, 3 tbsp brown sugar, and yeast. Mix it and let it sit for 10 minutes, or until foamy."
+            },
+            {
+                "description": "Add cinnamon, salt, and 2 cups of the flour. Stir with a spoon or a whisk until combined. Attach the dough hook and slowly add flour until the dough comes away from the sides of the bowl (it may not take all of the flour). Knead for 8-10 minutes."
+            },
+            {
+                "description": "Let rise in a greased bowl covered, for 30-45 minutes in a warm oven (turn your oven onto warm for 5 minutes, then turn it off)."
+            },
+            {
+                "description": "Turn dough out onto a floured counter. Divide into 12 equal pieces and roll into balls. Poke your thumb through the middle and stretch the hole a little bit to shape it like a bagel. Let sit for 10 minutes."
+            },
+            {
+                "description": "Fill a pot with water and bring to a boil over high heat. Add the remaining 1 tbsp brown sugar. Boil the bagels, 2 at a time, for 45 seconds on each side. Pat dry with paper towels and place 2\" apart on a lined cookie sheet."
+            },
+            {
+                "description": "Combine topping ingredients and sprinkle over the bagels. Bake at 400 degrees fahrenheit for 15-20 minutes, or until golden."
+            },
+            {
+                "description": "Let cool and store at room temperature for 3-5 days. You can freeze them for up to a month."
+            },
+            {
+                "description": "*\\*\\* I would recommend toasting these in a toaster oven with the sugar side up so it doesn't burn-- a regular toaster will probably burn the sugar! (I can't try it because we don't even have a regular toaster-- weird, right? My family always survived just fine without one so I don't see the point!)"
+            }
+        ]
+    }
+]

@@ -6,11 +6,15 @@
         "postId": 8,
         "ingredients": [
             {
+                "amount": "1/2 cup",
+                "name": "warm water"
+            },
+            {
                 "amount": "1/2 tsp",
                 "name": "sugar"
             },
             {
-                "amount": "1 tbsp (or 1 packet)",
+                "amount": "1 tbsp (1 packet)",
                 "name": "yeast"
             },
             {

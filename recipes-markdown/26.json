@@ -1,0 +1,131 @@
+[
+    {
+        "title": "Chocolate Silk Pie",
+        "yield": "9-12 servings",
+        "time": "",
+        "postId": 26,
+        "ingredients": [
+            {
+                "amount": "",
+                "name": "**Crust**"
+            },
+            {
+                "amount": "2 cups",
+                "name": "Oreo (or brownie-- I used a mixture of both!) crumbs"
+            },
+            {
+                "amount": "4 tbsp",
+                "name": "butter, melted"
+            },
+            {
+                "amount": "2 tbsp",
+                "name": "sugar"
+            },
+            {
+                "amount": "",
+                "name": ""
+            },
+            {
+                "amount": "",
+                "name": "**Chocolate Mousse**"
+            },
+            {
+                "amount": "8 oz",
+                "name": "dark chocolate"
+            },
+            {
+                "amount": "1 1/2 tsp",
+                "name": "vanilla"
+            },
+            {
+                "amount": "3/4 cup",
+                "name": "(1.5 sticks) butter, softened"
+            },
+            {
+                "amount": "1 cup",
+                "name": "sugar"
+            },
+            {
+                "amount": "3",
+                "name": "eggs"
+            },
+            {
+                "amount": "1 cup",
+                "name": "whipping cream"
+            },
+            {
+                "amount": "",
+                "name": ""
+            },
+            {
+                "amount": "",
+                "name": "**Whipped cream**"
+            },
+            {
+                "amount": "2 cups",
+                "name": "whipping cream"
+            },
+            {
+                "amount": "3 tbsp",
+                "name": "powdered sugar"
+            },
+            {
+                "amount": "1/2 tsp",
+                "name": "vanilla"
+            },
+            {
+                "amount": "",
+                "name": ""
+            },
+            {
+                "amount": "",
+                "name": "**Chocolate curls**"
+            },
+            {
+                "amount": "3 oz",
+                "name": "chocolate"
+            }
+        ],
+        "steps": [
+            {
+                "description": "**Crust**"
+            },
+            {
+                "description": "Preheat oven to 400 degrees fahrenheit. Butter a 9\" springform or pie pan."
+            },
+            {
+                "description": "In a food processor, crush Oreo cookies or brownies. Add the melted butter and sugar. (I omitted the sugar and butter because my brownies were very moist already-- not at all crumbly). Press into the bottom of the prepared pan and bake for 10 minutes. Let cool completely."
+            },
+            {
+                "description": "**Mousse**"
+            },
+            {
+                "description": "Melt chocolate, stirring often, until smooth. Add vanilla and stir."
+            },
+            {
+                "description": "In the bowl of a stand mixer, beat butter for 1 minute on medium speed. Add sugar and beat for 4 minutes on medium speed. Add chocolate and beat until incorporated."
+            },
+            {
+                "description": "Add 2 eggs and beat for 3 minutes. Add 3rd egg and beat for 3 more minutes."
+            },
+            {
+                "description": "In a separate bowl, whip cream for 4 minutes, or until stiff peaks form. Fold whipped cream and mousse together until it's completely incorporated."
+            },
+            {
+                "description": "Spread evenly on cooled crust."
+            },
+            {
+                "description": "**Whipped Cream**"
+            },
+            {
+                "description": "In a bowl, combine cream, sugar, and vanilla. Whip until stiff peaks form. Pipe onto the pie or spread it evenly however you desire."
+            },
+            {
+                "description": "**Chocolate Curls**"
+            },
+            {
+                "description": "Look at [this link](http://spicedblog.com/how-to-make-chocolate-curls.html) for directions on how to make chocolate curls."
+            }
+        ]
+    }
+]

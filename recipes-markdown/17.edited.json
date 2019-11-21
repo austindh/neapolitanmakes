@@ -1,0 +1,58 @@
+[
+    {
+        "title": "Angel Food Cupcakes",
+        "yield": "16 cupcakes",
+        "time": "",
+        "postId": 17,
+        "ingredients": [
+            {
+                "amount": "3/4 cup + 2 tbsp",
+                "name": "sugar"
+            },
+            {
+                "amount": "1/2 cup",
+                "name": "cake flour (or 1/2 cup AP flour + 1/2 tsp cornstarch)"
+            },
+            {
+                "amount": "1/4 tsp",
+                "name": "salt"
+            },
+            {
+                "amount": "6",
+                "name": "egg whites, room temperature"
+            },
+            {
+                "amount": "2 1/2 tbsp",
+                "name": "warm water"
+            },
+            {
+                "amount": "1/2 tsp",
+                "name": "vanilla"
+            },
+            {
+                "amount": "3/4 tsp",
+                "name": "cream of tartar"
+            }
+        ],
+        "steps": [
+            {
+                "description": "Preheat oven to 350 degrees and line muffin tins with paper liners."
+            },
+            {
+                "description": "Combine half the sugar with the flour and salt."
+            },
+            {
+                "description": "In a large bowl, combine the egg whites, water, vanilla, cream of tartar, and remaining sugar. Whip together with a whisk until medium peaks form."
+            },
+            {
+                "description": "Sift a small amount of the dry ingredients into the egg whites, then fold in with a spatula. Do this in at least 6 batches to ensure even folding."
+            },
+            {
+                "description": "Fill muffin cups all the way to the top with batter and bake for 15-20 minutes, or until the tops are golden and a toothpick comes out clean."
+            },
+            {
+                "description": "Fill with jam, if desired. Top with sweetened whipped cream (add a small amount of vanilla for an awesome taste), then garnish with berries."
+            }
+        ]
+    }
+]
