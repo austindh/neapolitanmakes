@@ -1,10 +1,11 @@
+@import '../../generate-blog/scss/colors';
 
 #modal-overlay {
 	display: none;
 	
 	#modal {
 		display: none;
-		background: #fdfdfd;
+		background: $white;
 		padding: 20px;
 		box-shadow: #4c4c4c 1px 1px 6px 1px;
 		min-width: 400px;

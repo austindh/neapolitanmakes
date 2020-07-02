@@ -51,13 +51,18 @@ const Header = props => {
 	return(
 		<React.Fragment>
 			<div id="header">
-				<div className="logo">
+				{/* <div className="logo">
 					<a className="main" href="/">
 						<span id="nea">NEA</span>
 						<span id="politan">POLITAN</span>
 						<span id="makes">MAKES</span>
 					</a>
 					<div className="sub-title">Flavors of Creativity</div>
+				</div> */}
+				<div className="logo">
+					<a href="/" className="main">
+						<img src="/icons/neapolitanmakes_logo.svg" style={{marginTop: '10px', marginBottom: '-6px'}}></img>
+					</a>
 				</div>
 				{ socialIcons }
 			</div>
